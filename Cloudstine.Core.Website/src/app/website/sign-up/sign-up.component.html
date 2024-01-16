@@ -1,0 +1,242 @@
+<!-- Hero Start -->
+<section
+  class="bg-auth-home d-table w-100"
+  style="padding-top: 100px !important"
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 col-md-6">
+        <div class="me-lg-5">
+          <img
+            src="assets/images/user/signup.svg"
+            class="img-fluid d-block mx-auto"
+            alt="signup"
+            width="70%"
+          />
+        </div>
+
+        <div *ngFor="let organization of OrganizationList">
+          <div *ngIf="organization.Disclaimer != null">
+            <div class="disclaimer" *ngIf="companyName == organization.Name">
+              <p style="font-size: small; margin: 0">
+                <b style="color: red">Disclaimer</b> - <br>
+                <!-- {{ organization.Disclaimer }} -->
+                <span [innerHTML]="organization.Disclaimer | sanitizeHtml"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6">
+        <div
+          style="text-align: center; margin-bottom: 12px"
+          *ngIf="companyName != undefined"
+        >
+          <img
+            src="assets/images/taxblock/corporateLogo/{{ companyName }}.png"
+            style="max-width: 200px; max-height: 100px" alt="corporateLogo"
+          />
+        </div>
+        <div class="card shadow rounded border-0">
+          <div class="card-body">
+            <h4 class="card-title text-center">Signup</h4>
+            <div class="login-form mt-4">
+              <form [formGroup]="signUpForm" (ngSubmit)="onSignUp_Click()">
+                <div class="form-grouprow">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Your Email <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                        <input
+                          type="email"
+                          class="form-control ps-5"
+                          placeholder="Email"
+                          name="EmailId"
+                          formControlName="EmailId"
+                          [ngClass]="{
+                            'is-invalid': submitted && f.EmailId.errors
+                          }"
+                        />
+
+                        <div
+                          *ngIf="submitted && f.EmailId.errors"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="f.EmailId.errors.required">
+                            Email Id is required
+                          </div>
+                          <div *ngIf="f.EmailId.errors.email">
+                            Email must be a valid email address
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Password <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="key" class="fea icon-sm icons"></i>
+                        <input
+                          type="password"
+                          class="form-control ps-5"
+                          placeholder="Password"
+                          name="PasswordHash"
+                          formControlName="PasswordHash"
+                          [ngClass]="{
+                            'is-invalid': submitted && f.PasswordHash.errors
+                          }"
+                        />
+                        <div
+                          *ngIf="submitted && f.PasswordHash.errors"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="f.PasswordHash.errors.required">
+                            Password is required
+                          </div>
+                          <div *ngIf="f.PasswordHash.errors.minlength">
+                            Password must be at least 8 characters
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Confirm Password
+                        <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="key" class="fea icon-sm icons"></i>
+                        <input
+                          type="password"
+                          class="form-control ps-5"
+                          placeholder="Confirm Password"
+                          name="ConfirmPassword"
+                          formControlName="ConfirmPassword"
+                          [ngClass]="{
+                            'is-invalid': submitted && f.ConfirmPassword.errors
+                          }"
+                        />
+                        <div
+                          *ngIf="submitted && f.ConfirmPassword.errors"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="f.ConfirmPassword.errors.required">
+                            Confirm Password is required
+                          </div>
+                          <div *ngIf="f.ConfirmPassword.errors.mustMatch">
+                            Passwords must match
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >PAN Number <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="key" class="fea icon-sm icons"></i>
+                        <input
+                          type="text"
+                          class="uppercase form-control ps-5"
+                          placeholder="PAN No."
+                          name="PANNo"
+                          formControlName="PANNo"
+                        />
+                        <div
+                          *ngIf="submitted && signUp_Form.PANNo.errors"
+                          class="text-danger"
+                        >
+                          <div *ngIf="signUp_Form.PANNo.errors.required">
+                            Please Enter PAN No.
+                          </div>
+                          <div *ngIf="signUp_Form.PANNo.errors.pattern">
+                            Please Enter Correct PAN Card No.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Mobile Number <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="key" class="fea icon-sm icons"></i>
+                        <input
+                          type="text"
+                          class="form-control ps-5"
+                          placeholder="Mobile Number"
+                          name="MobileNo"
+                          formControlName="MobileNo"
+                          maxlength="10"
+                          (input)="restrictNonNumericCharacters($event)"
+                        />
+                        <div
+                          *ngIf="submitted && signUp_Form.MobileNo.errors"
+                          class="text-danger"
+                        >
+                          <div *ngIf="signUp_Form.MobileNo.errors.required">
+                            Please Enter Mobile No.
+                          </div>
+                          <div *ngIf="signUp_Form.MobileNo.errors.pattern">
+                            Please Enter Correct Number.
+                          </div>
+                          <div *ngIf="signUp_Form.MobileNo.errors.maxlength">
+                            Mobile No. must be 10 Digits.
+                          </div>
+                          <div *ngIf="signUp_Form.MobileNo.errors.minlength">
+                            Mobile No. must be 10 Digits.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-12">
+                    <div class="d-grid">
+                      <button class="btn btn-primary">Register</button>
+                    </div>
+                  </div>
+                  <!--end col-->
+
+                  <div class="mx-auto">
+                    <p class="mb-0 mt-3">
+                      <small class="text-dark me-2"
+                        >Already have an account ?</small
+                      >
+                      <a (click)="OnSignInClick()" style="cursor: pointer;" class="text-dark fw-bold">Sign in</a>
+                    </p>
+                  </div>
+                </div>
+                <!--end row-->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</section>
+<!--end section-->
+<!-- Hero End -->

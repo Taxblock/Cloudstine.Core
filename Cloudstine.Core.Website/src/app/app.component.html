@@ -1,0 +1,20 @@
+<span *ngIf="showLoader" id="loading-bg" style="top:0">
+  <!-- <div class="loading-logo"> -->
+  <!-- <img src="assets/images/taxblock/logo.png" alt="Logo" /> -->
+  <!-- </div> -->
+  <div class="loader">
+    <div class="effect-1 effects"></div>
+    <div class="effect-2 effects"></div>
+    <div class="effect-3 effects"></div>
+
+  </div>
+  <div class="loading-msg">
+    <p>Wait a moment while we processing your request...</p>
+  </div>
+</span>
+<span *ngIf="showNavBar">
+  <nav-component ></nav-component>
+</span>
+
+<router-outlet></router-outlet>
+<footer></footer>

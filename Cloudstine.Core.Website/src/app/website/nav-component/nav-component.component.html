@@ -1,0 +1,340 @@
+<div >
+  <header id="topnav" class="defaultscroll sticky" *ngIf="showNav">
+    <div class="container-flued" style="padding: 0px 20px;border-bottom: 2px solid #692c72;">
+      <!-- Logo container-->
+      <a class="logo logo-lg" routerLink="/home">
+        <img src="assets/images/taxblock/cloud.png" height="35" class="" alt="cloud" />
+      </a>
+      <a class="logo logo-sm m-0" routerLink="/home">
+        <img src="assets/images/taxblock/cloud.png" height="25" class="" alt="cloud" />
+      </a>
+      
+      <!-- Logo End -->
+  
+      <!-- End Logo container-->
+      <div class="menu-extras">
+        <div class="menu-item">
+          <!-- Mobile menu toggle-->
+          <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+            <div class="lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <!-- End mobile menu toggle-->
+        </div>
+      </div>
+  
+      <!--Login button Start-->
+      <ul
+        class="buy-button list-inline m-0"
+        id="menu-box"
+        style="display: block"
+      >
+       
+        <li class="list-inline-item mb-0" >
+          <div class="dropdown dropdown-primary">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              (click)="OnSignInClick()"
+              style="border-radius: 20px"
+            >
+              <!-- <i class="fa fa-sign-in"></i> -->
+              Sign-In
+            </button>
+          </div>
+        </li>
+  
+        <!-- <li class="list-inline-item ps-1 mb-0" *ngIf="!isLogin">
+          <a href="https://itax.taxblock.in/#/login" title="Login/Sign-Up">
+            <div class="btn btn-pills btn-primary viewPromo">Sign In/Sign Up</div>
+            <div class="btn btn-pills btn-primary viewPromo1">Sign In</div>
+          </a>
+        </li> -->
+      </ul>
+      <!--Login button End-->
+  
+      <div id="navigation">
+        <!-- Navigation Menu-->
+        <ul class="navigation-menu">
+          <li onclick="toggleMenu()">
+            <a routerLink="home" routerLinkActive="active" class="cool-link"
+              >Home</a
+            >
+          </li>
+          <li onclick="toggleMenu()">
+            <a routerLink="/about-us" routerLinkActive="active" class="cool-link"
+              >About Us</a
+            >
+          </li>
+          <li onclick="toggleMenu()">
+            <a routerLink="/services" routerLinkActive="active" class="cool-link"
+              >Services</a
+            >
+          </li>
+         
+          <!-- <li onclick="toggleMenu()">
+            <a routerLink="/skill-hub" routerLinkActive="active" class="cool-link"
+              >SKILL HUB <sup class="blink">NEW</sup></a
+            >
+          </li> -->
+  
+          <!-- <li onclick="toggleMenu()">
+            <a
+              routerLink="/book-an-experts"
+              routerLinkActive="active"
+              class="cool-link"
+              >Financial Doctor</a
+            >
+          </li> -->
+  
+          <li onclick="toggleMenu()">
+            <a
+              routerLink="/tools"
+              routerLinkActive="active"
+              class="cool-link"
+              >Tools <sup class="blink">NEW</sup></a
+            >
+          </li>
+  
+          <li onclick="toggleMenu()">
+            <a
+              routerLink="/contact-us"
+              routerLinkActive="active"
+              class="cool-link"
+              >Contact</a
+            >
+          </li>
+          <li onclick="toggleMenu()">
+            <a routerLink="/careers" routerLinkActive="active" class="cool-link"
+              >Career</a
+            >
+          </li>
+  
+          <li class="has-submenu parent-menu-item drop">
+            <a>More</a><span class="menu-arrow"></span>
+            <ul class="submenu">
+              <!-- <li onclick="toggleMenu()">
+                <a
+                  routerLink="/careers"
+                  routerLinkActive="active"
+                  class="cool-link"
+                  >Career</a
+                >
+              </li> -->
+              <li onclick="toggleMenu()">
+                <a routerLink="/blogs" routerLinkActive="active" class="cool-link"
+                  >Blogs</a
+                >
+              </li>
+              <li onclick="toggleMenu()">
+                <a routerLink="/news" routerLinkActive="active" class="cool-link"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a routerLink="/faqs" routerLinkActive="active" class="cool-link"
+                  >FAQ's</a
+                >
+              </li>
+              <li onclick="toggleMenu()">
+                <a
+                  routerLink="/get-help"
+                  routerLinkActive="active"
+                  class="cool-link"
+                  >Get Help</a
+                >
+              </li>
+            </ul>
+          </li>
+  
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/careers" routerLinkActive="active" class="cool-link"
+              >Career</a
+            >
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/blogs" routerLinkActive="active" class="cool-link"
+              >Blogs</a
+            >
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/news" routerLinkActive="active" class="cool-link"
+              >News</a
+            >
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/faqs" routerLinkActive="active" class="cool-link"
+              >FAQ's</a
+            >
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a
+              href="assets/images/taxblock/ITAXUserGuide.pdf"
+              target="_blank"
+              routerLinkActive="active"
+              class="cool-link"
+              >Get Help</a
+            >
+          </li>
+        </ul>
+        <!--end navigation menu-->
+      </div>
+      <!--end navigation-->
+    </div>
+    <!--end container-->
+  </header>
+  <!--end header-->
+  <!-- Navbar End -->
+  <!-- Offcanvas Start -->
+  <div
+    class="offcanvas offcanvas-end bg-white shadow"
+    tabindex="-1"
+    id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel"
+  >
+    <div class="offcanvas-header p-4 border-bottom">
+      <h5 id="offcanvasRightLabel" class="mb-0">
+        <img
+          src="../assets/images/logo-dark.png"
+          height="24"
+          class="light-version"
+          alt="logo-dark"
+        />
+        <img
+          src="../assets/images/logo-light.png"
+          height="24"
+          class="dark-version"
+          alt="logo-light"
+        />
+      </h5>
+      <button
+        type="button"
+        class="btn-close d-flex align-items-center text-dark"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      >
+        <i class="uil uil-times fs-4"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div class="row">
+        <div class="col-12">
+          <img
+            src="../assets/images/contact.svg"
+            class="img-fluid d-block mx-auto"
+            style="max-width: 256px"
+            alt="contact"
+          />
+          <div class="card border-0 mt-5" style="z-index: 1">
+            <div class="card-body p-0">
+              <form method="post" name="myForm" onsubmit=" validateForm()">
+                <p id="error-msg" class="mb-0"></p>
+                <div id="simple-msg"></div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Your Name <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="user" class="fea icon-sm icons"></i>
+                        <input
+                          name="name"
+                          id="name"
+                          type="text"
+                          class="form-control ps-5"
+                          placeholder="Name :"
+                        />
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Your Email <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                        <input
+                          name="email"
+                          id="email"
+                          type="email"
+                          class="form-control ps-5"
+                          placeholder="Email :"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+  
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label class="form-label">Subject</label>
+                      <div class="form-icon position-relative">
+                        <i data-feather="book" class="fea icon-sm icons"></i>
+                        <input
+                          name="subject"
+                          id="subject"
+                          class="form-control ps-5"
+                          placeholder="subject :"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+  
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label class="form-label"
+                        >Comments <span class="text-danger">*</span></label
+                      >
+                      <div class="form-icon position-relative">
+                        <i
+                          data-feather="message-circle"
+                          class="fea icon-sm icons clearfix"
+                        ></i>
+                        <textarea
+                          name="comments"
+                          id="comments"
+                          rows="4"
+                          class="form-control ps-5"
+                          placeholder="Message :"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="d-grid">
+                      <button
+                        type="submit"
+                        id="submit"
+                        name="send"
+                        class="btn btn-primary"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--end col-->
+      </div>
+      <!--end row-->
+    </div>
+  </div>
+  <!-- Offcanvas End -->
+</div>

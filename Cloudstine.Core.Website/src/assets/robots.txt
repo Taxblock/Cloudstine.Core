@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /ITax/
+Disallow: /administration/
+Disallow: /masters/
+Disallow: /taxation/
+Disallow: 
+
+Disallow: /cgi-bin/
+Sitemap: https://taxblock.in/assets/sitemap.xml

@@ -1,0 +1,32 @@
+.blink {
+  -webkit-animation: change 1s infinite both;
+  animation: change 1s infinite both;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-name: change;
+}
+
+@keyframes change {
+  0% {
+    color: rgb(247 153 74);
+    /* opacity: .5; */
+  }
+
+  100% {
+    color: #eaeefb;
+  }
+}
+.active {
+  color: #2f55d4 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .servicesTab {
+    display: block !important;
+  }
+}
