@@ -5,3 +5,6 @@
 /.vs/Cloudstine.Core/FileContentIndex
 /.vs/ProjectEvaluation
 /.vs/Cloudstine.Core/DesignTimeBuild
+/Cloudstine.Core.API/obj/Release/net6.0
+/Cloudstine.Core.Repository/obj/Release/net6.0
+/Cloudstine.Core.Shared/obj/Release/net6.0
