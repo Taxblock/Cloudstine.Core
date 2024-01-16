@@ -1,0 +1,12 @@
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\bin\Debug\net6.0\Cloudstine.Core.Repository.deps.json
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\bin\Debug\net6.0\Cloudstine.Core.Repository.dll
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\bin\Debug\net6.0\Cloudstine.Core.Repository.pdb
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.csproj.AssemblyReference.cache
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.AssemblyInfoInputs.cache
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.AssemblyInfo.cs
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.csproj.CoreCompileInputs.cache
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.dll
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\refint\Cloudstine.Core.Repository.dll
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\Cloudstine.Core.Repository.pdb
+D:\Taxblock\Cloudstine.Core\Cloudstine.Core.Repository\obj\Debug\net6.0\ref\Cloudstine.Core.Repository.dll
