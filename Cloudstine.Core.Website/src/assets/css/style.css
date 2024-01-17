@@ -9217,7 +9217,8 @@ p {
 /*         Footer                */
 /*===============================*/
 .footer {
-  background: #202942;
+  /* background: #202942; */
+  background: #9938A5 !important;
   position: relative;
   color: #adb5bd;
 }
