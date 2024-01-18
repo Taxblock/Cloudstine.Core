@@ -140,4 +140,9 @@ export class DataGridComponent implements OnInit {
     this.tableDataSource = data;
   }
 
+  onGridReady(params: any) {
+    this.gridApi = params.api;
+    this.gridApi.sizeColumnsToFit();
+  }
+
 }
