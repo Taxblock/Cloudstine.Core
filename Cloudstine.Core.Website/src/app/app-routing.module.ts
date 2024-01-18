@@ -78,18 +78,10 @@ const routes: Routes = [
   },
 
   {
-    path: 'user-management',
-    loadChildren: () =>
-      import('./website/user-managemen/user-management.module').then(
-        (m) => m.UserManagementModule
-      ) 
-  }, 
-
-  {
     path: 'user',
     loadChildren: () =>
       import('./website/user-management/user-management.module').then(
-        (m) => m.usermanagementModule
+        (m) => m.userManagementModule
       ) 
   }, 
   
