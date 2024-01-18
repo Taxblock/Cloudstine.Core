@@ -32,6 +32,7 @@ import { AgGridModule } from "ag-grid-angular";
   imports: [CommonModule, NgxTinySliderModule,AgGridModule],
 
   exports: [
+    DataGridComponent,
     ActivePromocodeComponent,
     SanitizeHtmlPipe,
     TreeComponent,

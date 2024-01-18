@@ -1,28 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { ActionColumn, TableColumn } from 'app/shared/data-grid/model/data-grid-column.model';
 
 
 @Component({
-  selector: 'app-user-management',
+  selector: 'user',
   templateUrl: './user-management.component.html',
-  styleUrls: ['./user-management.component.scss']
+  styleUrls: ['./user-management.component.scss'],
 })
-export class UserManagementComponent implements OnInit {
-
+export class usermanagementcomponent implements OnInit {
   isMultipleSelected: boolean = false;
   selectedUsers: any[];
   dataSource: any[];
   data: any[];
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(
+   
+  ) {
+   
   }
 
-  addUserClick() {
+  ngOnInit() {
+
 
   }
 
-  userTableColumns: TableColumn[] = [
+ userTableColumns: TableColumn[] = [
     {
       field: 'SrNo',
       headerName: 'Sr No',

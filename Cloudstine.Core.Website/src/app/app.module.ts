@@ -26,7 +26,7 @@ import { APP_BASE_HREF } from '@angular/common';
     FooterComponentModule,
     NgxTinySliderModule,
     CoreModule,
-    SharedModule,
+    //SharedModule,
    
  
     ToastrModule.forRoot(),
