@@ -11,7 +11,6 @@ import { ActionColumn, TableColumn } from './model/data-grid-column.model';
   styleUrls: ['./data-grid.component.scss']
 })
 export class DataGridComponent implements OnInit {
-
   @Input() isEditable = false;
   @Input() isSortable = false;
   @Input() isFilterable = false;
@@ -25,6 +24,8 @@ export class DataGridComponent implements OnInit {
   @Input() actionButtons: ActionColumn[] = [];
   @Input() defaultPageSize: number;
 
+
+
   @Output() selectedRows: EventEmitter<any> = new EventEmitter<any>();
   @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
   @Output() actionButton: EventEmitter<any> = new EventEmitter<any>();
@@ -33,13 +34,16 @@ export class DataGridComponent implements OnInit {
   @Input() set tableData(data: any[]) {
     this.setTableDataSource(data);
   }
+
   tableDataSource: [] = [];
   displayedColumns: TableColumn[] = [];
+  searchText: string = '';
 
   gridOptions: GridOptions;
   gridApi: GridApi;
-  constructor() { }
 
+  constructor() {
+  }
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['tableColumns']) {
       this.displayedColumns = this.tableColumns;
@@ -73,6 +77,32 @@ export class DataGridComponent implements OnInit {
    
   }
   ngOnInit(): void {
+    this.initializeColumns();
+    // set grid options configuration
+    this.gridOptions = <GridOptions>{
+      suppressCellFocus: true,
+      pagination: this.isPageable,
+      paginationPageSize: this.defaultPageSize,
+      defaultColDef: {
+        editable: this.isEditable,
+        sortable: this.isSortable,
+        resizable: this.isResizable,
+        filter: this.isColumnFilterable,
+        flex: 1,
+        minWidth: 150,
+
+
+      },
+
+      getRowStyle(params) {
+        if (params.data.isActive && params.data.cycleType) {
+          return { 'background-color': '#aae796' }
+        } else if (!params.data.isActive && params.data.cycleType) {
+          return { 'color': 'red' }
+        }
+        return null;
+      }
+    };
   }
 
   initializeColumns(): void {
@@ -91,8 +121,7 @@ export class DataGridComponent implements OnInit {
       maxWidth: 250,
       sortable: false,
 
-     // cellRenderer: ActionRendererComponent,
-
+      cellRenderer: ActionRendererComponent,
       cellRendererParams: {
         actions: this.actionColumns,
         clicked: (data: any, action: string) => {
@@ -119,6 +148,19 @@ export class DataGridComponent implements OnInit {
     }
   }
 
+  setTableDataSource(data: any) {
+    this.tableDataSource = data;
+  }
+
+  onGridReady(params: any) {
+    this.gridApi = params.api;
+    this.gridApi.sizeColumnsToFit();
+  }
+
+  applyFilter() {
+    this.gridApi.setQuickFilter(this.searchText);
+  }
+
   toggleSelectedRow(event: SelectionChangedEvent) {
     let selectedNodes = event.api.getSelectedNodes();
     let selectedRows: Array<any> = [];
@@ -134,10 +176,6 @@ export class DataGridComponent implements OnInit {
 
   emitActionButton(action: string) {
     this.actionButton.emit(action);
-  }
-
-  setTableDataSource(data: any) {
-    this.tableDataSource = data;
   }
 
 }
