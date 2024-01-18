@@ -76,7 +76,14 @@ const routes: Routes = [
         (m) => m.ChangePasswordModule
       ),
   },
- 
+
+  {
+    path: 'user-management',
+    loadChildren: () =>
+      import('./website/user-management/user-management.module').then(
+        (m) => m.UserManagementModule
+      )
+  }, 
   {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
