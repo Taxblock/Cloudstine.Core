@@ -32,17 +32,32 @@
         id="menu-box"
         style="display: block"
       >
-       
+      <li class="list-inline-item mb-0" >
+        <div class="dropdown dropdown-primary">
+          <button
+            type="button"
+            class="btn btn-outline-cloud dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            (click)="OnSignInClick()"
+            
+          >
+            
+            Sign-Up <i class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+      </li>
         <li class="list-inline-item mb-0" >
           <div class="dropdown dropdown-primary">
             <button
               type="button"
-              class="btn btn-primary dropdown-toggle"
+              class="btn btn-cloud dropdown-toggle"
               data-bs-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
               (click)="OnSignInClick()"
-              style="border-radius: 20px"
+              
             >
               <!-- <i class="fa fa-sign-in"></i> -->
               Sign-In

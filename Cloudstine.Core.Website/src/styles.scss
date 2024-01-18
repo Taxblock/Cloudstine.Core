@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+
 .scrollbox {
     overflow-y: scroll;
   
@@ -117,4 +121,29 @@
     transform: rotate(1turn);
     opacity: 1;
   }
+
+  
+}
+.btn-cloud{
+  background-color:#9938A5;
+  border: 1px solid #9938A5;
+  color: #fff;
+}
+.btn-cloud:hover{
+  background-color:#883194;
+  border: 1px solid #883194;
+  color: #fff;
+}
+.btn-outline-cloud{
+  background-color:#fff;
+  border: 1px solid #9938A5;
+  color: #9938A5;
+}
+.btn-outline-cloud:hover{
+  background-color:#883194;
+  border: 1px solid #883194;
+  color: #fff;
+}
+#topnav .navigation-menu>li>a:active, #topnav .navigation-menu>li>a:hover{
+  color: #9938A5 !important;
 }
