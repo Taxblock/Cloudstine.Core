@@ -1,0 +1,179 @@
+<div class="row" style="margin-top: 80px;">
+    <h4 class="col-12 p-2" style="border-bottom: 2px solid rgb(230, 230, 230);">
+        <a href=""><i class="uil uil-multiply" style="color: black;"></i></a>
+        My Profile
+    </h4>
+</div>
+<div class="card-body mt-2 mb-3">
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-body">
+            <h6 class="col-12 p-2"><b>Personal Info</b></h6>
+            <form [formGroup]="PersonalInfoForm">
+                <div class="mt-1">
+                    <div class="row">
+                        <div class="col-sm-3 form-group">
+                            <label>Customer ID*</label>
+                            <input class="form-control" type="text" formControlName="UserId"
+                                placeholder="Customer ID" />
+                            <div *ngIf="(PersonalInfoForm.get('UserId').dirty || PersonalInfoForm.get('UserId').touched || submitted) && PersonalInfoForm.get('UserId').invalid"
+                                class="text-danger">
+                                Please Enter Customer ID
+                            </div>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label>Name*</label>
+                            <input class="form-control" type="text" formControlName="Name" placeholder="Name" />
+                            <div *ngIf="(PersonalInfoForm.get('Name').dirty || PersonalInfoForm.get('Name').touched || submitted) && PersonalInfoForm.get('Name').invalid"
+                                class="text-danger">
+                                Please Enter Valid Name
+                            </div>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label>Mobile Number*</label>
+                            <input class="form-control" type="text" formControlName="MobileNo"
+                                placeholder="Mobile Number" maxlength="10" (keypress)="onlyNumberKey($event)" />
+                            <div *ngIf="(PersonalInfoForm.get('MobileNo').dirty || PersonalInfoForm.get('MobileNo').touched || submitted) && PersonalInfoForm.get('MobileNo').invalid"
+                                class="text-danger">
+                                Please Enter Valid Mobile Number
+                            </div>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label>Email ID*</label>
+                            <input class="form-control" type="text" formControlName="EmailId" placeholder="Email ID" />
+                            <div *ngIf="(PersonalInfoForm.get('EmailId').dirty || PersonalInfoForm.get('EmailId').touched || submitted) && PersonalInfoForm.get('EmailId').invalid"
+                                class="text-danger">
+                                Please Enter Valid Email ID
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row mx-1 mt-1">
+            <h6 class="col-12 p-2"><b>Billing Info</b></h6>
+        </div>
+        <form [formGroup]="BillingInfo">
+            <div class="row">
+                <div class="col-sm-3 form-group">
+                    <label>GSTN</label>
+                    <input class="form-control" type="text" formControlName="GSTINNO" placeholder="GSTIN" />
+                    <div *ngIf="(BillingInfo.get('GSTINNO').dirty || BillingInfo.get('GSTINNO').touched || submitted) && BillingInfo.get('GSTINNO').invalid"
+                        class="text-danger">
+                        Please Enter Valid GSTN Number
+                    </div>
+                </div>
+                <div class="col-sm-3 form-group">
+                    <label>PAN*</label>
+                    <input class="form-control" type="text" formControlName="PANNO" placeholder="PAN"
+                        style="text-transform:uppercase" />
+                    <div *ngIf="(BillingInfo.get('PANNO').dirty || BillingInfo.get('PANNO').touched || submitted) && BillingInfo.get('PANNO').invalid"
+                        class="text-danger">
+                        Please Enter Valid PAN Number
+                    </div>
+                </div>
+                <div class="col-sm-4 form-group">
+                    <label>Organisation Name</label>
+                    <input class="form-control" type="text" formControlName="OrganisationName"
+                        placeholder="Organisation Name" maxlength="10" style="width:600px;" />
+                    <div *ngIf="(BillingInfo.get('OrganisationName').dirty || BillingInfo.get('OrganisationName').touched || submitted) && BillingInfo.get('OrganisationName').invalid"
+                        class="text-danger">
+                        Please Enter Organisation Name
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row mt-3 mb-3">
+            <div class="col-sm-3 form-group">
+                <label>Flat No./Door No. *</label>
+                <input class="form-control" type="text" formControlName="FlatDoor" placeholder="FlatDoor" />
+                <div *ngIf="(BillingInfo.get('FlatDoor').dirty || BillingInfo.get('FlatDoor').touched || submitted) && BillingInfo.get('FlatDoor').invalid"
+                    class="text-danger">
+                    Please Enter Flat No./Door No.
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>Premises/Building Name*</label>
+                <input class="form-control" type="text" formControlName="BuildingName" placeholder="Building Name" />
+                <div *ngIf="(BillingInfo.get('BuildingName').dirty || BillingInfo.get('BuildingName').touched || submitted) && BillingInfo.get('BuildingName').invalid"
+                    class="text-danger">
+                    Please Enter Building Name
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>Road/Street/lane*</label>
+                <input class="form-control" type="text" formControlName="RoadStreet" placeholder="Road Street" />
+                <div *ngIf="(BillingInfo.get('RoadStreet').dirty || BillingInfo.get('RoadStreet').touched || submitted) && BillingInfo.get('RoadStreet').invalid"
+                    class="text-danger">
+                    Please Enter Road/Street/lane
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>Area/Loacation*</label>
+                <input class="form-control" type="text" formControlName="AreaLocality" placeholder="Area Locality" />
+                <div *ngIf="(BillingInfo.get('AreaLocality').dirty || BillingInfo.get('AreaLocality').touched || submitted) && BillingInfo.get('AreaLocality').invalid"
+                    class="text-danger">
+                    Please Enter Area/Location
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-3 form-group">
+                <label>Town/City/District*</label>
+                <input class="form-control" type="text" formControlName="City" placeholder="Town/City/District" />
+                <div *ngIf="(BillingInfo.get('City').dirty || BillingInfo.get('City').touched || submitted) && BillingInfo.get('City').invalid"
+                    class="text-danger">
+                    Please Enter Town/City/District
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>PIN Code*</label>
+                <input class="form-control" type="number" formControlName="PINCode" placeholder="PIN Code"
+                    (keypress)="onlyNumberKey($event)" (focusout)="onPincodeFocusOut($event)"
+                    onfocusout="value=value.trim();" />
+                <div *ngIf="(BillingInfo.get('PINCode').dirty || BillingInfo.get('PINCode').touched || submitted) && BillingInfo.get('PINCode').invalid"
+                    class="text-danger">
+                    Please Enter PIN Code
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>State</label>
+                <select class="form-control" placeholder="State" formControlName="StateId">
+                    <option value="" selected disabled hidden>
+                        Select State
+                    </option>
+                    <option *ngFor="
+                    let state of addressSelectList.stateList" [value]="state.stateId">
+                        {{state.name}}
+                    </option>
+                </select>
+                <div *ngIf="(BillingInfo.get('StateId').dirty || BillingInfo.get('StateId').touched || submitted) && BillingInfo.get('StateId').invalid"
+                    class="text-danger">
+                    Please Select the State
+                </div>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label>Required GSTN Invoice*</label>
+                <select class="form-control" placeholder="Required GSTN Invoice" formControlName="IsGSTInvoiceRequired">
+                    <option value="1" selected>
+                        No
+                    </option>
+                    <option value="2">
+                        Yes
+                    </option>
+                </select>
+                <div *ngIf="(BillingInfo.get('IsGSTInvoiceRequired').dirty || BillingInfo.get('IsGSTInvoiceRequired').touched || submitted) && BillingInfo.get('IsGSTInvoiceRequired').invalid"
+                    class="text-danger">
+                    Please Required GSTN Invoice
+                </div>
+            </div>
+            <div class="row mb-3 mt-4">
+                <hr>
+                <div class="col-12 mx-2 " align="left">
+                    <button type="submit" class="btn custom-btn"
+                        style="background-color: #AD60B7;color: white;border: none"
+                        (click)="SaveUserProfileData()">Save</button>
+                    <a class="btn custom-btn"
+                        style="background-color: #EBD7ED;color: #AD60B7;border: none ;margin-left: 15px; padding:7px 11px"
+                        href="" role="button"> Cancel </a>
+                </div>
+            </div>

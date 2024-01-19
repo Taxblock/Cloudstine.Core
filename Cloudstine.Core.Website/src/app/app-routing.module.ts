@@ -76,11 +76,20 @@ const routes: Routes = [
         (m) => m.ChangePasswordModule
       ),
   },
+  {
+    path: 'user-profile',
+    loadChildren: () =>
+    import('./website/user-profile/user-profile.module').then(
+      (m) => m.UserProfileModule
+    ),
+  },
  
   {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
-  },
+  }
+
+ 
   
 ];
 
