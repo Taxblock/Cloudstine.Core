@@ -3109,7 +3109,7 @@ p {
     justify-content: center;
   }
   #topnav .navigation-menu > .has-submenu:hover .menu-arrow {
-    top: 33px !important;
+    top: 33px;
   }
   #topnav .navigation-menu > .has-submenu.active .menu-arrow {
     top: 30px;

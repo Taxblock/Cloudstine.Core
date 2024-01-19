@@ -1,6 +1,6 @@
-<div >
+<div>
   <header id="topnav" class="defaultscroll sticky" *ngIf="showNav">
-    <div class="container-flued" style="padding: 0px 20px;border-bottom: 2px solid #692c72;">
+    <div class="container-flued" style="padding: 0px 20px;border-bottom: 2px solid #9938A5;">
       <!-- Logo container-->
       <a class="logo logo-lg" routerLink="/home">
         <img src="assets/images/taxblock/cloud.png" height="35" class="" alt="cloud" />
@@ -8,9 +8,9 @@
       <a class="logo logo-sm m-0" routerLink="/home">
         <img src="assets/images/taxblock/cloud.png" height="25" class="" alt="cloud" />
       </a>
-      
+
       <!-- Logo End -->
-  
+
       <!-- End Logo container-->
       <div class="menu-extras">
         <div class="menu-item">
@@ -25,46 +25,28 @@
           <!-- End mobile menu toggle-->
         </div>
       </div>
-  
+
       <!--Login button Start-->
-      <ul
-        class="buy-button list-inline m-0"
-        id="menu-box"
-        style="display: block"
-      >
-      <li class="list-inline-item mb-0" >
-        <div class="dropdown dropdown-primary">
-          <button
-            type="button"
-            class="btn btn-outline-cloud dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            (click)="OnSignInClick()"
-            
-          >
-            
-            Sign-Up <i class="fa fa-arrow-right"></i>
-          </button>
-        </div>
-      </li>
-        <li class="list-inline-item mb-0" >
+      <ul class="buy-button list-inline m-0" id="menu-box" style="display: block">
+        <li class="list-inline-item mb-0">
           <div class="dropdown dropdown-primary">
-            <button
-              type="button"
-              class="btn btn-cloud dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              (click)="OnSignInClick()"
-              
-            >
+            <button type="button" class="btn btn-outline-cloud dropdown-toggle" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" (click)="OnSignInClick()">
+
+              Sign-Up <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </li>
+        <li class="list-inline-item mb-0">
+          <div class="dropdown dropdown-primary">
+            <button type="button" class="btn btn-cloud dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false" (click)="OnSignInClick()">
               <!-- <i class="fa fa-sign-in"></i> -->
               Sign-In
             </button>
           </div>
         </li>
-  
+        
         <!-- <li class="list-inline-item ps-1 mb-0" *ngIf="!isLogin">
           <a href="https://itax.taxblock.in/#/login" title="Login/Sign-Up">
             <div class="btn btn-pills btn-primary viewPromo">Sign In/Sign Up</div>
@@ -73,66 +55,15 @@
         </li> -->
       </ul>
       <!--Login button End-->
-  
+
       <div id="navigation">
         <!-- Navigation Menu-->
         <ul class="navigation-menu">
           <li onclick="toggleMenu()">
-            <a routerLink="home" routerLinkActive="active" class="cool-link"
-              >Home</a
-            >
+            <a routerLink="home" routerLinkActive="active" class="cool-link">Home</a>
           </li>
-          <li onclick="toggleMenu()">
-            <a routerLink="/about-us" routerLinkActive="active" class="cool-link"
-              >About Us</a
-            >
-          </li>
-          <li onclick="toggleMenu()">
-            <a routerLink="/services" routerLinkActive="active" class="cool-link"
-              >Services</a
-            >
-          </li>
-         
-          <!-- <li onclick="toggleMenu()">
-            <a routerLink="/skill-hub" routerLinkActive="active" class="cool-link"
-              >SKILL HUB <sup class="blink">NEW</sup></a
-            >
-          </li> -->
-  
-          <!-- <li onclick="toggleMenu()">
-            <a
-              routerLink="/book-an-experts"
-              routerLinkActive="active"
-              class="cool-link"
-              >Financial Doctor</a
-            >
-          </li> -->
-  
-          <li onclick="toggleMenu()">
-            <a
-              routerLink="/tools"
-              routerLinkActive="active"
-              class="cool-link"
-              >Tools <sup class="blink">NEW</sup></a
-            >
-          </li>
-  
-          <li onclick="toggleMenu()">
-            <a
-              routerLink="/contact-us"
-              routerLinkActive="active"
-              class="cool-link"
-              >Contact</a
-            >
-          </li>
-          <li onclick="toggleMenu()">
-            <a routerLink="/careers" routerLinkActive="active" class="cool-link"
-              >Career</a
-            >
-          </li>
-  
           <li class="has-submenu parent-menu-item drop">
-            <a>More</a><span class="menu-arrow"></span>
+            <a>Company</a><span class="menu-arrow"></span>
             <ul class="submenu">
               <!-- <li onclick="toggleMenu()">
                 <a
@@ -143,59 +74,208 @@
                 >
               </li> -->
               <li onclick="toggleMenu()">
-                <a routerLink="/blogs" routerLinkActive="active" class="cool-link"
-                  >Blogs</a
-                >
+                <a routerLink="/blogs" routerLinkActive="active" class="cool-link">Blogs</a>
               </li>
               <li onclick="toggleMenu()">
-                <a routerLink="/news" routerLinkActive="active" class="cool-link"
-                  >News</a
-                >
+                <a routerLink="/news" routerLinkActive="active" class="cool-link">News</a>
               </li>
               <li>
-                <a routerLink="/faqs" routerLinkActive="active" class="cool-link"
-                  >FAQ's</a
-                >
+                <a routerLink="/faqs" routerLinkActive="active" class="cool-link">FAQ's</a>
               </li>
               <li onclick="toggleMenu()">
-                <a
-                  routerLink="/get-help"
-                  routerLinkActive="active"
-                  class="cool-link"
-                  >Get Help</a
-                >
+                <a routerLink="/get-help" routerLinkActive="active" class="cool-link">Get Help</a>
               </li>
             </ul>
           </li>
-  
-          <li onclick="toggleMenu()" class="nodrop">
-            <a routerLink="/careers" routerLinkActive="active" class="cool-link"
-              >Career</a
-            >
+          <li class="has-submenu parent-menu-item drop">
+            <a>Digital Applications</a><span class="menu-arrow"></span>
+
+            <div class="submenu megamenu" style="white-space: wrap !important;">
+              <div class="container">
+                <div class="row px-4" style="border-bottom: 1px solid #9938A5;">
+                  <div class="col-md-12">
+                    <h4>Income Tax</h4>
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">ITR Filling</h4>
+                        <p class="mb-0">ITR Filling by Advisor</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">Self Filling</h4>
+                        <p class="mb-0">Self ITR Filling</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">E-POI</h4>
+                        <p class="mb-0">Proof of Investment Verification Application</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">Tax Engine</h4>
+                        <p class="mb-0">API for Tax related calculations</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">ERI-API</h4>
+                        <p class="mb-0">API for ITR filling by E-Return Intermarries </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row px-4" style="border-bottom: 1px solid #9938A5;">
+                  <div class="col-md-12 mt-3">
+                    <h4>TDS</h4>
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">E-POI</h4>
+                        <p class="mb-0">Proof of Investment Verification Application</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">Smart TDS</h4>
+                        <p class="mb-0">File your TDS return smartly on cloud application</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">E-Form 16</h4>
+                        <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row px-4">
+                  <div class="col-md-12 mt-3">
+                    <h4>GST</h4>
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10">
+                        <h4 class="mb-0">E-Way Bill</h4>
+                        <p class="mb-0">Electronic Way bill for movement of goods</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 windows-border">
+                    <div class="row ">
+                      <div class="col-2" style="display: flex;align-items: center;">
+                        <i class="fa fa-user h2" style="color: #9938A5 !important;"></i>
+                      </div>
+                      <div class="col-10" >
+                        <h4 class="mb-0">E-Envoice</h4>
+                        <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+
           </li>
-          <li onclick="toggleMenu()" class="nodrop">
-            <a routerLink="/blogs" routerLinkActive="active" class="cool-link"
-              >Blogs</a
-            >
+          <li onclick="toggleMenu()">
+            <a routerLink="/services" routerLinkActive="active" class="cool-link">Services</a>
           </li>
-          <li onclick="toggleMenu()" class="nodrop">
-            <a routerLink="/news" routerLinkActive="active" class="cool-link"
-              >News</a
+
+          <!-- <li onclick="toggleMenu()">
+            <a routerLink="/skill-hub" routerLinkActive="active" class="cool-link"
+              >SKILL HUB <sup class="blink">NEW</sup></a
             >
-          </li>
-          <li onclick="toggleMenu()" class="nodrop">
-            <a routerLink="/faqs" routerLinkActive="active" class="cool-link"
-              >FAQ's</a
-            >
-          </li>
-          <li onclick="toggleMenu()" class="nodrop">
+          </li> -->
+
+          <!-- <li onclick="toggleMenu()">
             <a
-              href="assets/images/taxblock/ITAXUserGuide.pdf"
-              target="_blank"
+              routerLink="/book-an-experts"
               routerLinkActive="active"
               class="cool-link"
-              >Get Help</a
+              >Financial Doctor</a
             >
+          </li> -->
+
+          <li onclick="toggleMenu()">
+            <a routerLink="/tools" routerLinkActive="active" class="cool-link">Tools <sup class="blink">NEW</sup></a>
+          </li>
+
+          <li onclick="toggleMenu()">
+            <a routerLink="/contact-us" routerLinkActive="active" class="cool-link">Contact</a>
+          </li>
+          <li onclick="toggleMenu()">
+            <a routerLink="/careers" routerLinkActive="active" class="cool-link">Career</a>
+          </li>
+
+          
+
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/careers" routerLinkActive="active" class="cool-link">Career</a>
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/blogs" routerLinkActive="active" class="cool-link">Blogs</a>
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/news" routerLinkActive="active" class="cool-link">News</a>
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a routerLink="/faqs" routerLinkActive="active" class="cool-link">FAQ's</a>
+          </li>
+          <li onclick="toggleMenu()" class="nodrop">
+            <a href="assets/images/taxblock/ITAXUserGuide.pdf" target="_blank" routerLinkActive="active"
+              class="cool-link">Get Help</a>
           </li>
         </ul>
         <!--end navigation menu-->
@@ -207,45 +287,23 @@
   <!--end header-->
   <!-- Navbar End -->
   <!-- Offcanvas Start -->
-  <div
-    class="offcanvas offcanvas-end bg-white shadow"
-    tabindex="-1"
-    id="offcanvasRight"
-    aria-labelledby="offcanvasRightLabel"
-  >
+  <div class="offcanvas offcanvas-end bg-white shadow" tabindex="-1" id="offcanvasRight"
+    aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header p-4 border-bottom">
       <h5 id="offcanvasRightLabel" class="mb-0">
-        <img
-          src="../assets/images/logo-dark.png"
-          height="24"
-          class="light-version"
-          alt="logo-dark"
-        />
-        <img
-          src="../assets/images/logo-light.png"
-          height="24"
-          class="dark-version"
-          alt="logo-light"
-        />
+        <img src="../assets/images/logo-dark.png" height="24" class="light-version" alt="logo-dark" />
+        <img src="../assets/images/logo-light.png" height="24" class="dark-version" alt="logo-light" />
       </h5>
-      <button
-        type="button"
-        class="btn-close d-flex align-items-center text-dark"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      >
+      <button type="button" class="btn-close d-flex align-items-center text-dark" data-bs-dismiss="offcanvas"
+        aria-label="Close">
         <i class="uil uil-times fs-4"></i>
       </button>
     </div>
     <div class="offcanvas-body p-4">
       <div class="row">
         <div class="col-12">
-          <img
-            src="../assets/images/contact.svg"
-            class="img-fluid d-block mx-auto"
-            style="max-width: 256px"
-            alt="contact"
-          />
+          <img src="../assets/images/contact.svg" class="img-fluid d-block mx-auto" style="max-width: 256px"
+            alt="contact" />
           <div class="card border-0 mt-5" style="z-index: 1">
             <div class="card-body p-0">
               <form method="post" name="myForm" onsubmit=" validateForm()">
@@ -254,74 +312,43 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label class="form-label"
-                        >Your Name <span class="text-danger">*</span></label
-                      >
+                      <label class="form-label">Your Name <span class="text-danger">*</span></label>
                       <div class="form-icon position-relative">
                         <i data-feather="user" class="fea icon-sm icons"></i>
-                        <input
-                          name="name"
-                          id="name"
-                          type="text"
-                          class="form-control ps-5"
-                          placeholder="Name :"
-                        />
+                        <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Name :" />
                       </div>
                     </div>
                   </div>
-  
+
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label class="form-label"
-                        >Your Email <span class="text-danger">*</span></label
-                      >
+                      <label class="form-label">Your Email <span class="text-danger">*</span></label>
                       <div class="form-icon position-relative">
                         <i data-feather="mail" class="fea icon-sm icons"></i>
-                        <input
-                          name="email"
-                          id="email"
-                          type="email"
-                          class="form-control ps-5"
-                          placeholder="Email :"
-                        />
+                        <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Email :" />
                       </div>
                     </div>
                   </div>
                   <!--end col-->
-  
+
                   <div class="col-12">
                     <div class="mb-3">
                       <label class="form-label">Subject</label>
                       <div class="form-icon position-relative">
                         <i data-feather="book" class="fea icon-sm icons"></i>
-                        <input
-                          name="subject"
-                          id="subject"
-                          class="form-control ps-5"
-                          placeholder="subject :"
-                        />
+                        <input name="subject" id="subject" class="form-control ps-5" placeholder="subject :" />
                       </div>
                     </div>
                   </div>
                   <!--end col-->
-  
+
                   <div class="col-12">
                     <div class="mb-3">
-                      <label class="form-label"
-                        >Comments <span class="text-danger">*</span></label
-                      >
+                      <label class="form-label">Comments <span class="text-danger">*</span></label>
                       <div class="form-icon position-relative">
-                        <i
-                          data-feather="message-circle"
-                          class="fea icon-sm icons clearfix"
-                        ></i>
-                        <textarea
-                          name="comments"
-                          id="comments"
-                          rows="4"
-                          class="form-control ps-5"
-                          placeholder="Message :"
-                        ></textarea>
+                        <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
+                        <textarea name="comments" id="comments" rows="4" class="form-control ps-5"
+                          placeholder="Message :"></textarea>
                       </div>
                     </div>
                   </div>
@@ -329,12 +356,7 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="d-grid">
-                      <button
-                        type="submit"
-                        id="submit"
-                        name="send"
-                        class="btn btn-primary"
-                      >
+                      <button type="submit" id="submit" name="send" class="btn btn-primary">
                         Send Message
                       </button>
                     </div>
