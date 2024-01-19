@@ -1,21 +1,27 @@
-<!-- <div style="height: 100vh; margin-top: 100px;">
-hiiiiiiiiiiiiiiiiiiiiiiii
-</div> -->
-<div style="margin-top: 100px;" class="row d-flex">
-    <h6 class="mt-2 col-10"><b>User Management</b></h6>
-    <h6 class="mt-2 col-2 " style="text-align: end; cursor: pointer;" data-toggle="tooltip" title="Close"><i
-        class="uil uil-multiply"></i></h6>
-  </div>
-<div class="row border-top">
-    <div class="col-md-6">
-      <h6 class="mt-3">User</h6>
-    </div>
-    <div class="col-md-6" align="right"><button class="btn btn-outline-primary mt-2" style="background-color: #f8f9fa"
-      (click)="openAddUserDialog()">+
-        Add Employee</button>
-      </div>
+<div style="margin-top: 70px; margin-left: 5px;" class="row d-flex">
+  <h6 class=" col-10 p-2" style="border-bottom: 2px solid rgb(230, 230, 230);"><b>User Management</b></h6>
+  <h6 class="col-2 p-2" style="text-align: end; cursor: pointer;border-bottom: 2px solid rgb(230, 230, 230);"
+      data-toggle="tooltip" title="Close"><i class="uil uil-multiply"></i></h6>
 </div>
-<app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
+<header class="defaultscroll sticky">
+  <div class="container-fluid">
+    <div id="navigation">
+      <ul class="navigation-menu" style="border-bottom: 0px solid rgb(230, 230, 230); display: flex; color: black !important; font-size: 15px; list-style: none;">
+        <li>
+          <a routerLink="/user/users" routerLinkActive="active" style="color: black;">USERS</a>
+        </li>
+        <li>
+          <a routerLink="/user/access-control" routerLinkActive="active" style="color: black;">ACCESS CONTROL</a>
+        </li>
+      </ul>
+    </div>
+   
+  </div>
+</header>
+
+<router-outlet></router-outlet>
+
+<!-- <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
   [actionColumns]="userActionColumns" [rowSelection]="rowSelection" [isEditable]="false" [isSortable]="true"
   [isFilterable]="false" [isColumnFilterable]="false" [isResizable]="false" [isPageable]="true" [defaultPageSize]="10"
   (selectedRows)="selectEmployee($event)" (rowAction)="onRowAction($event)" (actionButton)="onActionButton($event)">
@@ -30,7 +36,8 @@ width: -webkit-fill-available; bottom:0;background: #fff;padding: 12px;">
   <button type="button" rippleEffect class="btn btn-danger py-0 px-3 me-3"
     (click)="multipleEmployeeStatusChange(0)">Inactive</button>
 
-</div>
+</div> -->
+
 
 
  
