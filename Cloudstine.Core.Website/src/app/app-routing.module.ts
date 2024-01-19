@@ -85,6 +85,14 @@ const routes: Routes = [
   },
  
   {
+    path: 'user',
+    loadChildren: () =>
+      import('./website/user-management/user-management.module').then(
+        (m) => m.userManagementModule
+      ) 
+  }, 
+  
+  {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
   }

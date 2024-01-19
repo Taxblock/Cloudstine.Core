@@ -1,6 +1,8 @@
 #topnav .logo {
   float: left;
   color: #ffffff !important;
+  padding: 0 !important;
+  line-height: 55px !important;
 }
 .logo-sm{
   display: none;
@@ -16,6 +18,8 @@
   justify-content: center;
   padding: 0;
 }
+
+
 
 .count {
   background: white;
@@ -73,7 +77,7 @@
 
 .cool-link {
   display: inline-block;
-  color: #537ef4;
+  color: #9938A5;
   text-decoration: none;
 }
 
@@ -82,7 +86,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: #537ef4;
+  background: #9938A5;
   transition: width 0.3s;
 }
 
@@ -110,5 +114,53 @@
   }
   100% {
     color:darkorange;
+  }
+}
+#topnav .navigation-menu .has-submenu .menu-arrow{
+  top:25px !important
+}
+// #topnav .navigation-menu .has-submenu .menu-arrow :hover{
+//   top:30px !important
+// }
+#topnav .navigation-menu > .has-submenu:hover .menu-arrow {
+  top: 30px !important;
+}
+#topnav .navigation-menu > .has-submenu.active .menu-arrow {
+  top: 25px;
+}
+.hov-border:hover{
+  //border-bottom: 1px solid #9938A5;
+}
+
+
+
+
+$border-color: #9938A5; // Set your border color
+$border-width: 4px;     // Set your border width
+$glow-size: 10px;       // Set the size of the glow
+
+.windows-border {
+  padding: 10px; // Adjust padding as needed
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid $border-width $border-color;
+    background-color: #ebd7ed;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+  }
+
+  &:hover:before {
+    opacity: 1;
   }
 }
