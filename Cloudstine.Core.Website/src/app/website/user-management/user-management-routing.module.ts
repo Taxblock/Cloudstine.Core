@@ -6,7 +6,24 @@ const routes: Routes = [
   {
     path: '',
     component: userManagementcomponent,
-  },
+    children: [
+      {
+        path: '',
+        redirectTo: 'users',
+        pathMatch: 'full'
+      },
+      {
+        path: 'users',
+        loadChildren:() => import('./users/users.module').then(m => m.UsersModule)
+      },
+      {
+        path: 'access-control',
+        loadChildren:() => import('./access-control/access-control.module').then(m => m.AccessControlModule)
+      }
+
+    ]
+  }
+
 ];
 
 @NgModule({
