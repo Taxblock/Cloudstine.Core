@@ -1,7 +1,7 @@
-<div style="height: 100vh; margin-top: 100px;">
+<!-- <div style="height: 100vh; margin-top: 100px;">
 hiiiiiiiiiiiiiiiiiiiiiiii
-</div>
-<div class="row d-flex">
+</div> -->
+<div style="margin-top: 100px;" class="row d-flex">
     <h6 class="mt-2 col-10"><b>User Management</b></h6>
     <h6 class="mt-2 col-2 " style="text-align: end; cursor: pointer;" data-toggle="tooltip" title="Close"><i
         class="uil uil-multiply"></i></h6>
@@ -10,15 +10,27 @@ hiiiiiiiiiiiiiiiiiiiiiiii
     <div class="col-md-6">
       <h6 class="mt-3">User</h6>
     </div>
-    <!-- <div class="col-md-6" align="right"><button class="btn btn-outline-primary mt-2" style="background-color: #f8f9fa"
-        (click)="addUserClick()">+
-        Add Employee</button></div> -->
+    <div class="col-md-6" align="right"><button class="btn btn-outline-primary mt-2" style="background-color: #f8f9fa"
+      (click)="openAddUserDialog()">+
+        Add Employee</button>
+      </div>
 </div>
 <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
   [actionColumns]="userActionColumns" [rowSelection]="rowSelection" [isEditable]="false" [isSortable]="true"
   [isFilterable]="false" [isColumnFilterable]="false" [isResizable]="false" [isPageable]="true" [defaultPageSize]="10"
   (selectedRows)="selectEmployee($event)" (rowAction)="onRowAction($event)" (actionButton)="onActionButton($event)">
 </app-data-grid>
+<div class="col-12 border-top" align="left" *ngIf="isMultipleSelected" style="position: fixed;text-align: center;
+width: -webkit-fill-available; bottom:0;background: #fff;padding: 12px;">
+
+  <button type="button" rippleEffect class="btn btn-success py-0 px-3 me-3" (click)="downloadClick()">Download
+    List</button>
+  <button type="button" rippleEffect class="btn btn-success py-0 px-3 me-3"
+    (click)="multipleEmployeeStatusChange(1)">Active</button>
+  <button type="button" rippleEffect class="btn btn-danger py-0 px-3 me-3"
+    (click)="multipleEmployeeStatusChange(0)">Inactive</button>
+
+</div>
 
 
  
