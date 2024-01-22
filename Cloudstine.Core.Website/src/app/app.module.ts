@@ -12,12 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AutoLogoutService } from './core/services/autoLogout.service';
 import { APP_BASE_HREF } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserProfileComponent } from './website/user-profile/user-profile.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UserProfileComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -26,8 +28,7 @@ import { APP_BASE_HREF } from '@angular/common';
     FooterComponentModule,
     NgxTinySliderModule,
     CoreModule,
-    //SharedModule,
-   
+    ReactiveFormsModule,
  
     ToastrModule.forRoot(),
   ],
