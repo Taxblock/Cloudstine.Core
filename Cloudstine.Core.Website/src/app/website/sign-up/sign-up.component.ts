@@ -54,6 +54,8 @@ export class SignUpComponent {
       if (this.companyName != null || this.companyName != '')
         this.corporateName = this.companyName;
     });
+
+    
   }
 
   ngOnInit(): void {
