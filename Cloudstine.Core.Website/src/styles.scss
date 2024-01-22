@@ -4,26 +4,26 @@
 
 
 .scrollbox {
-    overflow-y: scroll;
-  
-    //background-color: #F6F6F6;
-    &::-webkit-scrollbar {
-      background-color: rgb(231, 231, 231);
-      width: 0px;
-    }
+  overflow-y: scroll;
+
+  //background-color: #F6F6F6;
+  &::-webkit-scrollbar {
+    background-color: rgb(231, 231, 231);
+    width: 0px;
   }
-  
-  .scrollbox:hover {
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(59, 49, 201, 0.507);
-    }
+}
+
+.scrollbox:hover {
+  &::-webkit-scrollbar {
+    width: 8px;
   }
 
- /* Transparent Overlay */
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 49, 201, 0.507);
+  }
+}
+
+/* Transparent Overlay */
 #loading-bg {
   width: 100%;
   height: 100%;
@@ -31,7 +31,7 @@
   display: block;
   position: fixed;
   z-index: 99999;
- 
+
 }
 
 .loading-logo {
@@ -39,6 +39,7 @@
   left: calc(50% - 45px);
   top: 40%;
 }
+
 .loader {
   position: absolute;
   left: calc(50% - 35px);
@@ -88,7 +89,7 @@
   transition: all 0.3s ease;
 }
 
-.loading-msg{
+.loading-msg {
   position: absolute;
   left: calc(50% - 175px);
   top: 42%;
@@ -146,4 +147,15 @@
 }
 #topnav .navigation-menu>li>a:active, #topnav .navigation-menu>li>a:hover{
   color: #9938A5 !important;
+}
+}
+
+.pc-button {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .pc-button {
+    display: none !important;
+  }
 }

@@ -1,242 +1,208 @@
-<!-- Hero Start -->
-<section
-  class="bg-auth-home d-table w-100"
-  style="padding-top: 100px !important"
->
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-7 col-md-6">
-        <div class="me-lg-5">
-          <img
-            src="assets/images/user/signup.svg"
-            class="img-fluid d-block mx-auto"
-            alt="signup"
-            width="70%"
-          />
-        </div>
+<div style="height: 10vh;"></div>
 
-        <div *ngFor="let organization of OrganizationList">
-          <div *ngIf="organization.Disclaimer != null">
-            <div class="disclaimer" *ngIf="companyName == organization.Name">
-              <p style="font-size: small; margin: 0">
-                <b style="color: red">Disclaimer</b> - <br>
-                <!-- {{ organization.Disclaimer }} -->
-                <span [innerHTML]="organization.Disclaimer | sanitizeHtml"></span>
-              </p>
-            </div>
+<div class="container-flude">
+  <div class="row" style="height:88vh;">
+    <div class="col-md-5 pc-button d-flex align-items-center justify-content-center" style="background-color: #9938A5;">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <img src="assets/images/Home_Page/cloudstine_Login.png" alt="" width="70%" height="auto" />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-center text-white">
+            <h2>Cloudstine One Account</h2>
+            <h4>One Account. Multiple Apps</h4>
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-6">
-        <div
-          style="text-align: center; margin-bottom: 12px"
-          *ngIf="companyName != undefined"
-        >
-          <img
-            src="assets/images/taxblock/corporateLogo/{{ companyName }}.png"
-            style="max-width: 200px; max-height: 100px" alt="corporateLogo"
-          />
-        </div>
-        <div class="card shadow rounded border-0">
-          <div class="card-body">
-            <h4 class="card-title text-center">Signup</h4>
-            <div class="login-form mt-4">
-              <form [formGroup]="signUpForm" (ngSubmit)="onSignUp_Click()">
-                <div class="form-grouprow">
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >Your Email <span class="text-danger">*</span></label
-                      >
-                      <div class="form-icon position-relative">
-                        <i data-feather="mail" class="fea icon-sm icons"></i>
-                        <input
-                          type="email"
-                          class="form-control ps-5"
-                          placeholder="Email"
-                          name="EmailId"
-                          formControlName="EmailId"
-                          [ngClass]="{
-                            'is-invalid': submitted && f.EmailId.errors
-                          }"
-                        />
+    </div>
 
-                        <div
-                          *ngIf="submitted && f.EmailId.errors"
-                          class="invalid-feedback"
-                        >
-                          <div *ngIf="f.EmailId.errors.required">
-                            Email Id is required
-                          </div>
-                          <div *ngIf="f.EmailId.errors.email">
-                            Email must be a valid email address
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--end col-->
+    <div class="col-md-7">
+      <!--Sign Up Form-->
+      <div class="row my-5 mx-2" *ngIf="signUP">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 ">
+          <!--Button-->
+          <div class="row d-flex justify-content-end">
+            <div class="col-auto">
+              <button type="button" class="btn" style="border: 1px solid  #9938A5; color: #9938A5;"
+                (click)="Home_Page()">Home</button>
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn" style="background-color:  #9938A5; color: white;"
+                (click)="onSignInClick()">Sign In</button>
+            </div>
+          </div>
 
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >Password <span class="text-danger">*</span></label
-                      >
-                      <div class="form-icon position-relative">
-                        <i data-feather="key" class="fea icon-sm icons"></i>
-                        <input
-                          type="password"
-                          class="form-control ps-5"
-                          placeholder="Password"
-                          name="PasswordHash"
-                          formControlName="PasswordHash"
-                          [ngClass]="{
-                            'is-invalid': submitted && f.PasswordHash.errors
-                          }"
-                        />
-                        <div
-                          *ngIf="submitted && f.PasswordHash.errors"
-                          class="invalid-feedback"
-                        >
-                          <div *ngIf="f.PasswordHash.errors.required">
-                            Password is required
-                          </div>
-                          <div *ngIf="f.PasswordHash.errors.minlength">
-                            Password must be at least 8 characters
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--end col-->
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >Confirm Password
-                        <span class="text-danger">*</span></label
-                      >
-                      <div class="form-icon position-relative">
-                        <i data-feather="key" class="fea icon-sm icons"></i>
-                        <input
-                          type="password"
-                          class="form-control ps-5"
-                          placeholder="Confirm Password"
-                          name="ConfirmPassword"
-                          formControlName="ConfirmPassword"
-                          [ngClass]="{
-                            'is-invalid': submitted && f.ConfirmPassword.errors
-                          }"
-                        />
-                        <div
-                          *ngIf="submitted && f.ConfirmPassword.errors"
-                          class="invalid-feedback"
-                        >
-                          <div *ngIf="f.ConfirmPassword.errors.required">
-                            Confirm Password is required
-                          </div>
-                          <div *ngIf="f.ConfirmPassword.errors.mustMatch">
-                            Passwords must match
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--end col-->
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >PAN Number <span class="text-danger">*</span></label
-                      >
-                      <div class="form-icon position-relative">
-                        <i data-feather="key" class="fea icon-sm icons"></i>
-                        <input
-                          type="text"
-                          class="uppercase form-control ps-5"
-                          placeholder="PAN No."
-                          name="PANNo"
-                          formControlName="PANNo"
-                        />
-                        <div
-                          *ngIf="submitted && signUp_Form.PANNo.errors"
-                          class="text-danger"
-                        >
-                          <div *ngIf="signUp_Form.PANNo.errors.required">
-                            Please Enter PAN No.
-                          </div>
-                          <div *ngIf="signUp_Form.PANNo.errors.pattern">
-                            Please Enter Correct PAN Card No.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--end col-->
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >Mobile Number <span class="text-danger">*</span></label
-                      >
-                      <div class="form-icon position-relative">
-                        <i data-feather="key" class="fea icon-sm icons"></i>
-                        <input
-                          type="text"
-                          class="form-control ps-5"
-                          placeholder="Mobile Number"
-                          name="MobileNo"
-                          formControlName="MobileNo"
-                          maxlength="10"
-                          (input)="restrictNonNumericCharacters($event)"
-                        />
-                        <div
-                          *ngIf="submitted && signUp_Form.MobileNo.errors"
-                          class="text-danger"
-                        >
-                          <div *ngIf="signUp_Form.MobileNo.errors.required">
-                            Please Enter Mobile No.
-                          </div>
-                          <div *ngIf="signUp_Form.MobileNo.errors.pattern">
-                            Please Enter Correct Number.
-                          </div>
-                          <div *ngIf="signUp_Form.MobileNo.errors.maxlength">
-                            Mobile No. must be 10 Digits.
-                          </div>
-                          <div *ngIf="signUp_Form.MobileNo.errors.minlength">
-                            Mobile No. must be 10 Digits.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--end col-->
+          <!--Cloudstine Logo-->
+          <div class="row mt-3">
+            <div class="text-left">
+              <img src="assets/images/Home_Page/cloudstine_logo_PNG.png" alt="" width="30%" height="auto">
+            </div>
+          </div>
 
-                  <div class="col-md-12">
+          <!--Sign In-->
+          <div class="row mt-3">
+            <div class="text-left">
+              <h3>Sign Up</h3>
+              <form class="sign-up-form" [formGroup]="signUpForm">
+                <div class="row">
+                  <div class="col-md-12 mt-3">
+                    <div class="form-group">
+                      <label class="form-label">Your Name<span class="text-danger">*</span></label>
+                      <input type="email" class="form-control" placeholder="Enter Name" formControlName="Name" />
+                      <div class="form text text-danger"
+                        *ngIf="signUpForm.controls['Name'].invalid && (signUpForm.controls['Name'].dirty || signUpForm.controls['Name'].touched)">
+                        <div *ngIf="signUpForm.controls['Name'].errors">
+                          Please provide valid Name
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <div class="form-group">
+                      <label class="form-label">Mail Id<span class="text-danger">*</span></label>
+                      <input type="email" class="form-control" placeholder="Enter Email Id" formControlName="EmailId" />
+                      <div class="form text text-danger"
+                        *ngIf="signUpForm.controls['EmailId'].invalid && (signUpForm.controls['EmailId'].dirty || signUpForm.controls['EmailId'].touched)">
+                        <div *ngIf="signUpForm.controls['EmailId'].errors">
+                          Please provide valid Email Id
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <div class="form-group">
+                      <label class="form-label">Mobile Number<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" placeholder="Enter Mobile Number"
+                        formControlName="MobileNo" maxlength="10" />
+                      <div class="form text text-danger"
+                        *ngIf="signUpForm.controls['MobileNo'].invalid && (signUpForm.controls['MobileNo'].dirty || signUpForm.controls['MobileNo'].touched)">
+                        <div *ngIf="signUpForm.controls['MobileNo'].errors">
+                          Please provide valid Mobile Number
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mt-5">
                     <div class="d-grid">
-                      <button class="btn btn-primary">Register</button>
+                      <button class="btn" style="background-color:  #9938A5; color: white;"
+                        [disabled]="signUpForm.invalid" (click)="onNextClick()">
+                        Next
+                      </button>
                     </div>
-                  </div>
-                  <!--end col-->
-
-                  <div class="mx-auto">
-                    <p class="mb-0 mt-3">
-                      <small class="text-dark me-2"
-                        >Already have an account ?</small
-                      >
-                      <a (click)="OnSignInClick()" style="cursor: pointer;" class="text-dark fw-bold">Sign in</a>
-                    </p>
                   </div>
                 </div>
-                <!--end row-->
               </form>
             </div>
           </div>
         </div>
       </div>
 
-      <!--end col-->
+
+
+      <!--OTP-->
+      <div class="row my-5 mx-2" *ngIf="isVerifyOTP && !signUP">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 ">
+          <!--Button-->
+          <div class="row d-flex justify-content-end">
+            <div class="col-auto">
+              <button type="button" class="btn" style="border: 1px solid  #9938A5; color: #9938A5;"
+                (click)="backToSignUp()">Back</button>
+            </div>
+          </div>
+
+          <!--Cloudstine Logo-->
+          <div class="row mt-3">
+            <div class="text-left">
+              <img src="assets/images/Home_Page/cloudstine_logo_PNG.png" alt="" width="30%" height="auto">
+            </div>
+          </div>
+
+          <!--OTP-->
+          <div class="row mt-3">
+            <div class="text-left">
+              <div class="form-group">
+                <label class="form-label">OTP<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" placeholder="Enter OTP" [class]="isShake ? 'onClickShake' : ''"
+                  [(ngModel)]="this.EnterOTP" name="OTP" #OTP="ngModel">
+                <div class="col-md-12">
+                  <span class="text-muted" style="font-size: 12px;">OTP is sent on your mail ID</span>
+                </div>
+              </div>
+              <div class="col-md-12 mt-3">
+                <div class="d-grid">
+                  <button class="btn" (click)="onClickVerifyOTP()" style="background-color:  #9938A5; color: white;">
+                    Verify OTP
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Create Password-->
+      <div class="row my-5 mx-2" *ngIf="createPass && !isVerifyOTP && !signUP">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 ">
+          <!--Button-->
+          <div class="row d-flex justify-content-end">
+            <div class="col-auto">
+              <button type="button" class="btn" style="border: 1px solid  #9938A5; color: #9938A5;"
+                (click)="backToOTP()">Back</button>
+            </div>
+          </div>
+
+          <!--Cloudstine Logo-->
+          <div class="row mt-3">
+            <div class="text-left">
+              <img src="assets/images/Home_Page/cloudstine_logo_PNG.png" alt="" width="30%" height="auto">
+            </div>
+          </div>
+
+          <!--OTP-->
+          <div class="row mt-3">
+            <div class="text-left">
+              <h3>Create Password</h3>
+              <form #setPasswordForm="ngForm">
+                <label class="form-label" for="UserName">Password<span class="text-danger">*</span></label>
+                <div class="mb-2 input-group input-group-merge form-password-toggle">
+                  <input [type]="passwordTextType ? 'text' : 'password'" ngModel name="password" required
+                    class="form-control" placeholder="Enter Password">
+                  <div class="input-group-append">
+                    <span class="input-group-text cursor-pointer"><i class="uil  align-middle me-1" [ngClass]="{
+                        ' uil-eye': passwordTextType,
+                        'uil-eye-slash': !passwordTextType
+                      }" (click)="togglePasswordTextType()"></i></span>
+                  </div>
+                </div>
+                <label class="form-label" for="UserName">Re Enter Password<span class="text-danger">*</span></label>
+                <div class="mb-2 input-group input-group-merge form-password-toggle">
+                  <input [type]="repasswordTextType ? 'text' : 'password'" ngModel name="confirmPassword"
+                    class="form-control" placeholder="Re Enter Password">
+                  <div class="input-group-append">
+                    <span class="input-group-text cursor-pointer"><i class="uil  align-middle me-1" [ngClass]="{
+                        ' uil-eye': repasswordTextType,
+                        'uil-eye-slash': !repasswordTextType
+                      }" (click)="toggleRePasswordTextType()"></i></span>
+                  </div>
+                </div>
+
+                <div class="col-md-12 mt-5">
+                  <div class="d-grid">
+                    <button class="btn" style="background-color:  #9938A5; color: white;"
+                      (click)="setPassword(setPasswordForm)">
+                      Next
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--end row-->
   </div>
-  <!--end container-->
-</section>
-<!--end section-->
-<!-- Hero End -->
