@@ -8,11 +8,12 @@ import { UserManagementService } from './user-management.service';
 import { userManagementcomponent } from './user-management.component';
 import { AddUserDialogComponent } from './add-user-dialog/add-user-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
   declarations: [userManagementcomponent, AddUserDialogComponent],
-  imports: [CommonModule,SharedModule, userManagementRoutingModule, NgxTinySliderModule , LazyLoadImageModule, FormsModule ],
+  imports: [CommonModule, userManagementRoutingModule, NgxTinySliderModule , LazyLoadImageModule, FormsModule ],
   providers: [UserManagementService],
   exports: [NgxTinySliderModule],
 })
