@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd,Event, Router } from '@angular/router';
 import { ScrollService } from '../services/scroll.service';
 
 
@@ -11,9 +11,26 @@ import { ScrollService } from '../services/scroll.service';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  constructor(@Inject(DOCUMENT) private document: Document , private router: Router , ) {}
+currentRoute:string;
+showfooter:boolean=true
 
-  ngOnInit() {}
+  constructor(@Inject(DOCUMENT) private document: Document , private router: Router , ) {
+
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+        //console.log(this.currentRoute);
+        if (this.currentRoute == '/login' || this.currentRoute == '/error') {
+          this.showfooter = false;
+        } else {
+          this.showfooter = true;
+        }
+      }
+    });
+  }
 
   scrollToTop() {
     window.scrollTo({ top: 980, behavior: 'smooth' });

@@ -12,6 +12,10 @@ import { SanitizeHtmlPipe } from './pipes/domsanitizer.pipe';
 import { StateService } from '../core/services/state-service.service';
 import { UserProfileService } from '../core/services/user-profile.service';
 import { AutoLogoutService } from 'app/core/services/autoLogout.service';
+import { DataGridComponent } from './data-grid/data-grid.component';
+import { ActionRendererComponent } from './action-renderer/action-renderer.component';
+import { AgGridModule } from "ag-grid-angular";
+
 
 @NgModule({
   declarations: [
@@ -21,11 +25,14 @@ import { AutoLogoutService } from 'app/core/services/autoLogout.service';
     TreeNodeCheckedPipe,
     TreeNodeSearchPipe,
     TreeView,
+    DataGridComponent,
+    ActionRendererComponent,
   ],
 
-  imports: [CommonModule, NgxTinySliderModule],
+  imports: [CommonModule, NgxTinySliderModule,AgGridModule],
 
   exports: [
+    DataGridComponent,
     ActivePromocodeComponent,
     SanitizeHtmlPipe,
     TreeComponent,
