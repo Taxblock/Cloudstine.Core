@@ -138,11 +138,8 @@
             <div class="col-sm-3 form-group">
                 <label>State</label>
                 <select class="form-control" placeholder="State" formControlName="StateId">
-                    <option value="" selected disabled hidden>
-                        Select State
-                    </option>
-                    <option *ngFor="
-                    let state of addressSelectList.stateList" [value]="state.stateId">
+                    <option value="" selected disabled hidden> Select State</option>
+                    <option *ngFor="let state of addressSelectList.stateList" [value]="state.stateId">
                         {{state.name}}
                     </option>
                 </select>
@@ -154,12 +151,8 @@
             <div class="col-sm-3 form-group">
                 <label>Required GSTN Invoice*</label>
                 <select class="form-control" placeholder="Required GSTN Invoice" formControlName="IsGSTInvoiceRequired">
-                    <option value="1" selected>
-                        No
-                    </option>
-                    <option value="2">
-                        Yes
-                    </option>
+                    <option value="1" selected> No</option>
+                    <option value="2"> Yes</option>
                 </select>
                 <div *ngIf="(BillingInfo.get('IsGSTInvoiceRequired').dirty || BillingInfo.get('IsGSTInvoiceRequired').touched || submitted) && BillingInfo.get('IsGSTInvoiceRequired').invalid"
                     class="text-danger">
@@ -169,11 +162,7 @@
             <div class="row mb-3 mt-4">
                 <hr>
                 <div class="col-12 mx-2 " align="left">
-                    <button type="submit" class="btn custom-btn"
-                        style="background-color: #AD60B7;color: white;border: none"
-                        (click)="SaveUserProfileData()">Save</button>
-                    <a class="btn custom-btn"
-                        style="background-color: #EBD7ED;color: #AD60B7;border: none ;margin-left: 15px; padding:7px 11px"
-                        href="" role="button"> Cancel </a>
+                    <button type="submit" class="btn btn-cloud" (click)="SaveUserProfileData()">Save</button>&nbsp;&nbsp;
+                    <a class="btn btn-outline-cloud" href="" role="button"> Cancel </a>
                 </div>
             </div>

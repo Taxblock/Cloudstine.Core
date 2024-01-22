@@ -114,7 +114,7 @@ export class UserProfileComponent implements OnInit {
       this.userProfileService.SaveUserProfileData(this.userprofile).subscribe(
         (result: any) => {
           let serviceResponse = result.Value;
-          this.alertService.ShowSuccessMessage("Financial Metadata save Successfully");
+          this.alertService.ShowSuccessMessage("User Profile save Successfully");
           this.ResetForm();
         },
         (error: any) => {
