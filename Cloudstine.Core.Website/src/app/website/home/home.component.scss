@@ -11,10 +11,12 @@
     width: 0px;
   }
 }
+
 .scrollbox:hover {
   &::-webkit-scrollbar {
     width: 8px;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -30,4 +32,34 @@
     height: auto;
     overflow: hidden;
   }
+
+  .vertical-line {
+    display: none !important;
+  }
+}
+
+.businesses {
+  background: linear-gradient(to bottom, #F17EFF 0%, #EBD7ED 100%);
+}
+
+.card-bg {
+  background: linear-gradient(180deg, #EBD7ED 25%, transparent 25%);
+}
+
+.features {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
 }

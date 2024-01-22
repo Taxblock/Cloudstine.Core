@@ -9,32 +9,32 @@ import { IdentityUser } from 'app/shared/Model/identty-user.model';
 export class LoginService {
 
     tokenValid: boolean;
-    constructor(private apiService: APIService,private userProfileService : UserProfileService) { }
+    constructor(private apiService: APIService, private userProfileService: UserProfileService) { }
 
     loginURL: string = "/Authentication/Account/login";
     logOutURL: string = "/Account/LogOut";
     changePasswordURL: string = "/Account/ChangePassword";
     forgotPasswordURL: string = "/Account/ForgotPassword/";
 
-    Login(loginModel: any ) {
+    Login(loginModel: any) {
         return this.apiService.postData(this.loginURL, loginModel);
     }
-    
+
     LogOff(UserID: number) {
-                 return this.apiService.getData(this.logOutURL + "?UserID=" + UserID)       
+        return this.apiService.getData(this.logOutURL + "?UserID=" + UserID)
     }
 
-    setSession(authResult:IdentityUser) {
-       this.userProfileService.SetUserData(authResult);    
+    setSession(authResult: IdentityUser) {
+        this.userProfileService.SetUserData(authResult);
     }
 
     ChangePassword(loginModel: any) {
         return this.apiService.postData(this.changePasswordURL, loginModel);
     }
 
-    ForgotPassword(loginModel: any) {      
-            return this.apiService.postData(this.forgotPasswordURL, loginModel);
-     }
+    ForgotPassword(loginModel: any) {
+        return this.apiService.postData(this.forgotPasswordURL, loginModel);
+    }
 }
 
 
