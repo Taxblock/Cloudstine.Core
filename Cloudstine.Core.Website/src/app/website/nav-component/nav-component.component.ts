@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 import { APIService } from '../../core/services/apiService';
@@ -14,6 +14,7 @@ import { environment } from 'environments/environment';
   selector: 'nav-component',
   templateUrl: './nav-component.component.html',
   styleUrls: ['./nav-component.component.scss'],
+  
 })
 export class NavComponent {
   public isLogin: boolean = false;
@@ -60,8 +61,8 @@ export class NavComponent {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
-        console.log(this.currentRoute);
-        if (this.currentRoute == '/error') {
+        //console.log(this.currentRoute);
+        if (this.currentRoute == '/login' || this.currentRoute == '/error') {
           this.showNav = false;
         } else {
           this.showNav = true;
