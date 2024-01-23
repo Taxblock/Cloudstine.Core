@@ -7,6 +7,7 @@ import { Subscription } from "rxjs";
 import { UserSearchParameterModel } from './user-search-parameter.model';
 import { UserManagementService } from './user-management.service';
 import { AddUserDialogComponent } from './add-user-dialog/add-user-dialog.component';
+import { UserModel } from './users/user.model';
 // import { ConfigurationSettings } from "src/app/core/models/configuration";
 // import { ResponseCode } from "src/app/core/models/responseObject.model";
 // import { AlertService } from "src/app/core/services/alertService";
@@ -28,6 +29,8 @@ export class userManagementcomponent implements OnInit {
   @ViewChild(AddUserDialogComponent) addUserDialog!: AddUserDialogComponent;
 
   public buttonTypes: any;
+  userModel = new UserModel();
+
   userTableColumns: TableColumn[] = [
     {
       field: 'SrNo',
@@ -114,6 +117,9 @@ export class userManagementcomponent implements OnInit {
   showStatus: boolean = true;
   showDepartment: boolean = true;
   paged: boolean = true;
+  
+  submitted = false;
+  user: any = {};
 
   constructor(private userManagementService : UserManagementService) {
 
@@ -128,9 +134,18 @@ export class userManagementcomponent implements OnInit {
 
   }
 
-  openAddUserDialog() {
-
+  onClickAddUser() {
+    document.getElementById('example3').click();
   }
+
+  login() {
+    this.submitted = true;
+    this.userModel.username = this.user.name;
+    this.userModel.mailId = this.user.email;
+    this.userModel.mobileNo = this.user.mobile;
+    let a=JSON.stringify(this.userModel)
+    console.log(a+"---------------------------------");
+   }
 
   getEmployeeList() {
     let userSearchParameterModel = new UserSearchParameterModel();

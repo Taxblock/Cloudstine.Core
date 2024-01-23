@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from 'app/core/services/alertService';
 import { ActionColumn, TableColumn } from 'app/shared/data-grid/model/data-grid-column.model';
+import { AccessControlService } from './access-control.service';
+import { AccessControl } from './access-control.model';
 
 @Component({
   selector: 'app-access-control',
@@ -8,6 +11,7 @@ import { ActionColumn, TableColumn } from 'app/shared/data-grid/model/data-grid-
 })
 export class AccessControlComponent implements OnInit {
   public buttonTypes: any;
+  accessControlModel = new AccessControl();
   userTableColumns: TableColumn[] = [
     {
       field: 'SrNo',
@@ -95,7 +99,8 @@ export class AccessControlComponent implements OnInit {
   showDepartment: boolean = true;
   paged: boolean = true;
 
-  constructor() { }
+  constructor(private alertService: AlertService,
+    private accessControlService : AccessControlService) { }
 
   ngOnInit(): void {
   }
@@ -149,6 +154,33 @@ export class AccessControlComponent implements OnInit {
 
   onActionButton(action: string) {
     alert(action + ' ' + 'action button clicked.');
+  }
+
+  OnSaveClick(){
+    this.accessControlService.insertAccessControlDetails(this.accessControlModel).subscribe(
+      (result: any) => {
+        let serviceResponse = result.Value;
+        // if (serviceResponse.responseCode == ResponseCode.Success) {
+        //   let responseData = serviceResponse;
+        //   this.personalInfoModel = new EmployeePersonalInfoModel();
+        //   this.alertService.ShowSuccessMessage(this.messageService.addedSuccessfully);
+        //   this.manualService.setRecordInitialized(true);
+        //   this.router.navigate([this.next], { state: { ignore: true } });
+        // }
+        // else if (serviceResponse.responseCode == ResponseCode.PANAlreadyExists) {
+        //   this.alertService.ShowErrorMessage(this.messageService.alreadyPANExists);
+        // }
+        // else if (serviceResponse.responseCode == ResponseCode.EmailAlreadyExists) {
+        //   this.alertService.ShowErrorMessage(this.messageService.alreadyEmailExists);
+        // }
+        // else {
+        //   this.alertService.ShowErrorMessage(this.messageService.serviceError);
+        // }
+      },
+      (error: any) => {
+        this.alertService.ShowErrorMessage(error.error);
+      }
+    );
   }
 
 }
