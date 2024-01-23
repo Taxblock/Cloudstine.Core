@@ -5,16 +5,17 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7 col-md-7 p-5">
-                <h1 class="text-white">Empowering Your</h1>
-                <h1 class="text-white">Business For Tomorrow</h1>
-                <p class="mt-3">
+                <h1 class="text-white fw-bolder">Empowering Your</h1>
+                <h1 class="text-white fw-bold">Business For Tomorrow</h1>
+                <p class="mt-3 fs-5 fw-bolder">
                     At Cloudstine, we champion the cause of digital transformation to empower businesses in
                     navigating
                     the
                     realms of financial accounts and taxation. Our mission is clear - to collaborate with you in
                     transforming ideas into dynamic solutions that not only meet but exceed your expectations.
                 </p>
-                <button class="btn mt-3" style="background-color:  #9938A5; color: white;">Get Started</button>
+                <button class="btn button mt-3"><span>Get Started
+                        &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
             <div class="col-sm-5 col-md-5 pt-3">
                 <div class="text-center">
@@ -30,39 +31,61 @@
 <div class="container">
     <div class="row mt-5">
         <div class="text-center">
-            <h2>
+            <h2 class="">
                 DIGITAL PORTFOLIO
             </h2>
         </div>
         <div class="row position-relative">
-            <div class="col-sm-7 col-md-7">
-                <div class="text-center">
-                    <img src="assets/images/Home_Page/indian-businesswoman.png" alt="" width="100%" height="auto">
+            <div class="col-sm-6 col-md-6 mt-5">
+                <div class="d-flex align-items-center justify-content-center text-center image-container">
+                    <img [src]="imgHome" alt="">
                 </div>
             </div>
-            <div class="vertical-line"
-                style="position: absolute; top: 0; bottom: 0; left: 50%; border-left: 1px solid  #9938A5;"></div>
-            <div class="col-sm-5 col-md-5 mt-3">
-                <h4>
-                    Transform Your Digital Core
-                </h4>
-                <p>#RevolutionizeYourFoundation</p>
-                <p>Let Cloudstine transform your digital core, laying the groundwork for unparalleled efficiency and
-                    innovation in financial accounts and taxation. Elevate your business to new heights with our
-                    cutting-edge solutions.</p>
-                <div class="text-left">
-                    <button type="button" class="btn"
-                        style="background-color: white; border: 1px solid  #9938A5; color: #9938A5;  ;">
-                        <span>Get Started &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </button>
+            <div class="col-sm-6 col-md-6">
+                <div class="mt-5 verticalLine" (click)="tranformImage()">
+                    <h4>Transform Your Digital Core</h4>
+                    <p>#RevolutionizeYourFoundation</p>
+                    <p class="" *ngIf="transferPara">Let Cloudstine transform your digital core, laying the groundwork
+                        for
+                        unparalleled efficiency and
+                        innovation in financial accounts and taxation. Elevate your business to new heights with our
+                        cutting-edge
+                        solutions.</p>
+                    <div class="text-left" *ngIf="transferPara">
+                        <button type="button" class="btn"
+                            style="background-color: white; border: 1px solid #9938A5; color: #9938A5;">
+                            <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="mt-3">
+
+                <div class="mt-5 verticalLine" (click)="SAPServicesImage()">
                     <h4>SAP Services</h4>
                     <p>#UnlockSAPPotential</p>
+                    <p class="" *ngIf="SAPServicePara">Maximize the power of SAP with Cloudstine's expert services,
+                        tailored to
+                        streamline financial transactions, human capital management, and programming needs</p>
+                    <div class="text-left" *ngIf="SAPServicePara">
+                        <button type="button" class="btn"
+                            style="background-color: white; border: 1px solid #9938A5; color: #9938A5;">
+                            <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="mt-3">
+                <div class="mt-5 verticalLine" (click)="taxWorkspaceImage()">
                     <h4>Tax Workspace </h4>
                     <p>#EffortlessTaxManagement</p>
+                    <p class="" *ngIf="taxWorkspacePara">Explore Cloudstine's suite of tax applications, covering Income
+                        Tax,
+                        TDS/TCS, GST, and more, designed to streamline compliance, enhance accuracy, and simplify
+                        tax-related
+                        processes.</p>
+                    <div class="text-left" *ngIf="taxWorkspacePara">
+                        <button type="button" class="btn"
+                            style="background-color: white; border: 1px solid #9938A5; color: #9938A5;">
+                            <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,65 +99,47 @@
             <h2>TRUSTED BY OUR CUSTOMER</h2>
             <p>Cloud base application for automate your financial journy</p>
         </div>
-        <div class="container">
+        <div class="container mt-5">
             <div class="row">
-                <div class="col-sm-2">
-                    <div
-                        class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
-                        <div class="text-center">
-                            <div class="image-container">
-                                <img src="assets/images/Home_Page/Taxblock.png" alt="">
-                            </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="text-center d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img src="assets/images/Home_Page/Taxblock.png" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div
-                        class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
-                        <div class="text-center">
-                            <div class="image-container">
-                                <img src="assets/images/Home_Page/Sudarshan.png" alt="">
-                            </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="text-center d-flex justify-content-center align-items-center">
+                        <div class="">
+                            <img src="assets/images/Home_Page/Sudarshan.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div
-                        class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
-                        <div class="text-center">
-                            <div class="image-container">
-                                <img src="assets/images/Home_Page/CSG.png" alt="">
-                            </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="text-center">
+                        <div class="">
+                            <img src="assets/images/Home_Page/CSG.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div
-                        class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
-                        <div class="text-center">
-                            <div class="image-container">
-                                <img src="assets/images/Home_Page/Dell.png" alt="">
-                            </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="text-center">
+                        <div class="">
+                            <img src="assets/images/Home_Page/Dell.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div
-                        class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
-                        <div class="text-center">
-                            <div class="image-container">
-                                <img src="assets/images/Home_Page/CRED.png" alt="">
-                            </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="text-center">
+                        <div class="">
+                            <img src="assets/images/Home_Page/CRED.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div
-                        class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
-                        <div class="text-center">
-                            <div class="image-container">
-                                <img src="assets/images/Home_Page/Emsecure.png" alt="">
-                            </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="text-center">
+                        <div class="">
+                            <img src="assets/images/Home_Page/Emsecure.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -149,10 +154,10 @@
         <div class="row">
             <div class="col-sm-7 col-md-7">
                 <div class="">
-                    <h2 style="color: #9938A5;">% Tax Workspace</h2>
-                    <h2>Efficient Tax Management:
+                    <h2 style="color: #9938A5;"><b>% Tax Workspace</b></h2>
+                    <h2 class="mt-3">Efficient Tax Management:
                         Cloudstine's Workspace Unifies Compliance for Seamless Tax Operations.</h2>
-                    <button class="btn" style="background-color:  #9938A5; color: white;"><span>Get Started
+                    <button class="btn mt-3" style="background-color:  #9938A5; color: white;"><span>Try Now
                             &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -169,28 +174,28 @@
 <div class="container">
     <div class="row d-flex mt-3 p-5">
         <div class="col-sm-3 col-md-3">
-            <h4>PROVEN BUSINESS RESULTS AT LEADING COMPANIES</h4>
+            <h3 style="color: #9938A5;"><b>PROVEN BUSINESS RESULTS AT LEADING COMPANIES</b></h3>
         </div>
         <div class="col-sm-3 col-md-3">
-            <h4 style="color: #9938A5;">60%</h4>
+            <h3 style="color: #9938A5;"><b>60%</b></h3>
             <h4>Decrease in time togo-to-market</h4>
             <div class="mt-3">
-                <h4 style="color: #9938A5;">360&#176;</h4>
+                <h3 style="color: #9938A5;"><b>360&#176;</b></h3>
                 <h4>Task & processvisibility</h4>
             </div>
         </div>
         <div class="col-sm-3 col-md-3">
-            <h4 style="color: #9938A5;">
-                &lt;1
-            </h4>
+            <h3 style="color: #9938A5;">
+                <b> &lt;1</b>
+            </h3>
             <h4>Year ROI realization</h4>
             <div class="mt-3">
-                <h4 style="color: #9938A5;">50%</h4>
+                <h3 style="color: #9938A5;"><b>50%</b></h3>
                 <h4>Increase in workflow</h4>
             </div>
         </div>
         <div class="col-sm-3 col-md-3">
-            <h4 style="color: #9938A5;">3X</h4>
+            <h3 style="color: #9938A5;"><b>3X</b></h3>
             <h4>Improvement in staffproductivity</h4>
         </div>
     </div>
@@ -201,19 +206,18 @@
     <div class="container">
         <div class="row mx-5 p-5">
             <div class="text-center">
-                <div id="dropdownMenuButton" class="btn btn-icon btn-pills "
-                    style="background: #9938A5;width: 40px; height: 40px; color: #fff;"><i
-                        class="uil uil-check align-middle" style="font-size: 24px;"></i></div>
-                <div class="mt-3">
-                    <h2>Your Privacy Is Our Responsibility</h2>
+                <div class="">
+                    <img src="assets/images/Home_Page/Symbol.png" alt="">
                 </div>
-                <p style="font-size: 22px;">At Cloudstine, we prioritize your privacy. We don't own or sell your
-                    data,
-                    and
-                    our commitment to trust is unwavering. Our revenue comes solely from the software license fees
-                    you
-                    pay,
-                    ensuring a secure and transparent partnership.</p>
+                <div class="mt-3">
+                    <h1>Your Privacy Is Our Responsibility</h1>
+                </div>
+                <p style="font-size: 26px;">
+                    At <span style="color: #9938A5;">Cloudstine</span>, we prioritize your privacy. We don't own or sell
+                    your data,
+                    and our commitment to trust is unwavering. Our revenue comes solely from the software license fees
+                    you pay,
+                    ensuring a se
             </div>
         </div>
     </div>
@@ -223,14 +227,14 @@
 <!--card-->
 <div class="card-bg">
     <div class="card p-5 mx-5" style="border-radius: 15px;">
-        <div class="text-center">
-            <h2>Driven By Core Values Always</h2>
+        <div class="text-center mt-5">
+            <h1>Driven By Core Values Always</h1>
         </div>
         <div class="row">
             <div class="col-sm-4 col-md-4">
                 <div class="text-left">
                     <i class="uil uil-watch-alt align-middle" style="font-size: 40px; color: #9938A5;"></i>
-                    <h3>Sustained Long-Term Dedication</h3>
+                    <h2>Sustained Long-Term Dedication</h2>
                     <p>With three years of experience, we intimately understand the challenges of a growing
                         business.
                         Our pride lies in sustaining a business powered by you, our valued customer</p>
@@ -255,8 +259,8 @@
                 </div>
             </div>
         </div>
-        <div class="text-center">
-            <button type="button" class="btn" style="border: 1px solid  #9938A5; color: #9938A5;  ;">
+        <div class="text-center mb-5">
+            <button type="button" class="btn buttons">
                 <span>Read About Us &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
         </div>
@@ -264,12 +268,14 @@
 </div>
 
 <!--Ready to Unlock Your Best Work?-->
-<div class="row mt-3 mb-5">
-    <div class="text-center">
-        <h2>Ready to Unlock Your Best Work?</h2>
-        <h4>Let's get you started</h4>
-        <button type="button" class="btn" style="border: 1px solid  #9938A5; color: #9938A5;">
-            <span>Access Your Apps&nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </button>
+<div class="" style="background-color: #F8F9FB;">
+    <div class="row">
+        <div class="text-center mt-5 mb-5">
+            <h1 class="mt-3">Ready to Unlock Your Best Work?</h1>
+            <h2 class="mt-3">Let's get you started</h2>
+            <button type="button" class="btn buttons mt-5">
+                <span>Access Your Apps&nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
     </div>
 </div>
