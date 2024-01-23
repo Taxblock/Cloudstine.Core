@@ -1,6 +1,6 @@
 export class AccessControl{
     userAccessId: number;
-    username: string;
+    userName: string;
     applicationNameId: number;
     applicationName : string;
     roleId : number;
