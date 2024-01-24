@@ -1,0 +1,177 @@
+<div style="height: 9vh;"></div>
+
+<!--Apps you’ve accessed-->
+<div class="row" style="background-color: #9938A5;">
+    <div class="text-center p-4">
+        <h2 class="text-white fw-bolder">Apps you’ve accessed</h2>
+    </div>
+</div>
+
+<!--Purchase Product-->
+<div class="card-bg">
+    <div class="card p-5 mx-5" style="border-radius: 15px; background-color: #EEF5FB;">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let product of purchaseProduct">
+                <div class="card feature mt-3 p-3">
+                    <div class="text-left">
+                        <div class="image-container my-3">
+                            <img [src]="product.logo" alt="">
+                        </div>
+                        <h3 class="my-3">{{product.ApplicationName}}</h3>
+                        <div class="details mb-3">
+                            <p title="{{product.ApplicationDetails}}" class="ellipsis">
+                                {{product.ApplicationDetails}}
+                            </p>
+                        </div>
+                        <button type="button" class="btn">
+                            <span>Get Accessed &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--All Product-->
+<div class="" style="background-color: #EBD7ED;">
+    <div class="row">
+        <div class="text-center mt-5" style="color:#9938A5">
+            <h2 class="fw-bolder">Or, choose from over 15+ different <br>business applications</h2>
+        </div>
+    </div>
+    <!--Income Tax-->
+    <div class="row px-5 mx-5">
+        <div class="text-left">
+            <h3>Income Tax</h3>
+        </div>
+    </div>
+    <div class="row px-5 mx-5">
+        <div class="col-md-3 mb-5" *ngFor="let product of incomeProduct">
+            <div class="card feature mt-3 p-3">
+                <div class="text-left">
+                    <div class="image-container my-3">
+                        <img [src]="product.logo" alt="">
+                    </div>
+                    <h3 class="my-3">{{product.ApplicationName}}</h3>
+                    <div class="details mb-3">
+                        <p title="{{product.ApplicationDetails}}" class="ellipsis">
+                            {{product.ApplicationDetails}}
+                        </p>
+                    </div>
+                    <button type="button" class="btn">
+                        <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--TDS-->
+    <div class="row px-5 mx-5">
+        <div class="text-left">
+            <h3>TDS</h3>
+        </div>
+    </div>
+    <div class="row px-5 mx-5">
+        <div class="col-md-3 mb-5" *ngFor="let product of TDS">
+            <div class="card feature mt-3 p-3">
+                <div class="text-left">
+                    <div class="image-container my-3">
+                        <img [src]="product.logo" alt="">
+                    </div>
+                    <h3 class="my-3">{{product.ApplicationName}}</h3>
+                    <div class="details mb-3">
+                        <p title="{{product.ApplicationDetails}}" class="ellipsis">
+                            {{product.ApplicationDetails}}
+                        </p>
+                    </div>
+                    <button type="button" class="btn">
+                        <span>Try Now&nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SAP-->
+    <div class="row px-5 mx-5">
+        <div class="text-left">
+            <h3>SAP</h3>
+        </div>
+    </div>
+    <div class="row px-5 mx-5">
+        <div class="col-md-3 mb-5" *ngFor="let product of SAP">
+            <div class="card feature mt-3 p-3">
+                <div class="text-left">
+                    <div class="image-container my-3">
+                        <img [src]="product.logo" alt="">
+                    </div>
+                    <h3 class="my-3">{{product.ApplicationName}}</h3>
+                    <div class="details mb-3">
+                        <p title="{{product.ApplicationDetails}}" class="ellipsis">
+                            {{product.ApplicationDetails}}
+                        </p>
+                    </div>
+                    <button type="button" class="btn">
+                        <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--GST-->
+    <div class="row px-5 mx-5">
+        <div class="text-left">
+            <h3>GST</h3>
+        </div>
+    </div>
+    <div class="row px-5 mx-5">
+        <div class="col-md-3 mb-5" *ngFor="let product of GST">
+            <div class="card feature mt-3 p-3">
+                <div class="text-left">
+                    <div class="image-container my-3">
+                        <img [src]="product.logo" alt="">
+                    </div>
+                    <h3 class="my-3">{{product.ApplicationName}}</h3>
+                    <div class="details mb-3">
+                        <p title="{{product.ApplicationDetails}}" class="ellipsis">
+                            {{product.ApplicationDetails}}
+                        </p>
+                    </div>
+                    <button type="button" class="btn">
+                        <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Other-->
+    <div class="row px-5 mx-5">
+        <div class="text-left">
+            <h3>Other</h3>
+        </div>
+    </div>
+    <div class="row px-5 mx-5">
+        <div class="col-md-3 mb-5" *ngFor="let product of Other">
+            <div class="card feature mt-3 p-3">
+                <div class="text-left">
+                    <div class="image-container my-3">
+                        <img [src]="product.logo" alt="">
+                    </div>
+                    <h3 class="my-3">{{product.ApplicationName}}</h3>
+                    <div class="details mb-3">
+                        <p title="{{product.ApplicationDetails}}" class="ellipsis">
+                            {{product.ApplicationDetails}}
+                        </p>
+                    </div>
+                    <button type="button" class="btn">
+                        <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
