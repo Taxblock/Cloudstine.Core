@@ -1,46 +1,33 @@
 <div style="margin-top: 70px; margin-left: 5px;" class="row d-flex">
-  <h6 class=" col-10 p-2" style="border-bottom: 2px solid rgb(230, 230, 230);"><b>User Management</b></h6>
-  <h6 class="col-2 p-2" style="text-align: end; cursor: pointer;border-bottom: 2px solid rgb(230, 230, 230);"
-      data-toggle="tooltip" title="Close"><i class="uil uil-multiply"></i></h6>
+  
+  <h6 class="p-3 mb-2" style="border-bottom: 2px solid rgb(230, 230, 230);"><b> <span
+    data-toggle="tooltip" title="Close"><i class="uil uil-multiply"></i> &nbsp;</span>User Management</b></h6>
+  
 </div>
-<!-- <header class="defaultscroll sticky">
-  <div class="container-fluid">
-    <div id="navigation">
-      <ul class="navigation-menu" style="border-bottom: 0px solid rgb(230, 230, 230); display: flex; color: black !important; font-size: 15px; list-style: none;">
-        <li>
-          <a routerLink="/user/users" routerLinkActive="active" style="color: black;">USERS</a>
-        </li>
-        <li>
-          <a routerLink="/user/access-control" routerLinkActive="active" style="color: black;">ACCESS CONTROL</a>
-        </li>
 
-        <button type="button" class="btn" (click)="onClickAddUser()" style="background-color: #EBD7ED;">+ Add User</button>
-
-      </ul>
-
-
+<div class="px-5 py-2">
+  <div class=" px-3 pb-2 col-12 border-bottom">
+    <div class="left-section ">
+      <a routerLink="/user-management/users" class="tab-link" routerLinkActive="active"
+        >Users</a> &nbsp;&nbsp;
+      <a routerLink="/user-management/access-control" class="tab-link" routerLinkActive="active"
+       >Access Control</a>
     </div>
-   
+    <!-- <div class="right-section">
+      <button type="button" class="btn" (click)="onClickAddUser()" style="background-color: #EBD7ED;">+ Add User</button>
+    </div> -->
   </div>
-</header> -->
-<div class="navbar p-3">
-  <div class="left-section">
-    <a routerLink="/poi/employer/add-employee/manual/personal-info" routerLinkActive="active"
-      style="color: black !important;">Users</a> &nbsp;&nbsp;
-    <a routerLink="/poi/employer/add-employee/manual/app-salary-details" routerLinkActive="active"
-      style="color: black !important;">Salary Details</a>
-  </div>
-  <div class="right-section">
-    <button type="button" class="btn" (click)="onClickAddUser()" style="background-color: #EBD7ED;">+ Add User</button>
-  </div>
+  
+  <router-outlet></router-outlet>
+  
 </div>
 
-<button type="button" id="example3" style="display: none;" class="btn btn-primary" data-bs-toggle="modal"
+<!-- <button type="button" id="example3" style="display: none;" class="btn btn-primary" data-bs-toggle="modal"
   data-bs-target="#exampleModal3">
   Launch demo modal
-</button>
+</button> -->
 <!-- <model> -->
-<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="border: none; background-color:  #9938A5; color: white !important;">
@@ -96,12 +83,5 @@
       </div>
     </div>
   </div>
-</div>
-
-
-
-<router-outlet></router-outlet>
-
-
-
+</div> -->
  

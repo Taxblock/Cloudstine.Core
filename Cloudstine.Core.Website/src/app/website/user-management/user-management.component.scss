@@ -59,3 +59,14 @@
 li{
   margin-right: 40px !important;
 }
+.tab-link{
+  color: #000;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+.active {
+ // color: #537ef4 !important;
+  // background: linear-gradient(360deg, #46c0de00, #4688f11c);
+  border-bottom: 4px solid #9938A5;
+  font-weight: 600;
+}

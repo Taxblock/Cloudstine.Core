@@ -12,6 +12,8 @@ import { AccessControl } from './access-control.model';
 export class AccessControlComponent implements OnInit {
   public buttonTypes: any;
   accessControlModel = new AccessControl();
+  submitted = false;
+  user: any = {};
   userTableColumns: TableColumn[] = [
     {
       field: 'SrNo',
@@ -85,6 +87,9 @@ export class AccessControlComponent implements OnInit {
     }
   ];
 
+  users: string[] = ['aman', 'naman', 'Vijay', 'shukla'];
+  Applications: any = ['POI', 'TDS', 'INSTAGRAM'];
+
   rowSelection: 'single' | 'multiple' = 'multiple';
   isMultipleSelected: boolean = false;
   selectedUsers: any[];
@@ -119,6 +124,13 @@ export class AccessControlComponent implements OnInit {
     else {
       this.isMultipleSelected = false;
     }
+  }
+
+  setDummyValues() {
+    this.accessControlModel.userName = 'John Doe';
+    this.accessControlModel.role = 'Employee';
+    this.accessControlModel.applicationName = 'POI';
+    // Set other properties...
   }
 
   setEditable() {
@@ -181,6 +193,12 @@ export class AccessControlComponent implements OnInit {
         this.alertService.ShowErrorMessage(error.error);
       }
     );
+  }
+
+  
+
+  onClickAddUserAccess(){
+    document.getElementById('example3').click();
   }
 
 }
