@@ -105,8 +105,7 @@ const routes: Routes = [
         (m) => m.PayNowModule
       ) 
   }, 
-      )
-  },
+    
   {
     path: 'product-dashboard',
     loadChildren: () =>

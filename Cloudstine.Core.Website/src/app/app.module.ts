@@ -21,8 +21,7 @@ import { ProductDashboardComponent } from './website/product-dashboard/product-d
 
 
 @NgModule({
-  declarations: [AppComponent, UserProfileComponent,PayNowComponent],
-  declarations: [AppComponent, UserProfileComponent, ProductDashboardComponent],
+  declarations: [AppComponent, UserProfileComponent,PayNowComponent,ProductDashboardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
