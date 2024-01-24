@@ -27,7 +27,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./website/home/home.module').then((m) => m.HomeModule),
   },
- 
+
   {
     path: 'login',
     loadChildren: () =>
@@ -38,14 +38,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./website/sign-up/sign-up.module').then((m) => m.SignUpModule),
   },
- 
+
 
   {
     path: 'error',
     loadChildren: () =>
       import('./website/error/error.module').then((m) => m.ErrorModule),
   },
- 
+
   {
     path: 'privacy-policy',
     loadChildren: () =>
@@ -68,7 +68,7 @@ const routes: Routes = [
         (m) => m.ResetPasswordModule
       ),
   },
- 
+
   {
     path: 'change-pass',
     loadChildren: () =>
@@ -79,11 +79,11 @@ const routes: Routes = [
   {
     path: 'user-profile',
     loadChildren: () =>
-    import('./website/user-profile/user-profile.module').then(
-      (m) => m.UserProfileModule
-    ),
+      import('./website/user-profile/user-profile.module').then(
+        (m) => m.UserProfileModule
+      ),
   },
- 
+
   {
     path: 'user-management',
     loadChildren: () =>
@@ -105,13 +105,22 @@ const routes: Routes = [
         (m) => m.PayNowModule
       ) 
   }, 
+      )
+  },
+  {
+    path: 'product-dashboard',
+    loadChildren: () =>
+      import('./website/product-dashboard/product-dashboard.module').then(
+        (m) => m.ProductDashboardModule
+      )
+  },
   {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
   }
 
- 
-  
+
+
 ];
 
 @NgModule({
@@ -123,4 +132,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

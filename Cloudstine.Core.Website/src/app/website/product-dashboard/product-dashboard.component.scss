@@ -1,0 +1,55 @@
+.card-bg {
+    background: linear-gradient(180deg, #9938A5 25%, #EBD7ED 25%);
+}
+
+.feature:hover {
+    border: 2px solid #9938A5;
+}
+
+.btn {
+    background-color: white;
+    border: 1px solid #9938A5;
+    color: #9938A5;
+}
+
+.btn:hover {
+    background-color: #9938A5;
+    color: white;
+}
+
+.image-container {
+    height: 60px !important;
+    width: 100px !important;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin: auto !important;
+}
+
+h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.details {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    font-size: 18px;
+}
+
+.ellipsis {
+    display: block;
+    height: 5rem;
+    white-space: normal;
+    overflow: hidden;
+}

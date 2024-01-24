@@ -15,12 +15,14 @@ import { APP_BASE_HREF } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserProfileComponent } from './website/user-profile/user-profile.component';
 import { PayNowComponent } from './website/pay-now/pay-now.component';
+import { ProductDashboardComponent } from './website/product-dashboard/product-dashboard.component';
 
 
 
 
 @NgModule({
   declarations: [AppComponent, UserProfileComponent,PayNowComponent],
+  declarations: [AppComponent, UserProfileComponent, ProductDashboardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -30,10 +32,11 @@ import { PayNowComponent } from './website/pay-now/pay-now.component';
     NgxTinySliderModule,
     CoreModule,
     ReactiveFormsModule,
+
     ToastrModule.forRoot(),
   ],
-  providers: [AutoLogoutService,{provide: APP_BASE_HREF, useValue : '/' }],
+  providers: [AutoLogoutService, { provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent],
   exports: [NgxTinySliderModule],
 })
-export class AppModule {}
+export class AppModule { }
