@@ -91,7 +91,20 @@ const routes: Routes = [
         (m) => m.userManagementModule
       ) 
   }, 
-  
+  {
+    path: 'transaction-history',
+    loadChildren: () =>
+      import('./website/transaction-history/tansaction-history.module').then(
+        (m) => m.TransactionHistoryModule
+      ) 
+  }, 
+  {
+    path: 'paynow',
+    loadChildren: () =>
+      import('./website/pay-now/pay-now.module').then(
+        (m) => m.PayNowModule
+      ) 
+  }, 
   {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found

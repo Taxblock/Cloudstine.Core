@@ -23,11 +23,12 @@ export class ResetPasswordComponent {
   confirmNewPassword: string = "";
   passwordHash: string = "";
   hideOldPassword: boolean = true;
-  hideNewPassword: boolean = true;
-  hideConfirmPassword: boolean = true;
+  hideNewPassword: boolean = false;
+  hideConfirmPassword: boolean = false;
   public UserId: number = 0;
   public UserName: string ;
-
+  passwordTextType:boolean=true;
+  NewPasswordTextType:boolean=true;
   constructor(private router: Router,
     private route: ActivatedRoute,
     private alertService: AlertService,
@@ -76,5 +77,8 @@ export class ResetPasswordComponent {
     else {
       this.alertService.ShowErrorMessage("validationError");
     }
+  }
+  toggleRePasswordTextType() {
+    this.hideNewPassword = !this.hideNewPassword;
   }
 }

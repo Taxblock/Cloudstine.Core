@@ -14,12 +14,13 @@ import { AutoLogoutService } from './core/services/autoLogout.service';
 import { APP_BASE_HREF } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserProfileComponent } from './website/user-profile/user-profile.component';
+import { PayNowComponent } from './website/pay-now/pay-now.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, UserProfileComponent],
+  declarations: [AppComponent, UserProfileComponent,PayNowComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,7 +30,6 @@ import { UserProfileComponent } from './website/user-profile/user-profile.compon
     NgxTinySliderModule,
     CoreModule,
     ReactiveFormsModule,
- 
     ToastrModule.forRoot(),
   ],
   providers: [AutoLogoutService,{provide: APP_BASE_HREF, useValue : '/' }],
