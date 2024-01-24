@@ -59,6 +59,7 @@ export class DataGridComponent implements OnInit {
           filter: this.isColumnFilterable,
           flex: 1,
           minWidth: 150,
+          
   
   
         },
@@ -113,6 +114,7 @@ export class DataGridComponent implements OnInit {
       maxWidth: 30,
       headerCheckboxSelection: true,
       checkboxSelection: true,
+      
     }
     // action buttons column
     let actionsColumn: TableColumn = {

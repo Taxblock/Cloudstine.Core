@@ -89,8 +89,23 @@ const routes: Routes = [
     loadChildren: () =>
       import('./website/user-management/user-management.module').then(
         (m) => m.userManagementModule
-      )
-  },
+      ) 
+  }, 
+  {
+    path: 'transaction-history',
+    loadChildren: () =>
+      import('./website/transaction-history/tansaction-history.module').then(
+        (m) => m.TransactionHistoryModule
+      ) 
+  }, 
+  {
+    path: 'paynow',
+    loadChildren: () =>
+      import('./website/pay-now/pay-now.module').then(
+        (m) => m.PayNowModule
+      ) 
+  }, 
+    
   {
     path: 'product-dashboard',
     loadChildren: () =>

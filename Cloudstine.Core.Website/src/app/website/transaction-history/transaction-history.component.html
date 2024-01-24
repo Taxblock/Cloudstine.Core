@@ -1,0 +1,23 @@
+<div class="row" style="margin-top: 80px;">
+    <h4 class=" col-12 p-2" style="border-bottom: 2px solid rgb(230, 230, 230);">
+        <a href="/home"><i class="uil uil-multiply" style="color: black;"></i></a>
+        Transaction History
+    </h4>
+
+</div>
+<!-- Ag-grid model for Transaction History -->
+<div class="card-body ">
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-body">
+            <div #content>
+                <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="GetalltransationhistoryList"
+                    [tableColumns]="userTableColumns" [actionColumns]="userActionColumns" [rowSelection]="rowSelection"
+                    [isEditable]="false" [isSortable]="true" [isFilterable]="false" [isColumnFilterable]="false"
+                    [isResizable]="false" [isPageable]="true" [defaultPageSize]="10"
+                    (rowAction)="onRowAction($event)"
+                    (actionButton)="onActionButton($event)">
+                </app-data-grid>
+            </div>
+        </div>
+    </div>
+</div>
