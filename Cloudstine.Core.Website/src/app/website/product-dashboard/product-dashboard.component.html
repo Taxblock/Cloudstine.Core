@@ -1,4 +1,4 @@
-<div style="height: 9vh;"></div>
+<div style="height: 10vh;"></div>
 
 <!--Apps you’ve accessed-->
 <div class="row" *ngIf="purchaseProduct && purchaseProduct.length > 0" style="background-color: #9938A5;">
@@ -46,10 +46,14 @@
             <h3>Income Tax</h3>
         </div>
     </div>
+
     <div class="row px-5 mx-5">
+       
         <div class="col-md-3 mb-5" *ngFor="let product of incomeProduct">
-            <div class="card feature mt-3 p-3">
-                <div class="text-left">
+            <div class=" mt-3 p-0 solution_cards_box">
+                <div class="text-left solution_card">
+                    <div class="hover_color_bubble"></div>
+
                     <div class="image-container my-3">
                         <img [src]="product.logo" alt="">
                     </div>
