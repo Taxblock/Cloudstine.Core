@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AccessControlRoutingModule } from './access-control-routing.module';
 import { AccessControlComponent } from './access-control.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from 'app/shared/shared.module';
   imports: [
     CommonModule,
     AccessControlRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class AccessControlModule { }

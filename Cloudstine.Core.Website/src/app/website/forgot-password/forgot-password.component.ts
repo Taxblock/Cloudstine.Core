@@ -97,5 +97,11 @@ ConfirmOTP(forgotPasswordForm: NgForm) {
   }
 
 }
+Home_Page() {
+  this.router.navigate(['/home']);
+}
+onSignInClick() {
+  this.router.navigate(['/login']);
+}
 
 }

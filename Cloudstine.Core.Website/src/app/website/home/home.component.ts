@@ -6,7 +6,6 @@ import { HomeService } from './home.service';
 import { AlertService } from '../../core/services/alertService';
 import { Router } from '@angular/router';
 import { UserProfileService } from 'app/core/services/user-profile.service';
-
 import { RedirectService } from 'app/core/services/redirect.service';
 import { environment } from 'environments/environment';
 import { Meta, Title } from '@angular/platform-browser';
@@ -201,9 +200,4 @@ export class HomeComponent implements OnInit {
     this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
   }
 
-  // loadVideo(entry: IntersectionObserverEntry) {
-  //   if (entry.isIntersecting) {
-  //     this.shouldLoadVideo = true;
-  //   }
-  // }
 }

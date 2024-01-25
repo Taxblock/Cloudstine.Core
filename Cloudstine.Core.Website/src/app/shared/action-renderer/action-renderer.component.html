@@ -1,1 +1,7 @@
-<p>action-renderer works!</p>
+<a class="px-2" *ngFor="let item of params.actions"
+    style="margin-right: 5px;cursor: pointer;" 
+    
+    [class]="item.colorClass"
+    (click)="btnClickedHandler(item.action)">
+    <i [class]="item.actionIcon"></i>
+</a>

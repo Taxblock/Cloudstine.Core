@@ -85,12 +85,17 @@ export class UsersComponent implements OnInit {
       colorClass: 'text-success'
     }
   ];
+  data = [
+    { SrNo: 1, userName: 'John Doe', mailId: 'john.doe@example.com', mobileNumber: '1234567890' },
+    { SrNo: 2, userName: 'Jane Smith', mailId: 'jane.smith@example.com', mobileNumber: '9876543210' },
+    // Add more dummy data...
+  ];
 
   rowSelection: 'single' | 'multiple' = 'multiple';
   isMultipleSelected: boolean = false;
   selectedUsers: any[];
   dataSource: any[];
-  data: any[];
+  //data: any[];
   private totalRecord: number;
   private isDirty: boolean = false;
   editable: boolean = false;
@@ -99,10 +104,14 @@ export class UsersComponent implements OnInit {
   showStatus: boolean = true;
   showDepartment: boolean = true;
   paged: boolean = true;
+
+  submitted = false;
+  user: any = {};
+
   constructor(private alertService: AlertService,
     private userManagementService: UserManagementService) {
 
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -110,8 +119,6 @@ export class UsersComponent implements OnInit {
   addUserClick() {
 
   }
-
-
 
   selectEmployee(employees: any) {
     if (employees.length > 0) {
@@ -136,6 +143,7 @@ export class UsersComponent implements OnInit {
     this.dataSource.forEach(e => e.status = e.isActive ? 'Active' : 'Inactive')
   }
 
+
   onRowAction(data: any) {
     let action: string = data.action;
     let employee: any = data.row;
@@ -158,7 +166,7 @@ export class UsersComponent implements OnInit {
     alert(action + ' ' + 'action button clicked.');
   }
 
-  OnSaveClick(){
+  OnSaveClick() {
     this.userManagementService.insertUserDetails(this.userModel).subscribe(
       (result: any) => {
         let serviceResponse = result.Value;
@@ -183,6 +191,10 @@ export class UsersComponent implements OnInit {
         this.alertService.ShowErrorMessage(error.error);
       }
     );
+  }
+
+  onClickAddUser() {
+    document.getElementById('example3').click();
   }
 
 }

@@ -196,7 +196,7 @@ export class SignUpComponent {
     this.signUpForm = this.formBuilder.group({
       Name: ['', [Validators.required]],
       EmailId: ['', [Validators.required, Validators.email]],
-      MobileNo: ['', [Validators.required, Validators.pattern('^[0-9]+$'),Validators.minLength(10),Validators.maxLength(10)]]
+      MobileNo: ['', [Validators.required, Validators.pattern('^[0-9]+$'), Validators.minLength(10), Validators.maxLength(10)]]
     })
   }
   Home_Page() {
@@ -282,6 +282,6 @@ export class SignUpComponent {
         this.alertService.ShowErrorMessage("Password & Re-Enter Password must be matched");
       }
     }
-    this._router.navigate(['/home']);
+    this._router.navigate(['/product-dashboard']);
   }
 }
