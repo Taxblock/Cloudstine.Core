@@ -1,14 +1,14 @@
 <div style="height: 9vh;"></div>
 
 <!--Apps you’ve accessed-->
-<div class="row" style="background-color: #9938A5;">
+<div class="row" *ngIf="purchaseProduct && purchaseProduct.length > 0" style="background-color: #9938A5;">
     <div class="text-center p-4">
         <h2 class="text-white fw-bolder">Apps you’ve accessed</h2>
     </div>
 </div>
 
 <!--Purchase Product-->
-<div class="card-bg">
+<div class="card-bg" *ngIf="purchaseProduct && purchaseProduct.length > 0">
     <div class="card p-5 mx-5" style="border-radius: 15px; background-color: #EEF5FB;">
         <div class="row">
             <div class="col-md-3" *ngFor="let product of purchaseProduct">
