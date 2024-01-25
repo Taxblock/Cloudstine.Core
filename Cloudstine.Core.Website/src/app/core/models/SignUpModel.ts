@@ -10,9 +10,9 @@ export class SignUpModel {
   // AddedBy: number | null; 
   // AddedDate:  Date | string | null;
   // UpdatedBy: number | null;
-  // UpdatedDate: Date | string | null;   
+  // UpdatedDate: Date | string | null; 
+   Password:string  
   Name: string
   EmailId: string;
   MobileNo: number;
-  Password:string
 }

@@ -1,7 +1,7 @@
 export class LoginModel {
     email: string;
-    userName: string;
-    passwordHash: string;
+    password: string;
+    //userName: string;
     // rememberMe: boolean;
     // userId: number;
     // mobileNo: string;

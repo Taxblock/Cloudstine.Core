@@ -180,7 +180,7 @@ export class HomeComponent implements OnInit {
 
     this.imgHome = "assets/images/Home_Page/Woman_Power.png"
   }
-  
+
   taxWorkspaceImage() {
 
     this.progress = 0;
