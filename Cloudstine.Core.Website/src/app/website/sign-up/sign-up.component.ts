@@ -282,6 +282,9 @@ export class SignUpComponent {
         this.alertService.ShowErrorMessage("Password & Re-Enter Password must be matched");
       }
     }
+    else {
+      this.alertService.ShowErrorMessage("Please enter the given fields.");
+    }
     this._router.navigate(['/product-dashboard']);
   }
 }

@@ -17,6 +17,8 @@ export class LoginService {
     forgotPasswordURL: string = "/Account/ForgotPassword/";
 
     Login(loginModel: any) {
+        let a = JSON.stringify(loginModel)
+        console.log("-------------This loginModel ---------------" + a);
         return this.apiService.postData(this.loginURL, loginModel);
     }
 

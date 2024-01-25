@@ -141,19 +141,18 @@ export class LoginComponent {
     email: new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required])
   })
-  get Email(): FormControl {
+  get email(): FormControl {
     return this.signInForm.get("email") as FormControl
   }
-  get Password(): FormControl {
+  get password(): FormControl {
     return this.signInForm.get("password") as FormControl
   }
   onSignIn_Click() {
     console.log(this.signInForm);
     if (this.signInForm.valid) {
       let signInFormData = this.signInForm.value;
-      this.loginModel.userName = signInFormData.email;
       this.loginModel.email = signInFormData.email;
-      this.loginModel.passwordHash = signInFormData.password;
+      this.loginModel.password = signInFormData.password;
       this.loginService.Login(this.loginModel).subscribe(
         (result: any) => {
           let serviceResponse = result.Value;
