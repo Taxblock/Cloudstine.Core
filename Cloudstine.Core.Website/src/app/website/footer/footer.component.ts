@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { NavigationEnd,Event, Router } from '@angular/router';
-import { ScrollService } from '../services/scroll.service';
+//import { ScrollService } from '../services/scroll.service';
 
 
 
@@ -23,7 +23,7 @@ showfooter:boolean=true
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute == '/login' || this.currentRoute == '/error'|| this.currentRoute == '/user-management/users' || this.currentRoute == '/user-management/access-control' || this.currentRoute == '/user-profile') {
+        if (this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error'|| this.currentRoute == '/user-management/users' || this.currentRoute == '/user-management/access-control' || this.currentRoute == '/user-profile') {
           this.showfooter = false;
         } else {
           this.showfooter = true;

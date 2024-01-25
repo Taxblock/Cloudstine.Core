@@ -1,5 +1,7 @@
 <div style="height: 10vh;"></div>
 
+<!-- <img *ngIf="progress === 100" src="path/to/completed-image.png" alt="Completed Image" /> -->
+
 <!--Empowering Your Business For Tomorrow-->
 <div class="businesses">
     <div class="container">
@@ -42,50 +44,75 @@
                 </div>
             </div>
             <div class="col-sm-6 col-md-6">
-                <div class="mt-5 verticalLine" (click)="tranformImage()">
-                    <h4>Transform Your Digital Core</h4>
-                    <p>#RevolutionizeYourFoundation</p>
-                    <p class="" *ngIf="transferPara">Let Cloudstine transform your digital core, laying the groundwork
-                        for
-                        unparalleled efficiency and
-                        innovation in financial accounts and taxation. Elevate your business to new heights with our
-                        cutting-edge
-                        solutions.</p>
-                    <div class="text-left" *ngIf="transferPara">
-                        <button type="button" class="btn"
-                            style="background-color: white; border: 1px solid #9938A5; color: #9938A5;">
-                            <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="d-flex">
+                    <div class="progress-container mt-3" [ngStyle]="{'width': transferPara ? '12px' : '10px'}">
+                        <div class="progress-bar" [style.height.%]="progress"></div>
+                    </div>
+                    <div class="mt-3 bg-white ms-4" >
+                        <span class="paraHover" (click)="tranformImage()" [ngStyle]="{'color': transferPara ? '' : 'darkgray'}">
+                        <h4>Transform Your Digital Core</h4>
+                        <p>#RevolutionizeYourFoundation</p>
+                        </span>
+                       <div  [ngClass]="transferPara ? 'max2':'max1'">
+                        <p class="paraHover1">Let Cloudstine transform your digital core, laying the groundwork
+                            for
+                            unparalleled efficiency and
+                            innovation in financial accounts and taxation. Elevate your business to new heights with our
+                            cutting-edge
+                            solutions.</p>
+                        <div class="text-left">
+                            <button type="button" class="btn btn-outline-cloud">
+                                <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
                     </div>
                 </div>
 
-                <div class="mt-5 verticalLine" (click)="SAPServicesImage()">
+                <div class="d-flex">
+                    <div class="progress-container mt-3"  [ngStyle]="{'width': SAPServicePara ? '11px' : '10px'}">
+                        <div class="progress-bar" [style.height.%]="progress1"></div>
+                    </div>
+                <div class="mt-3 bg-white ms-4" >
+                   <span class="paraHover" (click)="SAPServicesImage()" [ngStyle]="{'color': SAPServicePara ? '' : 'darkgray'}">
                     <h4>SAP Services</h4>
                     <p>#UnlockSAPPotential</p>
-                    <p class="" *ngIf="SAPServicePara">Maximize the power of SAP with Cloudstine's expert services,
+                   </span>
+                  <div [ngClass]="SAPServicePara ? 'max2':'max1'">
+                    <p class="" >Maximize the power of SAP with Cloudstine's expert services,
                         tailored to
                         streamline financial transactions, human capital management, and programming needs</p>
-                    <div class="text-left" *ngIf="SAPServicePara">
-                        <button type="button" class="btn"
-                            style="background-color: white; border: 1px solid #9938A5; color: #9938A5;">
-                            <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <div class="text-left" >
+                        <button type="button" class="btn btn-outline-cloud">
+                             <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                     </div>
+                  </div>
                 </div>
-                <div class="mt-5 verticalLine" (click)="taxWorkspaceImage()">
+                </div>
+
+                <div class="d-flex">
+                    <div class="progress-container mt-3"  [ngStyle]="{'width': taxWorkspacePara ? '12px' : '10px'}">
+                        <div class="progress-bar" [style.height.%]="progress2"></div>
+                    </div>
+                <div class="mt-3 bg-white ms-4" >
+                    <span class="paraHover" (click)="taxWorkspaceImage()" [ngStyle]="{'color': taxWorkspacePara ? '' : 'darkgray'}">
                     <h4>Tax Workspace </h4>
                     <p>#EffortlessTaxManagement</p>
-                    <p class="" *ngIf="taxWorkspacePara">Explore Cloudstine's suite of tax applications, covering Income
+                    </span>
+                   <div  [ngClass]="taxWorkspacePara ? 'max2':'max1'">
+                    <p class="">Explore Cloudstine's suite of tax applications, covering Income
                         Tax,
                         TDS/TCS, GST, and more, designed to streamline compliance, enhance accuracy, and simplify
                         tax-related
                         processes.</p>
-                    <div class="text-left" *ngIf="taxWorkspacePara">
-                        <button type="button" class="btn"
-                            style="background-color: white; border: 1px solid #9938A5; color: #9938A5;">
+                    <div class="text-left" >
+                        <button type="button" class="btn btn-outline-cloud">
                             <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                     </div>
+                   </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -157,7 +184,7 @@
                     <h2 style="color: #9938A5;"><b>% Tax Workspace</b></h2>
                     <h2 class="mt-3">Efficient Tax Management:
                         Cloudstine's Workspace Unifies Compliance for Seamless Tax Operations.</h2>
-                    <button class="btn mt-3" style="background-color:  #9938A5; color: white;"><span>Try Now
+                    <button class="btn button mt-3"><span>Try Now
                             &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -177,26 +204,26 @@
             <h3 style="color: #9938A5;"><b>PROVEN BUSINESS RESULTS AT LEADING COMPANIES</b></h3>
         </div>
         <div class="col-sm-3 col-md-3">
-            <h3 style="color: #9938A5;"><b>60%</b></h3>
-            <h4>Decrease in time togo-to-market</h4>
+            <h2 style="color: #9938A5;"><b>60%</b></h2>
+            <h6>Decrease in time togo-to-market</h6>
             <div class="mt-3">
-                <h3 style="color: #9938A5;"><b>360&#176;</b></h3>
-                <h4>Task & processvisibility</h4>
+                <h2 style="color: #9938A5;"><b>360&#176;</b></h2>
+                <h6>Task & processvisibility</h6>
             </div>
         </div>
         <div class="col-sm-3 col-md-3">
-            <h3 style="color: #9938A5;">
+            <h2 style="color: #9938A5;">
                 <b> &lt;1</b>
-            </h3>
-            <h4>Year ROI realization</h4>
+            </h2>
+            <h6>Year ROI realization</h6>
             <div class="mt-3">
-                <h3 style="color: #9938A5;"><b>50%</b></h3>
-                <h4>Increase in workflow</h4>
+                <h2 style="color: #9938A5;"><b>50%</b></h2>
+                <h6>Increase in workflow</h6>
             </div>
         </div>
         <div class="col-sm-3 col-md-3">
-            <h3 style="color: #9938A5;"><b>3X</b></h3>
-            <h4>Improvement in staffproductivity</h4>
+            <h2 style="color: #9938A5;"><b>3X</b></h2>
+            <h6>Improvement in staffproductivity</h6>
         </div>
     </div>
 </div>
@@ -214,10 +241,9 @@
                 </div>
                 <p style="font-size: 26px;">
                     At <span style="color: #9938A5;">Cloudstine</span>, we prioritize your privacy. We don't own or sell
-                    your data,
-                    and our commitment to trust is unwavering. Our revenue comes solely from the software license fees
-                    you pay,
-                    ensuring a se
+                    your data, and our commitment to
+                    trust is unwavering. Our revenue comes solely from the software license fees you pay, ensuring a
+                    secure and transparent partnership.</p>
             </div>
         </div>
     </div>

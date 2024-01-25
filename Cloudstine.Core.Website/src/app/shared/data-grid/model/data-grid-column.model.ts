@@ -19,3 +19,11 @@ export interface ActionColumn {
     buttonClass?: string;
     colorClass?: string;
 }
+export interface InovoiceColumn {
+    action: string;
+    actionPage: string;
+    actionIcon?: string;
+    actionButtonName?: string;
+    buttonClass?: string;
+    colorClass?: string;
+}
