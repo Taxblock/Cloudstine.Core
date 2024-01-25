@@ -18,24 +18,27 @@
 
     <div class="col-md-7">
       <div class="row my-5 mx-2">
+        <div class="col-md-11">
+            <!--Button-->
+            <div class="row d-flex justify-content-end">
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-cloud"
+                  (click)="Home_Page()">Home</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-cloud"
+                  (click)="onSignUpClick()">Sign Up</button>
+              </div>
+            </div>
+  
+        </div>
         <div class="col-md-2"></div>
         <div class="col-md-8 ">
-          <!--Button-->
-          <div class="row d-flex justify-content-end">
-            <div class="col-auto">
-              <button type="button" class="btn" style="border: 1px solid  #9938A5; color: #9938A5;"
-                (click)="Home_Page()">Home</button>
-            </div>
-            <div class="col-auto">
-              <button type="button" class="btn" style="background-color:  #9938A5; color: white;"
-                (click)="onSignUpClick()">Sign Up</button>
-            </div>
-          </div>
-
+        
           <!--Cloudstine Logo-->
           <div class="row mt-3">
-            <div class="text-left">
-              <img src="assets/images/Home_Page/cloudstine_logo_PNG.png" alt="" width="30%" height="auto">
+            <div class="text-left ps-0">
+              <img src="assets/images/cloudstine/cloudstine_b.png" alt="" width="50%" height="auto">
             </div>
           </div>
 
@@ -81,7 +84,7 @@
 
                   <div class="col-md-12 mt-3">
                     <div class="d-grid">
-                      <button class="btn" (click)="onSignIn_Click()" style="background-color:  #9938A5; color: white;"
+                      <button class="btn btn-cloud" (click)="onSignIn_Click()"
                         [disabled]="signInForm.invalid">
                         Sign in
                       </button>

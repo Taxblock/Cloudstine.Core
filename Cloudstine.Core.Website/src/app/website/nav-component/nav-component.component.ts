@@ -62,7 +62,7 @@ export class NavComponent {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute == '/login' || this.currentRoute == '/error' ) {
+        if (this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error' ) {
           this.showNav = false;
         } else {
           this.showNav = true;
@@ -165,6 +165,9 @@ export class NavComponent {
       this.router.navigateByUrl('/login');
     }
 
+  }
+  OnSignUpClick(){
+    this.router.navigateByUrl('/sign-up');
   }
 
   // signOut() {
