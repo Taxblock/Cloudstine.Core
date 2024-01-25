@@ -27,7 +27,7 @@
           <div class="row ">
             <div class="form-group">
               <label class="control-label">User Name:</label>
-              <input type="text" name="text" class="form-control" placeholder="Enter Name" [(ngModel)]="user.name"
+              <input type="text" name="text" class="form-control" placeholder="Enter Name" [(ngModel)]="userModel.username"
                 #name="ngModel" required>
               <div class="form text text-danger"
                 *ngIf="(name.touched || register.submitted || name.dirty) && name.errors?.['required']">This field is
@@ -37,7 +37,7 @@
           <div class="row mt-3">
             <div class="form-group">
               <label class="control-label">Mail Id:</label>
-              <input type="email" name="email" class="form-control" [(ngModel)]="user.email" #email="ngModel"
+              <input type="email" name="email" class="form-control" [(ngModel)]="userModel.mailId" #email="ngModel"
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" placeholder="Enter Email Id" required>
               <div class="form text text-danger"
                 *ngIf="(email.touched || email.dirty || register.submitted) && email.errors?.['required']">
@@ -53,7 +53,7 @@
             <div class="form-group">
               <label class="control-label">Mobile Number:
               </label>
-              <input type="text" name="mobile" [(ngModel)]="user.mobile" class="form-control" #mobile="ngModel"
+              <input type="text" name="mobile" [(ngModel)]="userModel.mobileNo" class="form-control" #mobile="ngModel"
                 pattern="^\d{10}$" maxlength="10" placeholder="Enter Mobile Number" required>
               <div class="form text text-danger"
                 *ngIf="(mobile.touched || mobile.dirty || register.submitted) && mobile.errors?.['required']">

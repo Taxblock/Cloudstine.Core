@@ -146,8 +146,22 @@ export class UsersComponent implements OnInit {
 
   onRowAction(data: any) {
     let action: string = data.action;
-    let employee: any = data.row;
+    let user: any = data.row;
+    console.log(this.user);
+    this.userModel = new UserModel();
+    this.userModel.mailId = user.mailId;
+    this.userModel.username = user.userName;
+    this.userModel.mobileNo = user.mobileNumber;
+    // this.userModel = {
+    //   userId : 100 ,
+    //   mailId : user.mailId,
+    //   username : user.userName,
+    //   mobileNo : user.mobileNumber,
+    //   status : 1
+    // }
 
+
+    document.getElementById('example3').click();
     // switch(action){
     //   case 'edit':
     //     this.employerService.setUserDetailsNFinancialId({ userId: employee.userId , userFinancialId: employee.userFinancialId });
