@@ -13,7 +13,7 @@ export class ProductDashboardComponent implements OnInit {
     {
       ApplicationId: 1,
       ApplicationName: 'SmartTDS',
-      ApplicationDetails: 'File your TDS return smartly on cloud application ',
+      ApplicationDetails: 'File your TDS return smartly on cloud applicationFile',
       logo: 'assets/images/Home_Page/CRED.png'
     },
 
