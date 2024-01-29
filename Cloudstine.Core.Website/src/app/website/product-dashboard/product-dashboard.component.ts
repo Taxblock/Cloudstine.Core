@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductDashboardService } from './product-dashboard.service'
+import { AlertService } from 'app/core/services/alertService';
 
 @Component({
   selector: 'app-product-dashboard',
@@ -11,7 +13,7 @@ export class ProductDashboardComponent implements OnInit {
     {
       ApplicationId: 1,
       ApplicationName: 'SmartTDS',
-      ApplicationDetails: 'File your TDS return smartly on cloud application ',
+      ApplicationDetails: 'File your TDS return smartly on cloud applicationFile',
       logo: 'assets/images/Home_Page/CRED.png'
     },
 
@@ -159,7 +161,7 @@ export class ProductDashboardComponent implements OnInit {
   GST: any[] = [];
   Other: any[] = [];
 
-  constructor() {
+  constructor(private ProductDashboardService: ProductDashboardService, private alertService: AlertService,) {
     //IncomeTax
     this.allProduct.forEach((productCategory) => {
       if (productCategory.incomeTax) {
@@ -193,5 +195,26 @@ export class ProductDashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.getAllProductList();
+    // this.getPurchaseProduct();
   }
+  getAllProductList() {
+    return this.ProductDashboardService.getAllProduct().subscribe(
+      (result: any) => {
+        this.allProduct = result.Value;
+      },
+      (error: any) => {
+        this.alertService.ShowErrorMessage(error.error);
+      }
+    );
+  }
+  getPurchaseProduct() {
+    return this.ProductDashboardService.getPurchaseProduct().subscribe((result: any) => {
+      this.purchaseProduct = result.value;
+    },
+      (error: any) => {
+        this.alertService.ShowErrorMessage(error.error);
+      });
+  }
+
 }

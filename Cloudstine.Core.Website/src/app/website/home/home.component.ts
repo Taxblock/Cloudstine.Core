@@ -40,7 +40,6 @@ export class HomeComponent implements OnInit {
   progress: number = 0;
   progress1: number = 0;
   progress2: number = 0;
-
   breckFor1: any
   breckFor2: any
   breckFor3: any
@@ -56,27 +55,31 @@ export class HomeComponent implements OnInit {
     this.progress1 = newProgress;
    
   }
+
   // Method to update progress
   updateProgress2(newProgress: number): void {
     this.progress2 = newProgress;
   
   }
+
   ngOnInit() {
-   this.simulateProgress()
+    this.simulateProgress()
   }
+
   async simulateProgress(): Promise<void> {
     for (let i = 0; i <= 100 && this.transferPara; i++) {
       await this.delay(50);
       this.updateProgress(i);
     }
+
     //this.updateProgress(100);
     this.progress = 0
-    if(this.transferPara){
+    if (this.transferPara) {
       this.transferPara = false
-    this.SAPServicePara = true
-    this.taxWorkspacePara = false;
-    this.imgHome = "assets/images/Home_Page/Woman_Power.png"
-    this.simulateProgress1()
+      this.SAPServicePara = true
+      this.taxWorkspacePara = false;
+      this.imgHome = "assets/images/Home_Page/Woman_Power.png"
+      this.simulateProgress1()
     }
   }
 
@@ -86,14 +89,15 @@ export class HomeComponent implements OnInit {
       // Assuming a different method for progress updates
       this.updateProgress1(i);
     }
+
     //this.updateProgress1(100);
     this.progress1 = 0
-    if(this.SAPServicePara){
-    this.transferPara = false
-    this.SAPServicePara = false
-    this.taxWorkspacePara = true;
-    this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
-    this.simulateProgress2()
+    if (this.SAPServicePara) {
+      this.transferPara = false
+      this.SAPServicePara = false
+      this.taxWorkspacePara = true;
+      this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
+      this.simulateProgress2()
     }
   }
 
@@ -103,14 +107,15 @@ export class HomeComponent implements OnInit {
       // Adjust the duration based on your needs
       this.updateProgress2(i);
     }
+
     //this.updateProgress2(100);
     this.progress2 = 0
-    if(this.taxWorkspacePara){
-    this.transferPara = true
-    this.SAPServicePara = false
-    this.taxWorkspacePara = false;
-    this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
-    this.simulateProgress()
+    if (this.taxWorkspacePara) {
+      this.transferPara = true
+      this.SAPServicePara = false
+      this.taxWorkspacePara = false;
+      this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
+      this.simulateProgress()
     }
   }
 
@@ -118,13 +123,7 @@ export class HomeComponent implements OnInit {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-
-
-
-
-
   tranformImage() {
-
     this.progress = 0;
     this.progress1 = 0;
     this.progress2 = 0;
@@ -138,6 +137,7 @@ export class HomeComponent implements OnInit {
     this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
 
   }
+
   SAPServicesImage() {
 
     this.progress = 0;
@@ -153,6 +153,7 @@ export class HomeComponent implements OnInit {
 
     this.imgHome = "assets/images/Home_Page/Woman_Power.png"
   }
+
   taxWorkspaceImage() {
 
     this.progress = 0;
