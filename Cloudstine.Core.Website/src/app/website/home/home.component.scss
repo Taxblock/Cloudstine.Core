@@ -68,8 +68,9 @@
   background-color: #9938A5;
   color: white;
 }
+
 .image-container {
-  height:400px !important;
+  height: 400px !important;
   width: 400px !important;
 }
 
@@ -97,7 +98,7 @@
 }
 
 .progress-container {
-  width:10px;
+  width: 10px;
   height: auto;
   background-color: #eee;
   border-radius: 20px;
@@ -109,40 +110,44 @@
   background-color: #9938A5;
   border-radius: 20px;
 }
-.paraHover:hover{
+
+.paraHover:hover {
   cursor: pointer;
   color: black !important;
-  
-}
-.paraHover{
-  
-    transition-property: all;
-    transition-duration: 0.25s;
-    transition-timing-function: ease;
-}
-.max1{
-  max-height: 0;
-  /*and eventually delay an overflow:auto; */
-  overflow:hidden;
-  transition: max-height .5s, overflow 1s;
 
 }
-.max2{
+
+.paraHover {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+.max1 {
+  max-height: 0;
+  /*and eventually delay an overflow:auto; */
+  overflow: hidden;
+  transition: max-height .5s, overflow 1s;
+}
+
+.max2 {
   max-height: 200px;
   //overflow:auto;
   transition: max-height .5s,
 }
-.bg-white{
+
+.bg-white {
   background: #fff !important;
 }
-.btn .fa{
- // display: none;
-  
+
+.btn .fa {
+  // display: none;
 }
 
-.btn:hover .fa{
+.btn:hover .fa {
   display: inline;
 }
+
 // h2{
 //   font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
 //   font-weight: 700;
