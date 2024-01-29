@@ -1,6 +1,6 @@
 <div class="row d-flex justify-content-end">
   <div class="col-auto">
-    <button type="button" class="btn" (click)="onClickAddUserAccess()" style="background-color: #EBD7ED;">+ Add User
+    <button type="button" class="btn addButton" (click)="onClickAddUserAccess()" style="background-color: #EBD7ED;">+ Add User
       Access</button>
   </div>
   <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
