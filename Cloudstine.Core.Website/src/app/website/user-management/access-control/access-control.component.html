@@ -1,6 +1,6 @@
 <div class="row d-flex justify-content-end">
   <div class="col-auto">
-    <button type="button" class="btn" (click)="onClickAddUserAccess()" style="background-color: #EBD7ED;">+ Add User
+    <button type="button" class="btn addButton" (click)="onClickAddUserAccess()" style="background-color: #EBD7ED;">+ Add User
       Access</button>
   </div>
   <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
@@ -40,32 +40,33 @@
             </div>
             <div class="row mt-3">
               <div class="form-group">
-                <label class="control-label">Mail Id:</label>
-                <input type="email" name="email" class="form-control" [(ngModel)]="user.email" #email="ngModel"
-                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" placeholder="Enter Email Id" required>
-                <div class="form text text-danger"
-                  *ngIf="(email.touched || email.dirty || register.submitted) && email.errors?.['required']">
-                  This field is required
-                </div>
-                <div class="form text text-danger"
-                  *ngIf="(email.touched || email.dirty || register.submitted) && email.errors?.['pattern']">
-                  Enter Valid Email Id
-                </div>
+                <label class="control-label">Application</label>
+                <select name="users" class="form-control" [(ngModel)]="accessControlModel.userName" #userRole="ngModel" required>
+                  <option value="" disabled>Select User Name</option>
+                  <option *ngFor="let user of users" [value]="user">{{ user }}</option>
+                  <!-- <input type="text" name="text" class="form-control" placeholder="Enter Name" [(ngModel)]="user.name"
+                #name="ngModel" required> -->
+                  <!-- <div class="form text text-danger"
+                    *ngIf="(name.touched || register.submitted || name.dirty) && name.errors?.['required']">This field
+                    is
+                    Required</div> -->
+                </select>
               </div>  
             </div>
             <div class="row mt-3">
               <div class="form-group">
-                <label class="control-label">Mobile Number:
+                <label class="control-label">Role
                 </label>
-                <input type="text" name="mobile" [(ngModel)]="user.mobile" class="form-control" #mobile="ngModel"
-                  pattern="^\d{10}$" maxlength="10" placeholder="Enter Mobile Number" required>
-                <div class="form text text-danger"
-                  *ngIf="(mobile.touched || mobile.dirty || register.submitted) && mobile.errors?.['required']">
-                  This field is required</div>
-                <div class="form text text-danger"
-                  *ngIf="(mobile.touched || mobile.dirty || register.submitted) && mobile.errors?.['pattern']">
-                  Enter Valid Mobile Number
-                </div>
+                <select name="users" class="form-control" [(ngModel)]="accessControlModel.userName" #userRole="ngModel" required>
+                  <option value="" disabled>Select User Name</option>
+                  <option *ngFor="let user of users" [value]="user">{{ user }}</option>
+                  <!-- <input type="text" name="text" class="form-control" placeholder="Enter Name" [(ngModel)]="user.name"
+                #name="ngModel" required> -->
+                  <!-- <div class="form text text-danger"
+                    *ngIf="(name.touched || register.submitted || name.dirty) && name.errors?.['required']">This field
+                    is
+                    Required</div> -->
+                </select>
               </div>
             </div><br>
             <div class="text-center">
