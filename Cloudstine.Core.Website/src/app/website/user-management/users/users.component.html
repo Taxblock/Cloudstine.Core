@@ -1,14 +1,15 @@
 <div class="row d-flex justify-content-end">
   <div class="col-auto">
-      <button type="button" class="btn" (click)="onClickAddUser()"   style="background-color: #EBD7ED;"
-    >+ Add User</button>
+    <button type="button" class="btn addButton" (click)="onClickAddUser()" style="background-color: #EBD7ED;">+
+      &nbsp; &nbsp; Add User&nbsp; &nbsp;&nbsp; &nbsp;
+    </button>
   </div>
-</div> 
-<app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
-  [actionColumns]="userActionColumns" [rowSelection]="rowSelection" [isEditable]="false" [isSortable]="true"
-  [isFilterable]="false" [isColumnFilterable]="false" [isResizable]="false" [isPageable]="true" [defaultPageSize]="10"
-  (selectedRows)="selectEmployee($event)" (rowAction)="onRowAction($event)" (actionButton)="onActionButton($event)">
-</app-data-grid>
+
+  <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="data" [tableColumns]="userTableColumns"
+    [actionColumns]="userActionColumns" [rowSelection]="rowSelection" [isEditable]="false" [isSortable]="true"
+    [isFilterable]="false" [isColumnFilterable]="false" [isResizable]="false" [isPageable]="true" [defaultPageSize]="10"
+    (selectedRows)="selectEmployee($event)" (rowAction)="onRowAction($event)" (actionButton)="onActionButton($event)">
+  </app-data-grid>
 
 <button type="button" id="example3" style="display: none;" class="btn btn-primary" data-bs-toggle="modal"
   data-bs-target="#exampleModal3">

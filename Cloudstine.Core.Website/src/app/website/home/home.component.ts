@@ -47,46 +47,19 @@ export class HomeComponent implements OnInit {
   // Method to update progress
   updateProgress(newProgress: number): void {
     this.progress = newProgress;
-    setTimeout(() => {
-      if (this.progress == 100) {
-        this.progress = 0
-        this.transferPara = false
-        this.SAPServicePara = true
-        this.taxWorkspacePara = false;
-        this.imgHome = "assets/images/Home_Page/Woman_Power.png"
-        this.simulateProgress1()
-      }
-    }, 1000)
+   
   }
 
   // Method to update progress
   updateProgress1(newProgress: number): void {
     this.progress1 = newProgress;
-    setTimeout(() => {
-      if (this.progress1 == 100) {
-        this.progress1 = 0
-        this.transferPara = false
-        this.SAPServicePara = false
-        this.taxWorkspacePara = true;
-        this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
-        this.simulateProgress2()
-      }
-    }, 1000)
+   
   }
 
   // Method to update progress
   updateProgress2(newProgress: number): void {
     this.progress2 = newProgress;
-    setTimeout(() => {
-      if (this.progress2 == 100) {
-        this.progress2 = 0
-        this.transferPara = true
-        this.SAPServicePara = false
-        this.taxWorkspacePara = false;
-        this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
-        this.simulateProgress()
-      }
-    }, 1000)
+  
   }
 
   ngOnInit() {
