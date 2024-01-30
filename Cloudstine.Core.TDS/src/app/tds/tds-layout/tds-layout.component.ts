@@ -106,13 +106,13 @@ export class TDSLayoutComponent implements OnInit {
     // this._coreMenuService.onMenuRegistered.subscribe(res => {
     //    this.Menu = res[1];
     // })
-    this.CheckAadharPanStatus();
-    let data = ConfigurationSettings.getMenu();
-    this.Menu = data
+    // this.CheckAadharPanStatus();
+    // let data = ConfigurationSettings.getMenu();
+    // this.Menu = data
 
-    this.poiLayoutService.currentLayoutDetails.subscribe(res => {
-      this.layoutDetails = res;
-    })
+    // this.poiLayoutService.currentLayoutDetails.subscribe(res => {
+    //   this.layoutDetails = res;
+    // })
 
     // this.poiLayoutService.panAadhaarLinkStatus.subscribe(res => {
     //   this.panAadhaarLink = res;
