@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
- 
+
   {
     path: "",
     //redirectTo: ":companyName/login",
     redirectTo: "tds",
     pathMatch: "full",
-},
+  },
 
 
 
@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes , { useHash : false})],
+  imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
