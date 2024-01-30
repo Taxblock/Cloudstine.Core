@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BasicInfoComponent } from './basic-info.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { BasicInfoRoutingModule } from './basic-info-routing.module';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyModule } from '@ngx-formly/core';
 
 
 
@@ -13,8 +15,11 @@ import { BasicInfoRoutingModule } from './basic-info-routing.module';
   imports: [
     CommonModule,
     BasicInfoRoutingModule,
+    ReactiveFormsModule,
+    FormlyBootstrapModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    FormlyModule.forRoot(),
   ]
 })
 export class BasicInfoModule { }
