@@ -20,8 +20,10 @@ import { ProductDashboardComponent } from './website/product-dashboard/product-d
 
 
 
+
+
 @NgModule({
-  declarations: [AppComponent, UserProfileComponent,PayNowComponent,ProductDashboardComponent],
+  declarations: [AppComponent, UserProfileComponent, PayNowComponent, ProductDashboardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -31,7 +33,6 @@ import { ProductDashboardComponent } from './website/product-dashboard/product-d
     NgxTinySliderModule,
     CoreModule,
     ReactiveFormsModule,
-
     ToastrModule.forRoot(),
   ],
   providers: [AutoLogoutService, { provide: APP_BASE_HREF, useValue: '/' }],
