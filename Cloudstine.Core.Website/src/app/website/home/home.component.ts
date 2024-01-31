@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
     private redirectService: RedirectService,
     private meta: Meta,
     private titleService: Title,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private _router: Router,
   ) {
     this.titleService.setTitle("Taxblock: Accounting & Taxation Compliance Management");
     this.meta.updateTag({ name: 'description', content: "Taxblock is a one-stop shop for Income Tax, GST, Accounting,Tax Technology & Automation. Offering across the globe with a customer satisfaction score of 98%" });
@@ -167,5 +168,7 @@ export class HomeComponent implements OnInit {
     this.simulateProgress2()
     this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
   }
-
+  readAbout(){
+    this._router.navigate(['/about']);
+  }
 }

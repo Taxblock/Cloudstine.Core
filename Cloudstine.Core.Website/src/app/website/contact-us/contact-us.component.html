@@ -1,0 +1,185 @@
+<div style="height: 10vh;"></div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="card" style="background-color: #EBD7ED;">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center align-items-center p-5">
+                    <div class="text-left">
+                        <h1><b>Contact Us</b></h1>
+                        <h3 class="mt-3">Start The Journey Of Successful HR Transformation</h3>
+                        <button class="btn button mt-3"><span>Get in Touch
+                                &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 p-5">
+                    <div class="text-center">
+                        <img src="assets/images/Home_Page/contact_us.png" alt="" width="80%" height="auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Form-->
+<div class="container mt-5">
+    <div class="row">
+        <div class="card p-5">
+            <div class="text-left">
+                <h4>
+                    Connect With Us
+                </h4>
+            </div>
+            <form #contactus="ngForm" (ngSubmit)="onClickSubmit()">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label class="control-label">Name:<span style="color: red;">*</span></label>
+                        <div class="">
+                            <input type="text" name="name" class="form-control" placeholder="Enter Your Name"
+                                [(ngModel)]="user.name" #name="ngModel" pattern="[a-zA-Z]+" required>
+                            <div class="error-msg"
+                                *ngIf="(name.touched || contactus.submitted || name.dirty) && name.errors?.['required']">
+                                Name Is
+                                Required</div>
+                            <div class="error-msg" *ngIf="name.errors?.['pattern']">Name should only contain
+                                alphabetical
+                                characters</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label class="control-label">Email:<span style="color: red;">*</span></label>
+                        <div class="">
+                            <input type="email" name="email" class="form-control" [(ngModel)]="user.email"
+                                placeholder="Email" #email="ngModel"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                            <div class="error-msg"
+                                *ngIf="(email.touched || email.dirty || contactus.submitted) && email.errors?.['required']">
+                                Email is required
+                            </div>
+                            <div class="error-msg"
+                                *ngIf="(email.touched || email.dirty || contactus.submitted) && email.errors?.['pattern']">
+                                Enter Valid Email
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label class="control-label">Mobile:<span style="color: red;">*</span>
+                        </label>
+                        <div class="">
+                            <input type="text" name="mobile" [(ngModel)]="user.mobile" class="form-control"
+                                #mobile="ngModel" pattern="^\d{10}$" maxlength="10" placeholder="Mobile No" required>
+                            <div class="error-msg"
+                                *ngIf="(mobile.touched || mobile.dirty || contactus.submitted) && mobile.errors?.['required']">
+                                Mobile is required</div>
+                            <div class="error-msg"
+                                *ngIf="(mobile.touched || mobile.dirty || contactus.submitted) && mobile.errors?.['pattern']">
+                                Enter Valid Mobile Number
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label class="control-label">Subject:<span style="color: red;">*</span>
+                        </label>
+                        <div class="">
+                            <input type="text" name="subject" [(ngModel)]="user.subject" class="form-control"
+                                #subject="ngModel" placeholder="Subject" required>
+                            <div class="error-msg"
+                                *ngIf="(subject.touched || subject.dirty || contactus.submitted) && subject.errors?.['required']">
+                                Subject is required</div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="control-label">Comments:
+                        </label>
+                        <div class="">
+                            <input type="textarea" name="comments" [(ngModel)]="user.comments" class="form-control"
+                                placeholder="Messege:" #comments="ngModel" rows="4">
+                        </div>
+                    </div>
+                </div><br>
+                <div class="text-center">
+                    <button [disabled]="contactus.invalid" class="btn text-white"
+                        style=" background-color: #9938A5;">Send Messege</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="card" style="background-color: #EBD7ED;">
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <div class="text-center">
+                        <img src="assets/images/Home_Page/address.png" alt="" width="80%" height="auto">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center p-5">
+                    <div class="text-left">
+                        <h3>HEADQUARTERS</h3>
+                        <h4>INDIA</h4>
+                        <h5>Cloudstine Automation Private Limited
+                            Office No 301, 3rd Floor, Epicentre,
+                            Old Mumbai - Pune Rd, Wakadewadi, Shivajinagar,
+                            Pune, Maharashtra 411005</h5>
+                        <h5>Phone : +917387818717</h5>
+                        <h5>Email: info@cloudstine.com
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="card" style="background-color: #EBD7ED;">
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <div class="text-center">
+                        <img src="assets/images/Home_Page/address.png" alt="" width="80%" height="auto">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center p-5">
+                    <div class="text-left ">
+                        <h3>ACROSS THE GLOBE</h3>
+                        <h4>Singapore</h4>
+                        <h5>Rolling Arrays Consulting Pte. Ltd. Headquarters
+                            9 Straits View, Marina One West Tower, #05-07, Singapore 018937</h5>
+                        <h5>Phone : +65 80314594</h5>
+                        <h5>Email: singapore@cloudstine.com
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="" style="background-color: #F8F9FB;">
+    <div class="row">
+        <div class="col-md-4 p-5">
+            <div class="text-center">
+                <img src="assets/images/Home_Page/Android_logo.png" alt="" width="40%" height="auto">
+            </div>
+        </div>
+        <div class="col-md-8 d-flex justify-content-center align-items-center p-5">
+            <div class="text-left ">
+                <h3>We’re happy to help</h3>
+                <h4 class="mt-3">Have any questions about Rolling Arrays, get in touch.</h4>
+                <button type="button" class="btn button mt-3">
+                    <span>Contact Us&nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div> -->
