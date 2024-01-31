@@ -20,7 +20,15 @@ const routes: Routes = [
         path: 'address-login',
         loadChildren:() => import('./address-and-login/address-and-login.module').then(m => m.AddressAndLoginModule)
       },
-
+      {
+        path: 'responsible-person-info',
+        loadChildren:() => import('./responsible-person-info/responsible-person-info.module').then(m => m.ResponsiblePersonInfoModule)
+      },
+      {
+        path: 'salary-info',
+        loadChildren:() => import('./salary-info/salary-info.module').then(m => m.SalaryInfoModule)
+      }
+      
     ]
   }
 
