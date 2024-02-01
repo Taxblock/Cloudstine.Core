@@ -109,7 +109,12 @@ export class NavComponent {
   onAccountClick() {
     window.location.href = environment.CLIENT_APP_URL + 'user-list';
   }
-
+  onClickPoi(){
+    this.router.navigate(["./poi"])
+  }
+  onClickERP(){
+    this.router.navigate(["./erp"])
+  }
   // SetServices(userCartVM: UserCartVM) {
   //   this.Total = 0;
   //   this.ItemCount = 0;
