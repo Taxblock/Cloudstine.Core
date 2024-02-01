@@ -26,7 +26,11 @@ const routes: Routes = [
       },
 
     ]
-  }
+  },
+  {
+    path: 'add-challan',
+    loadChildren:() => import('./challan/add-challan/add-challan.module').then(m => m.AddChallanModule)
+  },
 
 ];
 

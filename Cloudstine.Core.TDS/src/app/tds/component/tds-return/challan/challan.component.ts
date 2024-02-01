@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
 
 
@@ -9,6 +10,13 @@ import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.mod
   styleUrls: ['./challan.component.scss'],
 })
 export class ChallanComponent {
+
+constructor(
+  private router:Router
+){
+
+}
+
   tdsReturnList = [
     {
     sr_No: '001',
@@ -203,5 +211,8 @@ selectEmployee(employees: any) {
 }
 onRowAction(data: any) {
 
+}
+onAddChallanClick(){
+  this.router.navigateByUrl('tds/tds-return/add-challan')
 }
 }
