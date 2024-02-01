@@ -25,13 +25,13 @@ export class ErpComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onclickDownload(){
-    this.imgHome= "assets/images/Home_Page/people.png"
+  onclickDownload() {
+    this.imgHome = "assets/images/Home_Page/people.png"
   }
-  onClickDelete(){
-    this.imgHome= "assets/images/Home_Page/factor.png"
+  onClickDelete() {
+    this.imgHome = "assets/images/Home_Page/factor.png"
   }
-  onClickUpload(){
-    this.imgHome="assets/images/Home_Page/expert1.png"
+  onClickUpload() {
+    this.imgHome = "assets/images/Home_Page/expert1.png"
   }
 }

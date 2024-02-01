@@ -1,5 +1,5 @@
 .icon i {
-    border: 1px solid black;
+    border: 1px solid #9938A5;
     padding: 5px;
     margin: 5px;
     transition: background-color 0.3s;
@@ -10,14 +10,19 @@
     background-color: #9938A5;
 }
 
+.list-unstyled .icon a {
+    color: #9938A5;
+}
+
+.list-unstyled .icon a:hover {
+    color: #ffffff;
+}
+
 .image-container {
     border-radius: 50%;
-    /* This makes the image container circular */
     overflow: hidden;
-    /* This ensures the image stays within the circle */
-    width: 150px;
-    /* Adjust the width and height as needed */
-    height: 150px;
+    width: 170px;
+    height: 170px;
 }
 
 .image-container img {
@@ -52,5 +57,4 @@
 #card1 {
     width: 400px !important;
     position: relative;
-    // left: 70px !important;
 }

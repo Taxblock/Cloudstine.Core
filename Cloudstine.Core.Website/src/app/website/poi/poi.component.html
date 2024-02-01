@@ -195,17 +195,17 @@
 </div>
 
 <div class="container mt-5 mb-5">
-    <div class="row">
+    <div class="row" style="cursor: pointer;">
         <div class="text-left ">
             <div *ngFor="let faqItem of faqData">
-                <div class="row">
+                <div class="row" (click)="toggleAnswer(faqItem)">
                     <div class="col-md-11">
                         <div class="question">
                             <h5><b> {{ faqItem.question }}</b></h5>
                         </div>
                     </div>
                     <div class="col-md-1 text-center">
-                        <span class="toggle-icon" (click)="toggleAnswer(faqItem)">
+                        <span class="toggle-icon" >
                             {{ faqItem.showAnswer ? '-' : '+' }}
                         </span>
                     </div>
