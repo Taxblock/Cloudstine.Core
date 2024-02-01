@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserProfileComponent } from './website/user-profile/user-profile.component';
 import { PayNowComponent } from './website/pay-now/pay-now.component';
 import { ProductDashboardComponent } from './website/product-dashboard/product-dashboard.component';
+// import { ContactUsComponent } from './website/contact-us/contact-us.component';
 
 
 

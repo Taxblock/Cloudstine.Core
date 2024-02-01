@@ -10,10 +10,12 @@
 <!--Purchase Product-->
 <div class="card-bg" *ngIf="purchaseProduct && purchaseProduct.length > 0">
     <div class="card p-5 mx-5" style="border-radius: 15px; background-color: #EEF5FB;">
-        <div class="row">
-            <div class="col-md-3" *ngFor="let product of purchaseProduct">
-                <div class="card feature mt-3 p-3">
-                    <div class="text-left">
+
+        <div class="row ">
+            <div class="col-md-3 mb-5" *ngFor="let product of purchaseProduct">
+                <div class=" mt-3 p-0 solution_cards_box">
+                    <div class="text-left solution_card">
+                        <div class="hover_color_bubble"></div>
                         <div class="image-container my-3">
                             <img [src]="product.logo" alt="">
                         </div>
@@ -75,10 +77,12 @@
             <h3>TDS</h3>
         </div>
     </div>
+
     <div class="row px-5 mx-5">
         <div class="col-md-3 mb-5" *ngFor="let product of TDS">
-            <div class="card feature mt-3 p-3">
-                <div class="text-left">
+            <div class=" mt-3 p-0 solution_cards_box">
+                <div class="text-left solution_card">
+                    <div class="hover_color_bubble"></div>
                     <div class="image-container my-3">
                         <img [src]="product.logo" alt="">
                     </div>
@@ -89,7 +93,7 @@
                         </p>
                     </div>
                     <button type="button" class="btn">
-                        <span>Try Now&nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <span>Try Now &nbsp;</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -102,10 +106,12 @@
             <h3>SAP</h3>
         </div>
     </div>
+
     <div class="row px-5 mx-5">
         <div class="col-md-3 mb-5" *ngFor="let product of SAP">
-            <div class="card feature mt-3 p-3">
-                <div class="text-left">
+            <div class=" mt-3 p-0 solution_cards_box">
+                <div class="text-left solution_card">
+                    <div class="hover_color_bubble"></div>
                     <div class="image-container my-3">
                         <img [src]="product.logo" alt="">
                     </div>
@@ -129,10 +135,12 @@
             <h3>GST</h3>
         </div>
     </div>
+
     <div class="row px-5 mx-5">
         <div class="col-md-3 mb-5" *ngFor="let product of GST">
-            <div class="card feature mt-3 p-3">
-                <div class="text-left">
+            <div class=" mt-3 p-0 solution_cards_box">
+                <div class="text-left solution_card">
+                    <div class="hover_color_bubble"></div>
                     <div class="image-container my-3">
                         <img [src]="product.logo" alt="">
                     </div>
@@ -156,10 +164,12 @@
             <h3>Other</h3>
         </div>
     </div>
+
     <div class="row px-5 mx-5">
         <div class="col-md-3 mb-5" *ngFor="let product of Other">
-            <div class="card feature mt-3 p-3">
-                <div class="text-left">
+            <div class=" mt-3 p-0 solution_cards_box">
+                <div class="text-left solution_card">
+                    <div class="hover_color_bubble"></div>
                     <div class="image-container my-3">
                         <img [src]="product.logo" alt="">
                     </div>
