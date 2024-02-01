@@ -17,9 +17,8 @@ import {
   NgbPopoverModule,
 } from "@ng-bootstrap/ng-bootstrap";
 import { POIRouting } from "./tds-routing.module";
-import { TDSLayoutComponent } from "./tds-layout/tds-layout.component";
 import { TaxationLayoutModule } from "./tds-layout/tds-layout.module";
-import { DeductorDetailsComponent } from "./component/deductor-details/deductor-details.component";
+import { TDSReturnDashboardService } from "./component/tds-return-dashboard/tds-return-dashboard.service";
 
 
 
@@ -36,13 +35,13 @@ import { DeductorDetailsComponent } from "./component/deductor-details/deductor-
   ],
 
   declarations: [
-    
+  
   ],
 
   exports: [FormsModule,ReactiveFormsModule],
 
   providers: [
-    
+    TDSReturnDashboardService
   ],
 })
 export class POIModule {}
