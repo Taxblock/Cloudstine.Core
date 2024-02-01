@@ -121,6 +121,27 @@ const routes: Routes = [
       )
   },
   {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./website/contact-us/contact-us.module').then(
+        (m) => m.ContactUsModule
+      )
+  },
+  {
+    path: 'careers',
+    loadChildren: () =>
+      import('./website/careers/careers.module').then(
+        (m) => m.CareersModule
+      )
+  },
+  {
+    path: 'customer',
+    loadChildren: () =>
+      import('./website/customer/customer.module').then(
+        (m) => m.CustomerModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
   }

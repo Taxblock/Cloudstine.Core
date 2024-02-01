@@ -37,5 +37,20 @@
     margin-top: 100px;
     border-bottom: none !important;
     background-color: #9938A5 !important;
-    ;
+}
+
+.card {
+    width: 240px;
+    height: 240px;
+    background-color: #9938A5 !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#card1 {
+    width: 400px !important;
+    position: relative;
+    // left: 70px !important;
 }

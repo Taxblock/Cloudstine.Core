@@ -29,6 +29,24 @@ const poiRoutes: Routes = [
           ),
 
       },
+      {
+
+        path: 'tds-return-dashboard',
+        loadChildren: () =>
+          import('./component/tds-return-dashboard/tds-return-dashboard.module').then(
+            (m) => m.TDSRETURNDASHBOARDModule
+          ),
+
+      },
+      {
+
+        path: 'tds-return',
+        loadChildren: () =>
+          import('./component/tds-return/tds-return.module').then(
+            (m) => m.TDSRETURNModule
+          ),
+
+      },
 
     ],
   }
