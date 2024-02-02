@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'upload-exel',
     loadChildren:() => import('./challan/upload-exel/upload-exel.module').then(m => m.UploadExelModule)
-  }
+    },
+    {
+        path: 'add-employee',
+        loadChildren: () => import('./employee/add-employee/add-employee.module').then(m => m.AddEmployeeModule)
+    }
 
 
 ];
