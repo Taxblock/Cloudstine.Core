@@ -156,6 +156,27 @@ const routes: Routes = [
       )
   },
   {
+    path: 'serviceslist',
+    loadChildren: () =>
+      import('./website/serviceslist/serviceslist.module').then(
+        (m) => m.ServiceslistModule
+      )
+  },
+  {
+    path: 'sapservice',
+    loadChildren: () =>
+      import('./website/sapservice/sapservice.module').then(
+        (m) => m.SapserviceModule
+      )
+  },
+  {
+    path: 'taxservice',
+    loadChildren: () =>
+      import('./website/taxservice/taxservice.module').then(
+        (m) => m.TaxserviceModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
   }
