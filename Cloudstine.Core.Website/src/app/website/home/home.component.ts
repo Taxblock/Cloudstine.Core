@@ -171,4 +171,16 @@ export class HomeComponent implements OnInit {
   readAbout(){
     this._router.navigate(['/about']);
   }
+  onClickService(){
+    this._router.navigate(['/serviceslist']);
+  }
+  onclicksap(){
+    this._router.navigate(['/sapservice']);
+  }
+  onclickservice(){
+    this._router.navigate(['/serviceslist']);
+  }
+  onClickTaxService(){
+    this._router.navigate(['/taxservice']);
+  }
 }
