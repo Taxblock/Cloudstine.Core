@@ -14,41 +14,42 @@ import { SanitizeHtmlPipe } from "./pipe/domsanitizer.pipe";
 import { MessageComponent } from "./dialog/message/message.component";
 import { SubjectService } from "./services/subject.service";
 import { InsertITDSubmissionToPOIService } from "./services/InsertITDSubmissionToPOI.service";
-
+import { DatePickerComponent } from './date-picker/date-picker.component';
 
 @NgModule({
 	declarations: [
-		
+
 		DataGridComponent,
 		ActionRendererComponent,
-	
+
 		//DatePikerComponent,
 		//RemarkTooltipComponent,
 		LabelWrapper,
 		SanitizeHtmlPipe,
-		
-		
+		DatePickerComponent,
+
+
 		//MessageComponent,
-		
+
 	],
-	
+
 	imports: [
-		
+
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
 		AgGridModule,
 		HttpClientModule,
-	// 	FormlyModule.forRoot({
-	// 		types: [{ name: 'remark', component: RemarkTooltipComponent },{ name: 'poi-hraUploadDocType', component: POIHRAUploadDocumentTypeComponent },{ name: 'repeat', component: RepeatTypeComponent },{ name: 'itd-repeat', component: ITDRepeatTypeComponent },{ name: 'hra-repeat', component: HRARepeatTypeComponent },{ name: 'poi-repeat', component: POIRepeatTypeComponent },{ name: 'poi-repeat-uploadDocument', component: POIUploadDocRepeatTypeComponent },{ name: 'date',
-	// 		component: DatePikerComponent,
-	// 		wrappers: ['label'],
-	// 	  },{ name: 'deduction-section16-repeat', component: ITDRepeatDdeductionSection16Component },{ name: 'eye-button', component: EyeButtonTypeComponent }],
-	// 	  wrappers: [
-    //     { name: 'label', component: LabelWrapper },
-      
-    //   ]
-	// 	}),
+		// 	FormlyModule.forRoot({
+		// 		types: [{ name: 'remark', component: RemarkTooltipComponent },{ name: 'poi-hraUploadDocType', component: POIHRAUploadDocumentTypeComponent },{ name: 'repeat', component: RepeatTypeComponent },{ name: 'itd-repeat', component: ITDRepeatTypeComponent },{ name: 'hra-repeat', component: HRARepeatTypeComponent },{ name: 'poi-repeat', component: POIRepeatTypeComponent },{ name: 'poi-repeat-uploadDocument', component: POIUploadDocRepeatTypeComponent },{ name: 'date',
+		// 		component: DatePikerComponent,
+		// 		wrappers: ['label'],
+		// 	  },{ name: 'deduction-section16-repeat', component: ITDRepeatDdeductionSection16Component },{ name: 'eye-button', component: EyeButtonTypeComponent }],
+		// 	  wrappers: [
+		//     { name: 'label', component: LabelWrapper },
+
+		//   ]
+		// 	}),
 		NgbModule
 	],
 	exports: [
