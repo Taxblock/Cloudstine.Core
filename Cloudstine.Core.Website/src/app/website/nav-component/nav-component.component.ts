@@ -64,7 +64,7 @@ export class NavComponent {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error') {
+        if (this.currentRoute== '/forgot-pass' || this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error') {
           this.showNav = false;
         } else {
           this.showNav = true;
