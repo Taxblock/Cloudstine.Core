@@ -21,7 +21,7 @@ export class DataGridComponent implements OnInit {
   @Input() actionColumns: ActionColumn[] = [];
   @Input() actionButtons: ActionColumn[] = [];
   @Input() defaultPageSize: number;
-
+  @Input() frameworkComponents: any;
 
 
   @Output() selectedRows: EventEmitter<any> = new EventEmitter<any>();
