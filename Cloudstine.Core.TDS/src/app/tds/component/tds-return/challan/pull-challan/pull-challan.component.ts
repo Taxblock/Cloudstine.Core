@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { AgGridAngular } from 'ag-grid-angular';
 import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
 
 
@@ -10,6 +11,8 @@ import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.mod
 })
 
 export class PullChallanComponent {
+  @ViewChild('agGrid', { static: true }) agGrid: AgGridAngular;
+  
   formQsectionList = [
     { value: '1', label: 'From 24Q Section' },
     { value: '2', label: 'From 25Q Section' },
@@ -101,6 +104,7 @@ declaredTableColumns: TableColumn[] = [
     field: 'sr_No',
     headerName: 'SR NO',
     filter: 'agTextColumnFilter',
+    editable:true,
     filterParams: {
       buttons: ['reset', 'apply'],
     },
@@ -230,6 +234,20 @@ selectEmployee(employees: any) {
 
 }
 onRowAction(data: any) {
+
+}
+
+ngAfterViewInit() {
+  // Access the AG-Grid API after the grid has been fully initialized
+  this.OnConfirmClick();
+}
+OnConfirmClick(){
+  const editedRows = this.agGrid.api.getSelectedNodes();
+  console.log('Edited Data:', editedRows.map(row => row.data));
+}
+onCellValueChanged(e:any){
+  const editedRows = this.agGrid.api.getSelectedNodes();
+  console.log('Edited Data:', editedRows.map(row => row.data));
 
 }
 

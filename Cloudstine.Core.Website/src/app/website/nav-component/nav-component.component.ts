@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Renderer2 } from '@angular/core';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 import { APIService } from '../../core/services/apiService';
@@ -14,7 +14,7 @@ import { environment } from 'environments/environment';
   selector: 'nav-component',
   templateUrl: './nav-component.component.html',
   styleUrls: ['./nav-component.component.scss'],
-  
+
 })
 export class NavComponent {
   public isLogin: boolean = false;
@@ -29,18 +29,20 @@ export class NavComponent {
   returnUrl: string;
   companyName: string;
   showNavBar: boolean = true;
+  closeDrop: boolean = false;
 
   constructor(
-   
+
     private router: Router,
     private alertService: AlertService,
     private navService: NavComponentService,
     //private cartService: CartService,
     private userService: UserProfileService,
     private route: ActivatedRoute,
+    private renderer: Renderer2, private el: ElementRef
   ) {
 
-  
+
     this.route.queryParams.subscribe((params) => {
 
       this.companyName = params['corporateName'];
@@ -62,7 +64,7 @@ export class NavComponent {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error' ) {
+        if (this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error') {
           this.showNav = false;
         } else {
           this.showNav = true;
@@ -109,22 +111,27 @@ export class NavComponent {
   onAccountClick() {
     window.location.href = environment.CLIENT_APP_URL + 'user-list';
   }
-  onClickPoi(){
+  onClickPoi() {
     this.router.navigate(["./poi"])
+    // Get the native element reference
+    const element = this.el.nativeElement.querySelector('.closeDrop');
+
+    // Use Renderer2 to modify the style
+    this.renderer.setStyle(element, 'display', 'none');
   }
-  onClickERP(){
+  onClickERP() {
     this.router.navigate(["./erp"])
   }
-  onClickAboutUs(){
+  onClickAboutUs() {
     this.router.navigate(["./about"])
   }
-  onClickCareers(){
+  onClickCareers() {
     this.router.navigate(["./careers"])
   }
-  onClickCustomer(){
+  onClickCustomer() {
     this.router.navigate(["./customer"])
   }
-  contactUs(){
+  contactUs() {
     this.router.navigate(["./contact-us"])
   }
   // SetServices(userCartVM: UserCartVM) {
@@ -139,28 +146,28 @@ export class NavComponent {
   //   }
   // }
 
- GetCartByUserId() {
-  this.services = [];
-  this.Total = 0;
-  if (this.userService.CurrentUserValue && this.userService.CurrentUserValue.UserId) {
-    const userId = this.userService.CurrentUserValue.UserId;
-    this.navService.GetCartByUserId(userId).subscribe(
-      (result: any) => {
-        this.services = result.Value;
-        this.ItemCount = this.services.length;
-        for (let i = 0; i < this.services.length; i++) {
-          this.Total += this.services[i].TotalChargeAmount;
+  GetCartByUserId() {
+    this.services = [];
+    this.Total = 0;
+    if (this.userService.CurrentUserValue && this.userService.CurrentUserValue.UserId) {
+      const userId = this.userService.CurrentUserValue.UserId;
+      this.navService.GetCartByUserId(userId).subscribe(
+        (result: any) => {
+          this.services = result.Value;
+          this.ItemCount = this.services.length;
+          for (let i = 0; i < this.services.length; i++) {
+            this.Total += this.services[i].TotalChargeAmount;
+          }
+        },
+        (error: any) => {
+          this.alertService.ShowError(error, "Failed to get due to unknown error");
         }
-      },
-      (error: any) => {
-        this.alertService.ShowError(error, "Failed to get due to unknown error");
-      }
-    );
-  } else {
-    // Handle the case where CurrentUserValue or UserId is null
-    console.log("CurrentUserValue or UserId is null");
+      );
+    } else {
+      // Handle the case where CurrentUserValue or UserId is null
+      console.log("CurrentUserValue or UserId is null");
+    }
   }
-}
 
   // SaveCart(userCartVM: UserCartVM) {
   //   this.cartService.SaveCart(userCartVM).subscribe(
@@ -183,7 +190,7 @@ export class NavComponent {
     }
 
   }
-  OnSignUpClick(){
+  OnSignUpClick() {
     this.router.navigateByUrl('/sign-up');
   }
 

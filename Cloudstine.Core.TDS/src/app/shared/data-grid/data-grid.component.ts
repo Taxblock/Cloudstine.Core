@@ -72,7 +72,7 @@ export class DataGridComponent implements OnInit {
         }
       };
     }
-   
+   console.log('ssssss',this.tableDataSource)
   }
   ngOnInit(): void {
     this.initializeColumns();
@@ -88,7 +88,7 @@ export class DataGridComponent implements OnInit {
         filter: this.isColumnFilterable,
         flex: 1,
         minWidth: 150,
-
+        
 
       },
 
