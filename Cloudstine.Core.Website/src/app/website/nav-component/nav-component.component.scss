@@ -4,12 +4,15 @@
   padding: 0 !important;
   line-height: 55px !important;
 }
-.logo-sm{
+
+.logo-sm {
   display: none;
 }
-.logo-lg{
+
+.logo-lg {
   display: block;
 }
+
 .btn.btn-count {
   height: 20px;
   width: 20px;
@@ -28,6 +31,7 @@
   margin-top: -25px;
   margin-left: -12px;
 }
+
 .active {
   color: #9938A5 !important;
   // background: linear-gradient(360deg, #46c0de00, #4688f11c);
@@ -40,12 +44,15 @@
 .viewPromo {
   display: block;
 }
+
 .viewPromo1 {
   display: none;
 }
+
 .nodrop {
   display: none !important;
 }
+
 .drop {
   display: block !important;
 }
@@ -54,22 +61,26 @@
   .nodrop {
     display: block !important;
   }
+
   .drop {
     display: none !important;
   }
+
   .viewPromo {
     display: none;
   }
+
   .viewPromo1 {
     display: block;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  .logo-sm{
+  .logo-sm {
     display: block;
   }
-  .logo-lg{
+
+  .logo-lg {
     display: none;
   }
 }
@@ -94,6 +105,7 @@
   width: 100%;
   //transition: width .3s;
 }
+
 .blink {
   -webkit-animation: change 1s infinite both;
   animation: change 1s infinite both;
@@ -109,45 +121,55 @@
 
 @keyframes change {
   0% {
-    color:red;
+    color: red;
     /* opacity: .5; */
   }
+
   100% {
-    color:darkorange;
+    color: darkorange;
   }
 }
-#topnav .navigation-menu .has-submenu .menu-arrow{
-  top:25px !important
+
+#topnav .navigation-menu .has-submenu .menu-arrow {
+  top: 25px !important
 }
+
 // #topnav .navigation-menu .has-submenu .menu-arrow :hover{
 //   top:30px !important
 // }
-#topnav .navigation-menu > .has-submenu:hover .menu-arrow {
+#topnav .navigation-menu>.has-submenu:hover .menu-arrow {
   top: 30px !important;
 }
-#topnav .navigation-menu > .has-submenu.active .menu-arrow {
+
+#topnav .navigation-menu>.has-submenu.active .menu-arrow {
   top: 25px;
 }
-.hov-border:hover{
+
+.hov-border:hover {
   //border-bottom: 1px solid #9938A5;
 }
 
 
-
+.submenu.megamenu {
+  max-width: 70% !important /* Adjust this value to your desired width */
+  /* Add any other styling properties you need */
+}
 
 $border-color: #9938A5; // Set your border color
-$border-width: 4px;     // Set your border width
-$glow-size: 10px;       // Set the size of the glow
+$border-width: 4px; // Set your border width
+$glow-size: 10px; // Set the size of the glow
+
 .border-outline p {
   font-size: 12px;
 }
+
 .windows-border {
   padding: 10px; // Adjust padding as needed
   position: relative;
   cursor: pointer;
   display: grid;
   align-items: center;
-  
+
   &:before {
     content: "";
     position: absolute;
@@ -159,12 +181,12 @@ $glow-size: 10px;       // Set the size of the glow
     background-color: #ebd7ed;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-   
+
   }
 
   &:hover:before {
     opacity: 1;
-    
+
   }
 }
 
@@ -219,18 +241,17 @@ body {
     border-radius: 3px;
   }
 
- 
   &.material-bubble {
-    background-color: transparent;
+    // background-color: transparent;
     //color: darken($darkblue, 10%);
     border: none;
     overflow: hidden;
     box-shadow: none;
-   
+
     &:hover {
       //color: $offwhite;
       opacity: 1;
-      
+      color: #9938A5 !important
     }
 
     &::before {
@@ -241,8 +262,8 @@ body {
       width: 100%;
       height: 100%;
       //border: 3px solid darken($darkblue, 10%);
-      border: solid 1px #9938A5;
-      
+      // border: solid 1px #9938A5;
+
       opacity: 0;
       border-radius: 0px;
       transition: opacity 0.3s, border 0.3s;
@@ -250,7 +271,7 @@ body {
 
     &:hover::before {
       opacity: 1;
-      
+
     }
 
     &::after {
@@ -260,18 +281,18 @@ body {
       left: 0;
       width: 100%;
       height: 300px;
-      background-color: lighten($darkblue, 10%);
+      // background-color: lighten($darkblue, 10%);
       border-color: transparent;
       border-radius: 20%;
       transform: translate(0px, -100px) scale(0.1);
       opacity: 0;
       z-index: -1;
       transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-      
+
     }
 
     &:hover::after {
-      
+
       opacity: 1;
       transform-origin: 100px 100px;
       transform: scale(1) translate(0px, -100px);
@@ -288,7 +309,7 @@ body {
 //   color: $color;
 //   transition: color $duration $duration/3;
 //   position: relative;
-  
+
 //   &::before,
 //   &::after {
 //     border: 0 solid transparent;
@@ -297,28 +318,28 @@ body {
 //     pointer-events: none;
 //     position: absolute;
 //     width: 0; height: 0;
-    
+
 //     #{$vertical}: 0; 
 //     #{$horizontal}: 0;
 //   }
 
 //   &::before {
 //     $h-side: if($horizontal == 'left', 'right', 'left');
-    
+
 //     border-#{$vertical}-width: $width;
 //     border-#{$h-side}-width: $width;
 //   }
-  
+
 //   &::after {
 //     $v-side: if($vertical == 'top', 'bottom', 'top');
-    
+
 //     border-#{$v-side}-width: $width;
 //     border-#{$horizontal}-width: $width;
 //   }
-  
+
 //   &:hover {
 //     color: $hover;
-    
+
 //     &::before,
 //     &::after {
 //       border-color: $hover;
@@ -326,9 +347,9 @@ body {
 //       width: 100%;
 //       height: 100%;
 //     }
-    
+
 //     &::before { transition-delay: 0s, 0s, $duration; }
-    
+
 //     &::after { transition-delay: 0s, $duration, 0s; }
 //   }
 // }
@@ -346,7 +367,7 @@ body {
 //   font: 700 1.2rem 'Roboto Slab', sans-serif;
 //   padding: 1em 2em;
 //   letter-spacing: 0.05rem;
-  
+
 //   &:focus { outline: 2px dotted #55d7dc; }
 // }
 
@@ -361,5 +382,3 @@ body {
 
 
 /////////////////////////BORDER_EFFECT///////////////////////////////////////////////////////////////////////
-
-

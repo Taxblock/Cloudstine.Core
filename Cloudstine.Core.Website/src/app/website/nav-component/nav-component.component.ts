@@ -109,7 +109,24 @@ export class NavComponent {
   onAccountClick() {
     window.location.href = environment.CLIENT_APP_URL + 'user-list';
   }
-
+  onClickPoi(){
+    this.router.navigate(["./poi"])
+  }
+  onClickERP(){
+    this.router.navigate(["./erp"])
+  }
+  onClickAboutUs(){
+    this.router.navigate(["./about"])
+  }
+  onClickCareers(){
+    this.router.navigate(["./careers"])
+  }
+  onClickCustomer(){
+    this.router.navigate(["./customer"])
+  }
+  contactUs(){
+    this.router.navigate(["./contact-us"])
+  }
   // SetServices(userCartVM: UserCartVM) {
   //   this.Total = 0;
   //   this.ItemCount = 0;

@@ -142,6 +142,20 @@ const routes: Routes = [
       )
   },
   {
+    path: 'poi',
+    loadChildren: () =>
+      import('./website/poi/poi.module').then(
+        (m) => m.PoiModule
+      )
+  },
+  {
+    path: 'erp',
+    loadChildren: () =>
+      import('./website/erp/erp.module').then(
+        (m) => m.ErpModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'error', //Error 404 - Page not found
   }
