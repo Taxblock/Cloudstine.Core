@@ -4,21 +4,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
-import { EmployeeRoutingModule } from './employee-routing.module';
-import { EmployeeComponent } from './employee.component';
-
-
+import { UploadExelComponent } from './upload-exel.component';
+import { UploadExelRoutingModule } from './upload-exel-routing.module';
+import { NgxFileDropModule } from 'ngx-file-drop';
+import { UploadService } from './upload-exel.service';
 
 @NgModule({
-  declarations: [EmployeeComponent],
+  declarations: [UploadExelComponent],
   imports: [
     CommonModule,
-    EmployeeRoutingModule,
+    UploadExelRoutingModule,
     ReactiveFormsModule,
     FormlyBootstrapModule,
+    NgxFileDropModule,
     SharedModule,
     FormsModule,
     FormlyModule.forRoot(),
-  ]
+  ],
+  providers: [ UploadService ]
+
+  
 })
-export class EmployeeModule { }
+export class UploadExelModule { }

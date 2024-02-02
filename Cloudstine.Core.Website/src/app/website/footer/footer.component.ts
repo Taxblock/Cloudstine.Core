@@ -23,7 +23,7 @@ showfooter:boolean=true
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error'|| this.currentRoute == '/user-management/users' || this.currentRoute == '/user-management/access-control' || this.currentRoute == '/user-profile') {
+        if (this.currentRoute== '/forgot-pass' || this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error'|| this.currentRoute == '/user-management/users' || this.currentRoute == '/user-management/access-control' || this.currentRoute == '/user-profile') {
           this.showfooter = false;
         } else {
           this.showfooter = true;

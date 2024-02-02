@@ -31,6 +31,19 @@ const routes: Routes = [
     path: 'add-challan',
     loadChildren:() => import('./challan/add-challan/add-challan.module').then(m => m.AddChallanModule)
   },
+  {
+    path: 'pull-challan',
+    loadChildren:() => import('./challan/pull-challan/pull-challan.module').then(m => m.PullChallanModule)
+  },
+  {
+    path: 'upload-exel',
+    loadChildren:() => import('./challan/upload-exel/upload-exel.module').then(m => m.UploadExelModule)
+    },
+    {
+        path: 'add-employee',
+        loadChildren: () => import('./employee/add-employee/add-employee.module').then(m => m.AddEmployeeModule)
+    }
+
 
 ];
 

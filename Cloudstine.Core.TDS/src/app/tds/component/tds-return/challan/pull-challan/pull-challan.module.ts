@@ -4,16 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
-import { EmployeeRoutingModule } from './employee-routing.module';
-import { EmployeeComponent } from './employee.component';
+import { PullChallanRoutingModule } from './pull-challan-routing.module';
+import { PullChallanComponent } from './pull-challan.component';
+
+
 
 
 
 @NgModule({
-  declarations: [EmployeeComponent],
+  declarations: [PullChallanComponent],
   imports: [
     CommonModule,
-    EmployeeRoutingModule,
+    PullChallanRoutingModule,
     ReactiveFormsModule,
     FormlyBootstrapModule,
     SharedModule,
@@ -21,4 +23,4 @@ import { EmployeeComponent } from './employee.component';
     FormlyModule.forRoot(),
   ]
 })
-export class EmployeeModule { }
+export class PullChallanModule { }

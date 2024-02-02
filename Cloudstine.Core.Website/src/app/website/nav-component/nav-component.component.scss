@@ -300,6 +300,17 @@ body {
   }
 }
 
+.drop:hover, .closeDrop{
+display: block !important;
+}
+
+.material-bubble a {
+  color: #212529;
+}
+.material-bubble:hover a {
+  color: #9938A5;
+}
+
 
 
 /////////////////////////BORDER_EFFECT///////////////////////////////////////////////////////////////////////

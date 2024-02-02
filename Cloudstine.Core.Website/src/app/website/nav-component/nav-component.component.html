@@ -8,7 +8,7 @@
       <a class="logo logo-sm m-0" routerLink="/home">
         <img src="assets/images/Cloudstine/cloudstine_b.png" height="35" class="" alt="cloud" />
       </a>
-  <!-- Logo End -->
+      <!-- Logo End -->
 
 
       <div class="menu-extras">
@@ -86,19 +86,22 @@
               <div class="container">
                 <div class="row px-4 pb-3">
                   <div class=" border-outline material-bubble ">
-                    <div class="row" (click)="onClickAboutUs()">
-                      <div class="col-1" style="display: flex;align-items: center;">
-                        <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
-                        <!-- <i class="fa fa-info" aria-hidden="true" style="color: #9938A5 !important;"></i> -->
+                    <a href="/about" class="">
+                      <div class="row">
+                        <div class="col-1" style="display: flex;align-items: center;">
+                          <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                          <!-- <i class="fa fa-info" aria-hidden="true" style="color: #9938A5 !important;"></i> -->
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">About Us</h6>
+                          <p class="mb-0">ITR Filling by Advisor</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">About Us</h6>
-                        <p class="mb-0">ITR Filling by Advisor</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="border-outline material-bubble">
-                    <div class="row" (click)="onClickCareers()">
+                    <a href="/careers" class="">
+                    <div class="row" >
                       <div class="col-1" style="display: flex;align-items: center;">
                         <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
                       </div>
@@ -107,28 +110,33 @@
                         <p class="mb-0">Self ITR Filling</p>
                       </div>
                     </div>
+                    </a>
                   </div>
                   <div class="border-outline material-bubble">
-                    <div class="row" (click)="onClickCustomer()">
-                      <div class="col-1" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="/customer">
+                      <div class="row">
+                        <div class="col-1" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">Customer</h6>
+                          <p class="mb-0">Proof of Investment Verification Application</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">Customer</h6>
-                        <p class="mb-0">Proof of Investment Verification Application</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="border-outline material-bubble">
-                    <div class="row " (click)="contactUs()">
-                      <div class="col-1" style="display: flex;align-items: center;">
-                        <i class="uil uil-processor h3" style="color: #9938A5 !important;"></i>
+                    <a href="contact-us">
+                      <div class="row ">
+                        <div class="col-1" style="display: flex;align-items: center;">
+                          <i class="uil uil-processor h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">Contact Us</h6>
+                          <p class="mb-0">API for Tax related calculations</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">Contact Us</h6>
-                        <p class="mb-0">API for Tax related calculations</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -145,39 +153,46 @@
                     <h5>Income Tax</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble ">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">ITR Filling</h6>
+                          <p class="mb-0">ITR Filling by Advisor</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">ITR Filling</h6>
-                        <p class="mb-0">ITR Filling by Advisor</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">Self Filling</h6>
+                          <p class="mb-0">Self ITR Filling</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">Self Filling</h6>
-                        <p class="mb-0">Self ITR Filling</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row " (click)="onClickPoi()">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="/poi">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-POI</h6>
+                          <p class="mb-0">Proof of Investment Verification Application</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-POI</h6>
-                        <p class="mb-0">Proof of Investment Verification Application</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-processor h3" style="color: #9938A5 !important;"></i>
@@ -187,9 +202,11 @@
                         <p class="mb-0">API for Tax related calculations</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row " (click)="onClickERP()">
+                   <a href="/erp">
+                    <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="fa fa-cog  h3" style="color: #9938A5 !important;"></i>
                       </div>
@@ -198,6 +215,7 @@
                         <p class="mb-0">API for ITR filling by E-Return Intermarries </p>
                       </div>
                     </div>
+                   </a>
                   </div>
                 </div>
                 <div class="row px-4 pb-3" style="border-bottom: 1px solid #9938A5;">
@@ -205,6 +223,7 @@
                     <h5>TDS</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
@@ -214,8 +233,10 @@
                         <p class="mb-0">Proof of Investment Verification Application</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-percentage h3" style="color: #9938A5 !important;"></i>
@@ -225,17 +246,20 @@
                         <p class="mb-0">File your TDS return smartly on cloud application</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-Form 16</h6>
+                          <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-Form 16</h6>
-                        <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div class="row px-4">
@@ -243,6 +267,7 @@
                     <h5>GST</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="fa fa-truck h3" style="color: #9938A5 !important;"></i>
@@ -252,17 +277,20 @@
                         <p class="mb-0">Electronic Way bill for movement of goods</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-postcard h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-postcard h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-Envoice</h6>
+                          <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-Envoice</h6>
-                        <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -281,39 +309,46 @@
                     <h5>Income Tax</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble ">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">ITR Filling</h6>
+                          <p class="mb-0">ITR Filling by Advisor</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">ITR Filling</h6>
-                        <p class="mb-0">ITR Filling by Advisor</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">Self Filling</h6>
+                          <p class="mb-0">Self ITR Filling</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">Self Filling</h6>
-                        <p class="mb-0">Self ITR Filling</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row " (click)="onClickPoi()">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="/poi">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-POI</h6>
+                          <p class="mb-0">Proof of Investment Verification Application</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-POI</h6>
-                        <p class="mb-0">Proof of Investment Verification Application</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-processor h3" style="color: #9938A5 !important;"></i>
@@ -323,9 +358,11 @@
                         <p class="mb-0">API for Tax related calculations</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row " (click)="onClickERP()">
+                   <a href="/erp">
+                    <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="fa fa-cog  h3" style="color: #9938A5 !important;"></i>
                       </div>
@@ -334,6 +371,7 @@
                         <p class="mb-0">API for ITR filling by E-Return Intermarries </p>
                       </div>
                     </div>
+                   </a>
                   </div>
                 </div>
                 <div class="row px-4 pb-3" style="border-bottom: 1px solid #9938A5;">
@@ -341,6 +379,7 @@
                     <h5>TDS</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
@@ -350,8 +389,10 @@
                         <p class="mb-0">Proof of Investment Verification Application</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-percentage h3" style="color: #9938A5 !important;"></i>
@@ -361,17 +402,20 @@
                         <p class="mb-0">File your TDS return smartly on cloud application</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-Form 16</h6>
+                          <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-Form 16</h6>
-                        <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div class="row px-4">
@@ -379,6 +423,7 @@
                     <h5>GST</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="fa fa-truck h3" style="color: #9938A5 !important;"></i>
@@ -388,17 +433,20 @@
                         <p class="mb-0">Electronic Way bill for movement of goods</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-postcard h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-postcard h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-Envoice</h6>
+                          <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-Envoice</h6>
-                        <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -437,39 +485,46 @@
                     <h5>Income Tax</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble ">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">ITR Filling</h6>
+                          <p class="mb-0">ITR Filling by Advisor</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">ITR Filling</h6>
-                        <p class="mb-0">ITR Filling by Advisor</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-user-square h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">Self Filling</h6>
+                          <p class="mb-0">Self ITR Filling</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">Self Filling</h6>
-                        <p class="mb-0">Self ITR Filling</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row " (click)="onClickPoi()">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="/poi">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-POI</h6>
+                          <p class="mb-0">Proof of Investment Verification Application</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-POI</h6>
-                        <p class="mb-0">Proof of Investment Verification Application</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-processor h3" style="color: #9938A5 !important;"></i>
@@ -479,9 +534,11 @@
                         <p class="mb-0">API for Tax related calculations</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row " (click)="onClickERP()">
+                   <a href="/erp">
+                    <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="fa fa-cog  h3" style="color: #9938A5 !important;"></i>
                       </div>
@@ -490,6 +547,7 @@
                         <p class="mb-0">API for ITR filling by E-Return Intermarries </p>
                       </div>
                     </div>
+                   </a>
                   </div>
                 </div>
                 <div class="row px-4 pb-3" style="border-bottom: 1px solid #9938A5;">
@@ -497,6 +555,7 @@
                     <h5>TDS</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-file-check-alt h3" style="color: #9938A5 !important;"></i>
@@ -506,8 +565,10 @@
                         <p class="mb-0">Proof of Investment Verification Application</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="uil uil-percentage h3" style="color: #9938A5 !important;"></i>
@@ -517,17 +578,20 @@
                         <p class="mb-0">File your TDS return smartly on cloud application</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-file-alt h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-file-alt h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-Form 16</h6>
+                          <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-Form 16</h6>
-                        <p class="mb-0">Cloud application to generate Form-16 and its ann.</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div class="row px-4">
@@ -535,6 +599,7 @@
                     <h5>GST</h5>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
+                   <a href="">
                     <div class="row ">
                       <div class="col-2" style="display: flex;align-items: center;">
                         <i class="fa fa-truck h3" style="color: #9938A5 !important;"></i>
@@ -544,17 +609,20 @@
                         <p class="mb-0">Electronic Way bill for movement of goods</p>
                       </div>
                     </div>
+                   </a>
                   </div>
                   <div class="col-md-4 border-outline material-bubble">
-                    <div class="row ">
-                      <div class="col-2" style="display: flex;align-items: center;">
-                        <i class="uil uil-postcard h3" style="color: #9938A5 !important;"></i>
+                    <a href="">
+                      <div class="row ">
+                        <div class="col-2" style="display: flex;align-items: center;">
+                          <i class="uil uil-postcard h3" style="color: #9938A5 !important;"></i>
+                        </div>
+                        <div class="col-10">
+                          <h6 class="mb-0">E-Envoice</h6>
+                          <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
+                        </div>
                       </div>
-                      <div class="col-10">
-                        <h6 class="mb-0">E-Envoice</h6>
-                        <p class="mb-0">GST Invoices are electronically uploaded and authenticated with a unique IRN</p>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
