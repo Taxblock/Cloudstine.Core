@@ -215,4 +215,12 @@ onRowAction(data: any) {
 onAddChallanClick(){
   this.router.navigateByUrl('tds/tds-return/add-challan')
 }
+onPullChallanClick()
+{
+  this.router.navigateByUrl('tds/tds-return/pull-challan')
+}
+onUploadExelClick()
+{
+  this.router.navigateByUrl('tds/tds-return/upload-exel')
+}
 }
