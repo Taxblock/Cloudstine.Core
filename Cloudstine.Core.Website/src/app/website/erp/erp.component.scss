@@ -1,12 +1,9 @@
-.error-msg {
-    color: red;
-}
-
 .details {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 3;
     text-overflow: ellipsis;
     font-size: 18px;
-}
+  }
+  

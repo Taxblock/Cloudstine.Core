@@ -9,8 +9,8 @@ export const environment = {
   // DIY_APP_URL:'http://diyuat.taxblock.in/',
   // BASE_API_URL: 'http://apigatewayuat.taxblock.in/api',
 
-  DOMAIN : "taxblockuat.in",
-  WebsiteURL:'http://taxblockuat.in/',
+  DOMAIN : "cloudstineuat.com",
+  WebsiteURL:'http://cloudstineuat.com/',
   CLIENT_APP_URL:'http://client.taxblockuat.in/',
   CRM_APP_URL:'http://crm.taxblockuat.in/',
   TAXATION_APP_URL:'http://taxation.taxblockuat.in/',
