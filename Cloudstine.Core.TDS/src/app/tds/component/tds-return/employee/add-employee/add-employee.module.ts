@@ -1,24 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { AddEmployeeRoutingModule } from './add-employee-routing.module';
+import { AddEmployeeComponent } from './add-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
-import { EmployeeRoutingModule } from './employee-routing.module';
-import { EmployeeComponent } from './employee.component';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [EmployeeComponent],
+  declarations: [
+    AddEmployeeComponent
+  ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule,
+    AddEmployeeRoutingModule,
+    SharedModule,
     ReactiveFormsModule,
     FormlyBootstrapModule,
-    SharedModule,
-    FormsModule,
     FormlyModule.forRoot(),
+
   ]
 })
-export class EmployeeModule { }
+export class AddEmployeeModule { }
