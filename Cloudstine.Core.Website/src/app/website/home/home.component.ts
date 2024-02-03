@@ -18,7 +18,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 
 })
 export class HomeComponent implements OnInit {
-  imgHome: any = "assets/images/Home_Page/indian-businesswoman.png"
+  imgHome: any = "assets/images/Cloudstine/modal/modal1.png"
   transferPara: boolean = true
   SAPServicePara: boolean = false
   taxWorkspacePara: boolean = false;
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit {
       this.transferPara = false
       this.SAPServicePara = true
       this.taxWorkspacePara = false;
-      this.imgHome = "assets/images/Home_Page/Woman_Power.png"
+      this.imgHome = "assets/images/Cloudstine/modal/modal9.png"
       this.simulateProgress1()
     }
   }
@@ -94,7 +94,7 @@ export class HomeComponent implements OnInit {
       this.transferPara = false
       this.SAPServicePara = false
       this.taxWorkspacePara = true;
-      this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
+      this.imgHome = "assets/images/Cloudstine/modal/modal3.png"
       this.simulateProgress2()
     }
   }
@@ -112,7 +112,7 @@ export class HomeComponent implements OnInit {
       this.transferPara = true
       this.SAPServicePara = false
       this.taxWorkspacePara = false;
-      this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
+      this.imgHome = "assets/images/Cloudstine/modal/modal1.png"
       this.simulateProgress()
     }
   }
@@ -132,7 +132,7 @@ export class HomeComponent implements OnInit {
 
     this.simulateProgress()
 
-    this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
+    this.imgHome = "assets/images/Cloudstine/modal/modal1.png"
 
   }
 
@@ -149,7 +149,7 @@ export class HomeComponent implements OnInit {
 
     this.simulateProgress1()
 
-    this.imgHome = "assets/images/Home_Page/Woman_Power.png"
+    this.imgHome = "assets/images/Cloudstine/modal/modal9.png"
   }
 
   taxWorkspaceImage() {
@@ -163,7 +163,7 @@ export class HomeComponent implements OnInit {
     this.taxWorkspacePara = true;
 
     this.simulateProgress2()
-    this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
+    this.imgHome = "assets/images/Cloudstine/modal/modal0.png"
   }
   readAbout() {
     this._router.navigate(['/about']);

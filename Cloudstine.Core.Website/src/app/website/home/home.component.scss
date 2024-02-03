@@ -66,8 +66,9 @@
 }
 
 .image-container {
-  height: 400px !important;
-  width: 400px !important;
+  height: 450px !important;
+  width: 530px !important;
+  
 }
 
 .image-container img {
@@ -75,6 +76,8 @@
   height: 100%;
   object-fit: cover;
   margin: auto !important;
+  border: 1px solid #eeeeee;
+  border-radius: 20px;
 }
 
 .progress-container {
