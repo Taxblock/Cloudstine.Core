@@ -1,0 +1,16 @@
+
+.button {
+    background-color: #9938A5;
+    color: white;
+  
+    .fa-arrow-right {
+      display: none;
+    }
+  }
+  .button:hover .fa-arrow-right {
+    display: inline-block;
+  }  
+  .icon{
+    font-size: 40px;
+    color: #9938A5;
+  }

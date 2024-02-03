@@ -48,17 +48,17 @@ export class HomeComponent implements OnInit {
   // Method to update progress
   updateProgress(newProgress: number): void {
     this.progress = newProgress;
-   }
+  }
 
   // Method to update progress
   updateProgress1(newProgress: number): void {
     this.progress1 = newProgress;
-   }
+  }
 
   // Method to update progress
   updateProgress2(newProgress: number): void {
     this.progress2 = newProgress;
-   }
+  }
 
   ngOnInit() {
     this.simulateProgress()
@@ -165,19 +165,19 @@ export class HomeComponent implements OnInit {
     this.simulateProgress2()
     this.imgHome = "assets/images/Cloudstine/modal/modal0.png"
   }
-  readAbout(){
+  readAbout() {
     this._router.navigate(['/about']);
   }
-  onClickService(){
-    this._router.navigate(['/serviceslist']);
+  onClickService() {
+    this._router.navigate(['/cloudworkspace']);
   }
-  onclicksap(){
-    this._router.navigate(['/sapservice']);
+  onclicksap() {
+    // this._router.navigate(['/digitalservices']);
   }
-  onclickservice(){
-    this._router.navigate(['/serviceslist']);
+  onClickTaxService() {
+    this._router.navigate(['/cloudworkspace']);
   }
-  onClickTaxService(){
-    this._router.navigate(['/taxservice']);
+  onclickTransform() {
+    this._router.navigate(['/digitalservices']);
   }
 }

@@ -156,7 +156,7 @@ const routes: Routes = [
       )
   },
   {
-    path: 'serviceslist',
+    path: 'cloudworkspace',
     loadChildren: () =>
       import('./website/serviceslist/serviceslist.module').then(
         (m) => m.ServiceslistModule
@@ -174,6 +174,20 @@ const routes: Routes = [
     loadChildren: () =>
       import('./website/taxservice/taxservice.module').then(
         (m) => m.TaxserviceModule
+      )
+  },
+  {
+    path: 'terms',
+    loadChildren: () =>
+      import('./website/terms/terms.module').then(
+        (m) => m.TermsModule
+      )
+  },
+  {
+    path: 'digitalservices',
+    loadChildren: () =>
+      import('./website/digitalservices/digitalservices.module').then(
+        (m) => m.DigitalservicesModule
       )
   },
   {
