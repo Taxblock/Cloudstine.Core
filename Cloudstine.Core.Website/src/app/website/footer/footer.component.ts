@@ -1,9 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { NavigationEnd,Event, Router } from '@angular/router';
+import { NavigationEnd, Event, Router } from '@angular/router';
 //import { ScrollService } from '../services/scroll.service';
-
-
 
 @Component({
   selector: 'footer',
@@ -11,10 +9,10 @@ import { NavigationEnd,Event, Router } from '@angular/router';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-currentRoute:string;
-showfooter:boolean=true
+  currentRoute: string;
+  showfooter: boolean = true
 
-  constructor(@Inject(DOCUMENT) private document: Document , private router: Router , ) {
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router,) {
 
   }
 
@@ -23,7 +21,7 @@ showfooter:boolean=true
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute== '/forgot-pass' || this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error'|| this.currentRoute == '/user-management/users' || this.currentRoute == '/user-management/access-control' || this.currentRoute == '/user-profile') {
+        if (this.currentRoute == '/forgot-pass' || this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error' || this.currentRoute == '/user-management/users' || this.currentRoute == '/user-management/access-control' || this.currentRoute == '/user-profile') {
           this.showfooter = false;
         } else {
           this.showfooter = true;
@@ -37,13 +35,12 @@ showfooter:boolean=true
     this.router.navigate(['/services']); // Update the URL manually
   }
 
-  onServiceLinkClick(serviceId:string){
-    console.log("click" , serviceId)
-   // this._scrollService.setScrollTarget(serviceId);
+  onServiceLinkClick(serviceId: string) {
+    console.log("click", serviceId)
+    // this._scrollService.setScrollTarget(serviceId);
     this.router.navigate(['/services'])
     // this.router.navigate(['/services']);
-
-  }
+}
 
   setColor(theme: any) {
     let data = this.document.getElementById('color-opt') as HTMLLinkElement;
@@ -55,7 +52,6 @@ showfooter:boolean=true
   }
   // loadStyle(styleName: string) {
   //   const head = this.document.getElementsByTagName('head')[0];
-
   //   let themeLink = this.document.getElementById(
   //     'client-theme'
   //   ) as HTMLLinkElement;
@@ -66,7 +62,6 @@ showfooter:boolean=true
   //     style.id = 'client-theme';
   //     style.rel = 'stylesheet';
   //     style.href = `${styleName}`;
-
   //     head.appendChild(style);
   //   }
   // }

@@ -48,20 +48,17 @@ export class HomeComponent implements OnInit {
   // Method to update progress
   updateProgress(newProgress: number): void {
     this.progress = newProgress;
-   
-  }
+   }
 
   // Method to update progress
   updateProgress1(newProgress: number): void {
     this.progress1 = newProgress;
-   
-  }
+   }
 
   // Method to update progress
   updateProgress2(newProgress: number): void {
     this.progress2 = newProgress;
-  
-  }
+   }
 
   ngOnInit() {
     this.simulateProgress()

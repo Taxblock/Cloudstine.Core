@@ -19,7 +19,6 @@ export class ChangePasswordComponent implements OnInit {
   @ViewChild('changePasswordForm', { static: true }) ngForm: NgForm;
   model: any = {};
   changePasswordModel = new ChangePasswordModel();
-
   isValidating = false;
   returnUrl: string;
   public changePasswordForm: FormGroup;
@@ -30,9 +29,6 @@ export class ChangePasswordComponent implements OnInit {
   UserData: any;
   public currentUser: IdentityUser;
   public Total: number = 0;
-
-
-
 
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -74,12 +70,10 @@ export class ChangePasswordComponent implements OnInit {
   //       //   this.isValidating = false;
   //       // },
   //       // () => {
-
   //       // }
   //       (error:any) => {
   //         this.alertService.ShowError(error,"Failed to change password due to unknown error");
   //         this.isValidating = false;
-
   //       }
   //     );
   //   }
@@ -87,7 +81,6 @@ export class ChangePasswordComponent implements OnInit {
   //     (error:any) => {
   //       this.alertService.ShowError(error,"Please enter valid password & confirm password");
   //       this.isValidating = false;
-
   //     }
   //   }
   // }
@@ -150,17 +143,14 @@ export class ChangePasswordComponent implements OnInit {
             this.router.navigateByUrl('/login');
           }
         },
-
         (error: any) => {
           this.alertService.ShowError(error, "Failed to proceed due to unknown error");
 
         }
       );
-
     }
     else {
       this.alertService.ShowErrorMessage("Validation Failed.");
     }
-
   }
 }
