@@ -16,7 +16,6 @@ export class ForgotPasswordComponent implements OnInit {
  
 @ViewChild('forgotPasswordForm', { static: true }) ngForm: NgForm;
 submitted = false;
-
 loginModel: LoginModel;
 public userName: string;
 public otp: string;
@@ -30,11 +29,9 @@ constructor(
   private forgetPasswordService: ForgetPasswordService,
   private alertService: AlertService,
   private userService:UserProfileService) {
-
 }
 
 ngOnInit() {
-  
   this.loginModel = new LoginModel();
 }
 
@@ -51,16 +48,13 @@ SendOTP(forgotPasswordForm: NgForm): void {
       },
       (error:any) => {
         this.alertService.ShowError(error,"Failed to send OTP due to unknown error");
-
-      }
+ }
     );
   }
   else {
     this.alertService.ShowErrorMessage("Validation Failed");
   }
 }
-
-
 
 ConfirmOTP(forgotPasswordForm: NgForm) {
   this.submitted = true;
@@ -84,18 +78,15 @@ ConfirmOTP(forgotPasswordForm: NgForm) {
                   UserName);
               }
           },
-          
-          (error:any) => {
+            (error:any) => {
             this.alertService.ShowError(error,"Failed to proceed due to unknown error");
     
           }
       );
-
-  }
+    }
   else {
       this.alertService.ShowErrorMessage("Validation Failed.");
   }
-
 }
 Home_Page() {
   this.router.navigate(['/home']);
