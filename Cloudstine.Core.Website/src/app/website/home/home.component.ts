@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     private elementRef: ElementRef,
     private _router: Router,
   ) {
-    this.titleService.setTitle("Taxblock: Accounting & Taxation Compliance Management");
+    this.titleService.setTitle("Cloudstine: Togather we can achive more");
     this.meta.updateTag({ name: 'description', content: "Taxblock is a one-stop shop for Income Tax, GST, Accounting,Tax Technology & Automation. Offering across the globe with a customer satisfaction score of 98%" });
     this.meta.updateTag({ name: 'keywords', content: 'efiling tax, income efiling, income tax efiling, efile taxes india, efiling india, india tax efiling, income tax filing Taxblock,  itr filing, itr efiling, itr filing fy 2022-23, income tax filing fy 2022-23, Taxblock. gst filing' });
   }
@@ -48,17 +48,17 @@ export class HomeComponent implements OnInit {
   // Method to update progress
   updateProgress(newProgress: number): void {
     this.progress = newProgress;
-   }
+  }
 
   // Method to update progress
   updateProgress1(newProgress: number): void {
     this.progress1 = newProgress;
-   }
+  }
 
   // Method to update progress
   updateProgress2(newProgress: number): void {
     this.progress2 = newProgress;
-   }
+  }
 
   ngOnInit() {
     this.simulateProgress()
@@ -165,19 +165,19 @@ export class HomeComponent implements OnInit {
     this.simulateProgress2()
     this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
   }
-  readAbout(){
+  readAbout() {
     this._router.navigate(['/about']);
   }
-  onClickService(){
-    this._router.navigate(['/serviceslist']);
+  onClickService() {
+    this._router.navigate(['/cloudworkspace']);
   }
-  onclicksap(){
-    this._router.navigate(['/sapservice']);
+  onclicksap() {
+    // this._router.navigate(['/digitalservices']);
   }
-  onclickservice(){
-    this._router.navigate(['/serviceslist']);
+  onClickTaxService() {
+    this._router.navigate(['/cloudworkspace']);
   }
-  onClickTaxService(){
-    this._router.navigate(['/taxservice']);
+  onclickTransform() {
+    this._router.navigate(['/digitalservices']);
   }
 }
