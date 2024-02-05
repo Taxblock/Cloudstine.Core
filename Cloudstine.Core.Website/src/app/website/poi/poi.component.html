@@ -194,12 +194,12 @@
         <div class="text-left ">
             <div *ngFor="let faqItem of faqData">
                 <div class="row" (click)="toggleAnswer(faqItem)">
-                    <div class="col-md-11">
+                    <div class="col-11">
                         <div class="question">
                             <h5><b> {{ faqItem.question }}</b></h5>
                         </div>
                     </div>
-                    <div class="col-md-1 text-center">
+                    <div class="col-1 text-center">
                         <span class="toggle-icon">
                             {{ faqItem.showAnswer ? '-' : '+' }}
                         </span>

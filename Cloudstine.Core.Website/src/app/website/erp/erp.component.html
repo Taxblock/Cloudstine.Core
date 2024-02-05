@@ -38,15 +38,15 @@
                         'color':featuredColor===true?'#9938A5':'black'
                    }">
                         <div class="row d-flex" (click)="onClickFeatured()">
-                            <div class="col-md-3">
+                            <div class="col-3">
                                 <div class="text-center"> <i class="uil-comment-alt-search icon"></i></div>
                             </div>
-                            <div class="col-md-7 mt-3">
+                            <div class="col-7 mt-3">
                                 <div class="text-left">
                                     <h5>Featured</h5>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <div class="text-left">
                                     <i class="uil-angle-right-b icon"></i>
                                 </div>
@@ -61,15 +61,15 @@
                         'color':almlColor===true?'#9938A5':'black'
                    }">
                         <div class="row d-flex" (click)="onClickALML()">
-                            <div class="col-md-3">
+                            <div class="col-3">
                                 <div class="text-center"> <i class="uil-cloud-computing icon"></i></div>
                             </div>
-                            <div class="col-md-7 mt-3">
+                            <div class="col-7 mt-3">
                                 <div class="text-left">
                                     <h5>AL/ML</h5>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <div class="text-left">
                                     <i class="uil-angle-right-b icon"></i>
                                 </div>
@@ -84,15 +84,15 @@
                         'color':serverColor===true?'#9938A5':'black'
                    }">
                         <div class="row d-flex" (click)="onClickServerLess()">
-                            <div class="col-md-3">
+                            <div class="col-3">
                                 <div class="text-center"> <i class=" uil-cloud-redo icon"></i></div>
                             </div>
-                            <div class="col-md-7 mt-3">
+                            <div class="col-7 mt-3">
                                 <div class="text-left">
                                     <h5>Serverless</h5>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <div class="text-left">
                                     <i class="uil-angle-right-b icon"></i>
                                 </div>
@@ -107,15 +107,15 @@
                         'color':backendColor===true?'#9938A5':'black'
                    }">
                         <div class="row d-flex" (click)="onClickBackend()">
-                            <div class="col-md-3">
+                            <div class="col-3">
                                 <div class="text-center"> <i class="uil-comment-alt-redo icon"></i></div>
                             </div>
-                            <div class="col-md-7 mt-3">
+                            <div class="col-7 mt-3">
                                 <div class="text-left">
                                     <h5>Backend</h5>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <div class="text-left">
                                     <i class="uil-angle-right-b icon"></i>
                                 </div>
@@ -130,15 +130,15 @@
                         'color':devopsColor===true?'#9938A5':'black'
                    }">
                         <div class="row d-flex" (click)="onClickdevopes()">
-                            <div class="col-md-3">
+                            <div class="col-3">
                                 <div class="text-center"> <i class=" uil-master-card icon"></i></div>
                             </div>
-                            <div class="col-md-7 mt-3">
+                            <div class="col-7 mt-3">
                                 <div class="text-left">
                                     <h5>DevOps</h5>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-2">
                                 <div class="text-left">
                                     <i class="uil-angle-right-b icon"></i>
                                 </div>
@@ -152,7 +152,7 @@
         <div class="col-md-8" *ngIf="feature">
             <div class="row px-3">
                 <div class="col-md-6" *ngFor="let data of featured">
-                    <div class="card p-3 mt-5" style="background-color:  #EBD7ED ;">
+                    <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-3 mt-5" style="background-color:  #EBD7ED ;">
                         <div class="text-center">
                             <h4>{{data.title}}</h4>
                             <p class="fs-5 mt-3">{{data.content}}</p>
@@ -164,7 +164,7 @@
         <div class="col-md-8" *ngIf="ALML">
             <div class="row px-3">
                 <div class="col-md-6" *ngFor="let data of alml">
-                    <div class="card p-3 mt-5" style="background-color:  #EBD7ED ;">
+                    <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-3 mt-5" style="background-color:  #EBD7ED ;">
                         <div class="text-center">
                             <h4>{{data.title}}</h4>
                             <p class="fs-5 mt-3">{{data.content}}</p>
@@ -176,7 +176,7 @@
         <div class="col-md-8" *ngIf="server">
             <div class="row px-3">
                 <div class="col-md-6" *ngFor="let data of serverless">
-                    <div class="card p-3 mt-5" style="background-color:  #EBD7ED ;">
+                    <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-3 mt-5" style="background-color:  #EBD7ED ;">
                         <div class="text-center">
                             <h4>{{data.title}}</h4>
                             <p class="fs-5 mt-3">{{data.content}}</p>
@@ -188,7 +188,7 @@
         <div class="col-md-8" *ngIf="back">
             <div class="row px-3">
                 <div class="col-md-6" *ngFor="let data of backend">
-                    <div class="card p-3 mt-5" style="background-color:  #EBD7ED ;">
+                    <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-3 mt-5" style="background-color:  #EBD7ED ;">
                         <div class="text-center">
                             <h4>{{data.title}}</h4>
                             <p class="fs-5 mt-3">{{data.content}}</p>
@@ -200,7 +200,7 @@
         <div class="col-md-8" *ngIf="develop">
             <div class="row px-3">
                 <div class="col-md-6" *ngFor="let data of devops">
-                    <div class="card p-3 mt-5" style="background-color:  #EBD7ED ;">
+                    <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-3 mt-5" style="background-color:  #EBD7ED ;">
                         <div class="text-center">
                             <h4>{{data.title}}</h4>
                             <p class="fs-5 mt-3">{{data.content}}</p>
@@ -218,10 +218,10 @@
     </div>
 </div>
 
-<div class="container mt-5 mb-5">
+<div class="container mb-5">
     <div class="row">
-        <div class="col-md-3">
-            <div class="card ">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
                 <div class="text-left ps-5 mt-3">
                     <i class="uil-tablet icon"></i>
                 </div>
@@ -247,8 +247,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card ">
+        <div class="col-md-3 mt-5">
+            <div class="card  features feature-primary feature-clean explore-feature  border-0 rounded-md shadow">
                 <div class="text-left ps-5 mt-3">
                     <i class=" uil-circuit icon"></i>
                 </div>
@@ -274,8 +274,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card ">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow ">
                 <div class="text-left ps-5 mt-3">
                     <i class="uil-crosshairs icon"></i>
                 </div>
@@ -301,8 +301,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card ">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow ">
                 <div class="text-left ps-5 mt-3">
                     <i class="uil-process icon"></i>
                 </div>
@@ -337,7 +337,7 @@
     </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row" style="cursor: pointer;">
         <div class="col-md-6 mt-5 px-3">
             <div class="text-left" (click)="onClickUpload()">
@@ -365,7 +365,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="col-md-6 mt-5 d-flex align-items-center justify-content-center">
             <div class="image-container">
                 <img [src]="imgHome" alt="" width="100%" height="auto">
             </div>
@@ -373,13 +373,13 @@
     </div>
 </div>
 
-<div class="container mt-5 mb-5">
+<div class="container mb-5">
     <div class="text-center">
         <h2><b>Build and ship faster with ready-to-use microservices</b></h2>
     </div>
     <div class="row mt-5">
-        <div class="col-md-3">
-            <div class="card p-5">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-5">
                 <div class="text-left">
                     <h5>Algolia Search Integration</h5>
                     <p class="details">Implement relevant search and discovery in your catalyst application using
@@ -388,8 +388,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card p-5">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-5">
                 <div class="text-left">
                     <h5>Zoho CRM Bulk Import</h5>
                     <p class="details">The Zoho CRM Bulk Import CodeLib solution enables you to import data in bulk to
@@ -398,8 +398,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card p-5">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-5">
                 <div class="text-left">
                     <h5><b>Database Connector</b></h5>
                     <p class="details">Establish an instant database connection between your Catalyst application and an
@@ -408,8 +408,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card p-5">
+        <div class="col-md-3 mt-5">
+            <div class="card features feature-primary feature-clean explore-feature  border-0 rounded-md shadow p-5">
                 <div class="text-left">
                     <h5><b>Stripe Payments Integration</b></h5>
                     <p class="details">Handle billing, checkout and payment functionalities in your Catalyst
@@ -422,7 +422,7 @@
 </div>
 
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-md-6 d-flex justify-content-center align-items-center">
             <div class="">
