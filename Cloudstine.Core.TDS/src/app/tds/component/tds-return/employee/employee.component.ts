@@ -1,5 +1,6 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
 
 
@@ -236,4 +237,19 @@ export class EmployeeComponent {
   onAddEmployee() {
     this.router.navigateByUrl('tds/tds-return/add-employee')
   }
+
+  onUploadExelClick()
+{
+  let data1 : string = "employee"
+  let data = {
+    data: 'employee' 
+  };
+
+  const navigationExtras: NavigationExtras = {
+    queryParams: {
+      yourDataKey: JSON.stringify(data)
+    }
+  };
+  this.router.navigate(['tds/tds-return/upload-exel'], navigationExtras);
+}
 }

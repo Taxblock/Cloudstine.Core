@@ -41,7 +41,6 @@ export class ChangePasswordComponent implements OnInit {
 
   }
   ngOnInit() {
-
     this.changePasswordForm
       = this.fb.group(
         {
@@ -108,12 +107,8 @@ export class ChangePasswordComponent implements OnInit {
     this.confirmNewpasswordTextType = !this.confirmNewpasswordTextType;
   }
 
-
-
-
-  ChangePassword() {
-
-    let resetPasswordForm = this.changePasswordForm.value
+ ChangePassword() {
+   let resetPasswordForm = this.changePasswordForm.value
     if (this.changePasswordForm && this.changePasswordForm.valid) {
       let changePasswordModel = new ChangePasswordModel();
       changePasswordModel = this.changePasswordForm.value;
