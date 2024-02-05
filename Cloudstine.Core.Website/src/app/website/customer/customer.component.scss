@@ -11,3 +11,17 @@
   .button:hover .fa-arrow-right {
     display: inline-block;
   }
+  .img-fluid {
+    // height: 400px !important;
+    width: 400px !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-fluid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto !important;
+  }
+  
