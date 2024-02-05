@@ -13,8 +13,7 @@
                 <app-data-grid class="ag-theme-alpine" #viewEmployeeGrid [tableData]="GetalltransationhistoryList"
                     [tableColumns]="userTableColumns" [actionColumns]="userActionColumns" [rowSelection]="rowSelection"
                     [isEditable]="false" [isSortable]="true" [isFilterable]="false" [isColumnFilterable]="false"
-                    [isResizable]="false" [isPageable]="true" [defaultPageSize]="10"
-                    (rowAction)="onRowAction($event)"
+                    [isResizable]="false" [isPageable]="true" [defaultPageSize]="10" (rowAction)="onRowAction($event)"
                     (actionButton)="onActionButton($event)">
                 </app-data-grid>
             </div>

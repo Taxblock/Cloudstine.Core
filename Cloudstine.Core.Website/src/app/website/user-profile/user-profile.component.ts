@@ -18,31 +18,31 @@ export class UserProfileComponent implements OnInit {
   submitted: boolean;
   userprofile = new UserProfile();
   addressSelectList: AddressSelectList = new AddressSelectList();
-  isFormValid:boolean=true;
+  isFormValid: boolean = true;
 
   constructor(private formBuilder: FormBuilder,
-   private alertService:AlertService,
-   private userProfileService: UserProfileService
+    private alertService: AlertService,
+    private userProfileService: UserProfileService
 
-    ) {}
+  ) { }
 
   ngOnInit(): void {
     this.CreateForm();
   }
   CreateForm() {
     this.PersonalInfoForm = this.formBuilder.group({
-      UserId:['', [Validators.required]],
-      Name:['', [Validators.pattern("^[a-zA-Z ]*$"),Validators.required],],
+      UserId: ['', [Validators.required]],
+      Name: ['', [Validators.pattern("^[a-zA-Z ]*$"), Validators.required],],
       MobileNo: ['', [Validators.required,
-        Validators.maxLength(10),
-        Validators.minLength(10)]],
-      EmailId:['', [Validators.required, Validators.email]],
+      Validators.maxLength(10),
+      Validators.minLength(10)]],
+      EmailId: ['', [Validators.required, Validators.email]],
 
     });
     this.PersonalInfo_Form = this.PersonalInfoForm.controls;
     this.BillingInfo = this.formBuilder.group({
-      GSTINNO:['', [Validators.required,Validators.pattern("^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[0-9A-Z]{1}[Z]{1}[0-9A-Z]{1}$")
-    ]],
+      GSTINNO: ['', [Validators.required, Validators.pattern("^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[0-9A-Z]{1}[Z]{1}[0-9A-Z]{1}$")
+      ]],
       PANNO: ['', [
         Validators.required,
         Validators.maxLength(10),
@@ -51,15 +51,15 @@ export class UserProfileComponent implements OnInit {
           "[A-Za-z]{3}[PCHFATBLJGgpchfatblj]{1}[A-Za-z]{1}[0-9]{4}[A-Za-z]{1}"
         ),
       ],],
-      OrganisationName:['', [Validators.required,Validators.pattern("^[a-zA-Z ]*$")]],
-      FlatDoor:['', [Validators.required]],
-      BuildingName:['', [Validators.required,Validators.pattern("^[a-zA-Z ]*$")]],
-      RoadStreet:['', [Validators.required,Validators.pattern("^[a-zA-Z ]*$")]],
-      AreaLocality:['', [Validators.required,Validators.pattern("^[a-zA-Z ]*$")]],
-      City:['', [Validators.required]], 
-      PINCode: ['', [Validators.required]],      
-      StateId:['', [Validators.required]],
-      IsGSTInvoiceRequired:['', [Validators.required]],
+      OrganisationName: ['', [Validators.required, Validators.pattern("^[a-zA-Z ]*$")]],
+      FlatDoor: ['', [Validators.required]],
+      BuildingName: ['', [Validators.required, Validators.pattern("^[a-zA-Z ]*$")]],
+      RoadStreet: ['', [Validators.required, Validators.pattern("^[a-zA-Z ]*$")]],
+      AreaLocality: ['', [Validators.required, Validators.pattern("^[a-zA-Z ]*$")]],
+      City: ['', [Validators.required]],
+      PINCode: ['', [Validators.required]],
+      StateId: ['', [Validators.required]],
+      IsGSTInvoiceRequired: ['', [Validators.required]],
     });
     this.Billing_Info = this.BillingInfo.controls;
   }
@@ -79,10 +79,10 @@ export class UserProfileComponent implements OnInit {
   onPincodeFocusOut(e: any) {
     let pincode = e.target.value;
     if (pincode.length == "6") {
-      this.isFormValid=true;
+      this.isFormValid = true;
     }
     else {
-      this.isFormValid=false; 
+      this.isFormValid = false;
       this.alertService.ShowWarningMessage('PinCode must be 6 Digits.');
       return;
     }
@@ -106,8 +106,6 @@ export class UserProfileComponent implements OnInit {
       this.userprofile.City = bilinginfo.City;
       this.userprofile.PINCode = bilinginfo.PINCode;
       this.userprofile.IsGSTInvoiceRequired = bilinginfo.IsGSTInvoiceRequired;
-
-
       if (isNaN(parseInt(data.UserId)) || this.userprofile.UserId == null || this.userprofile.UserId == undefined) {
         this.userprofile.UserId = 0;
       }
@@ -122,11 +120,10 @@ export class UserProfileComponent implements OnInit {
         }
       );
     }
-  } 
+  }
   ResetForm() {
     this.submitted = false;
     this.PersonalInfoForm.reset();
     this.BillingInfo.reset();
-
   }
 }

@@ -37,7 +37,6 @@ export class TransactionHistoryComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 170
-
     },
     {
       field: 'transactionType',
@@ -47,7 +46,6 @@ export class TransactionHistoryComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 170
-
     },
     {
       field: 'product',
@@ -65,7 +63,6 @@ export class TransactionHistoryComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 170
-
     },
     {
       field: 'inovoiceAmount',
@@ -75,16 +72,12 @@ export class TransactionHistoryComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 200
-
     }
-    
-
-
   ];
 
   userActionColumns: ActionColumn[] = [       //Action Cloumn
     {
-      action: 'activate',           
+      action: 'activate',
       actionPage: 'ViewEmployee',
       actionIcon: 'uil uil-download-alt',
       buttonClass: 'btn btn-lg btn-secondary',
@@ -124,8 +117,8 @@ export class TransactionHistoryComponent implements OnInit {
       inovoiceAmount: 1500
     }
   ];
-  constructor(private transactionHistoryService:TransactionHistoryService,
-    private alertService: AlertService ) { }
+  constructor(private transactionHistoryService: TransactionHistoryService,
+    private alertService: AlertService) { }
 
   ngOnInit(): void {
     //this.Getalltransationhistory();
@@ -133,23 +126,20 @@ export class TransactionHistoryComponent implements OnInit {
   onRowAction(data: any) {     //rowactions
     let action: string = data.action;
     let employee: any = data.row;
-
   }
 
   onActionButton(action: string) {    //action button method
     alert(action + ' ' + 'action button clicked.');
   }
   //Get All Transaction Data
-  Getalltransationhistory() {  
+  Getalltransationhistory() {
     this.transactionHistoryService.getalltransationhistory().subscribe(
       (result: any) => {
-
         this.GetalltransationhistoryList = result.Value;
       },
       (error: any) => {
         this.alertService.ShowError(error, "Failed to save due to Service error");
       }
     );
-
-}
+  }
 }

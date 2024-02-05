@@ -40,7 +40,6 @@ export class AccessControlComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 100
-
     },
     {
       field: 'role',
@@ -50,7 +49,6 @@ export class AccessControlComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 120
-
     },
     {
       field: 'status',
@@ -60,7 +58,6 @@ export class AccessControlComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
     }
-
   ];
 
   userActionColumns: ActionColumn[] = [
@@ -105,7 +102,7 @@ export class AccessControlComponent implements OnInit {
   paged: boolean = true;
 
   constructor(private alertService: AlertService,
-    private accessControlService : AccessControlService) { }
+    private accessControlService: AccessControlService) { }
 
   ngOnInit(): void {
   }
@@ -113,8 +110,6 @@ export class AccessControlComponent implements OnInit {
   addUserClick() {
 
   }
-
-
 
   selectEmployee(employees: any) {
     if (employees.length > 0) {
@@ -168,7 +163,7 @@ export class AccessControlComponent implements OnInit {
     alert(action + ' ' + 'action button clicked.');
   }
 
-  OnSaveClick(){
+  OnSaveClick() {
     this.accessControlService.insertAccessControlDetails(this.accessControlModel).subscribe(
       (result: any) => {
         let serviceResponse = result.Value;
@@ -195,9 +190,7 @@ export class AccessControlComponent implements OnInit {
     );
   }
 
-  
-
-  onClickAddUserAccess(){
+  onClickAddUserAccess() {
     document.getElementById('example3').click();
   }
 
