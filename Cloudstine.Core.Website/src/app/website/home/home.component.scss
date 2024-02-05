@@ -68,7 +68,6 @@
 .image-container {
   height: 450px !important;
   width: 530px !important;
-  
 }
 
 .image-container img {
@@ -130,7 +129,7 @@
 }
 
 .img-fluid {
- // height: 400px !important;
+  // height: 400px !important;
   width: 400px !important;
   justify-content: center;
   align-items: center;
@@ -141,8 +140,9 @@
   height: 100%;
   object-fit: cover;
   margin: auto !important;
-  }
-  .icon{
-    font-size: 40px;
-    color: #9938A5;
-  }
+}
+
+.icon {
+  font-size: 40px;
+  color: #9938A5;
+}
