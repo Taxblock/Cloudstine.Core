@@ -43,12 +43,12 @@ tdsReturnList = [
   challanserialnumber:'12345',
   paymenttype:'200',
   seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
+  tds:'Enter Amount',
+  surcharge:'Enter Amount',
+  edcess:'Enter Amount',
+  interest:'Enter Amount',
+  fees:'Enter Amount',
+  others:'Enter Amount',
   total:'2000'
 },
 {
@@ -58,12 +58,12 @@ tdsReturnList = [
   challanserialnumber:'12345',
   paymenttype:'200',
   seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
+  tds:'Enter Amount',
+  surcharge:'Enter Amount',
+  edcess:'Enter Amount',
+  interest:'Enter Amount',
+  fees:'Enter Amount',
+  others:'Enter Amount',
   total:'2000'
 },
 {
@@ -73,12 +73,12 @@ tdsReturnList = [
   challanserialnumber:'12345',
   paymenttype:'200',
   seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
+  tds:'Enter Amount',
+  surcharge:'Enter Amount',
+  edcess:'Enter Amount',
+  interest:'Enter Amount',
+  fees:'Enter Amount',
+  others:'Enter Amount',
   total:'2000'
 },
 {
@@ -88,12 +88,12 @@ tdsReturnList = [
   challanserialnumber:'12345',
   paymenttype:'200',
   seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
+  tds:'Enter Amount',
+  surcharge:'Enter Amount',
+  edcess:'Enter Amount',
+  interest:'Enter Amount',
+  fees:'Enter Amount',
+  others:'Enter Amount',
   total:'2000'
  
 },
@@ -165,7 +165,9 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    editable:true,
+
 
   },
   {
@@ -175,7 +177,9 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    editable:true,
+
 
   },
   {
@@ -185,7 +189,9 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    editable:true,
+
 
   },
   {
@@ -195,7 +201,9 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    editable:true,
+
 
   },
   {
@@ -205,7 +213,9 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 120
+    minWidth: 120,
+    editable:true,
+
 
   }, {
     field: 'others',
@@ -215,7 +225,9 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 120
+    minWidth: 120,
+    editable:true,
+
 
   },
   {

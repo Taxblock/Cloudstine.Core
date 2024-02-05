@@ -1,6 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 import * as moment from 'moment';
 
@@ -14,7 +15,7 @@ export class AddEmployeeComponent implements OnInit {
   PreviousEmployementSalaryModel = {}
   fields: FormlyFieldConfig[];
   options: FormlyFormOptions = {};
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     this.setParameter();
@@ -214,8 +215,9 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   onCancleClick(){
-
+    this.router.navigateByUrl('tds/tds-return/employee')
   }
+
 
   insertPreviousEmployementSalary(data: any){
 
