@@ -49,7 +49,6 @@ export class UsersComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
       minWidth: 120
-
     },
     {
       field: 'status',
@@ -59,7 +58,6 @@ export class UsersComponent implements OnInit {
         buttons: ['reset', 'apply'],
       },
     }
-
   ];
 
   userActionColumns: ActionColumn[] = [
@@ -104,20 +102,17 @@ export class UsersComponent implements OnInit {
   showStatus: boolean = true;
   showDepartment: boolean = true;
   paged: boolean = true;
-
   submitted = false;
   user: any = {};
 
   constructor(private alertService: AlertService,
     private userManagementService: UserManagementService) {
-
   }
 
   ngOnInit(): void {
   }
 
   addUserClick() {
-
   }
 
   selectEmployee(employees: any) {

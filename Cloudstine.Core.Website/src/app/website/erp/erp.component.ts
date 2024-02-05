@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./erp.component.scss']
 })
 export class ErpComponent implements OnInit {
-  imgHome: any = "assets/images/Home_Page/expert1.png"
+  imgHome: any = "assets/images/Cloudstine/tech11.png"
   //color
   featuredColor: boolean = true;
   almlColor: boolean = false;
@@ -95,19 +95,19 @@ export class ErpComponent implements OnInit {
     this.showImage = true;
     this.showImage1 = false;
     this.showImage2 = false;
-    this.imgHome = "assets/images/Home_Page/people.png"
+    this.imgHome = "assets/images/Cloudstine/tech11.png"
   }
   onclickDownload() {
     this.showImage1 = true;
     this.showImage = false;
     this.showImage2 = false;
-    this.imgHome = "assets/images/Home_Page/factor.png"
+    this.imgHome = "assets/images/Cloudstine/tech10.png"
   }
   onClickDelete() {
     this.showImage2 = true;
     this.showImage1 = false;
     this.showImage = false;
-    this.imgHome = "assets/images/Home_Page/expert1.png"
+    this.imgHome = "assets/images/Cloudstine/tech8.png"
   }
   onClickFeatured() {
     this.feature = true;

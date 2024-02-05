@@ -1,5 +1,6 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
 
 
@@ -223,7 +224,7 @@ export class EmployeeComponent {
 
     }
   ];
-  constructor(private router:Router){
+  constructor(private router: Router, private route: ActivatedRoute) {
 
   }
   selectEmployee(employees: any) {
@@ -235,5 +236,15 @@ export class EmployeeComponent {
 
   onAddEmployee() {
     this.router.navigateByUrl('tds/tds-return/add-employee')
+  }
+
+  onUploadExelClick() {
+    let data1: string = "employee"
+    const data = {
+      source: 'employee'
+    };
+
+    this.router.navigate(['tds/tds-return/upload-exel'], { queryParams: data });
+
   }
 }

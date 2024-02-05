@@ -4,6 +4,7 @@ import { AlertService } from 'src/app/core/services/alertService';
 import { Userdocument } from 'src/app/shared/Models/userDocument.model';
 import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
 import { UploadService } from './upload-exel.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -15,17 +16,17 @@ import { UploadService } from './upload-exel.service';
 })
 
 export class UploadExelComponent {
-    allowFileDrop: boolean;
-    uploadedFile: Array<Userdocument> = [];
-    public files: NgxFileDropEntry[] = [];
-    IsUploaded: boolean;
+  allowFileDrop: boolean;
+  uploadedFile: Array<Userdocument> = [];
+  public files: NgxFileDropEntry[] = [];
+  IsUploaded: boolean;
 
 
   formQsectionList = [
     { value: '1', label: 'From 24Q Section' },
     { value: '2', label: 'From 25Q Section' },
     { value: '3', label: 'From 24Q Section' }
-  
+
   ]
   monthList = [
     { value: '1', label: 'January' },
@@ -41,209 +42,218 @@ export class UploadExelComponent {
     { value: '11', label: 'November' },
     { value: '12', label: 'December' },
 
-  
+
   ]
-tdsReturnList = [
-  {
-  sr_No: '001',
-  bsrCode: '202324',
-  date: '06/10.2024',
-  challanserialnumber:'12345',
-  paymenttype:'200',
-  seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
-  total:'2000'
-},
-{
-  sr_No: '002',
-  bsrCode: '202324',
-  date: '06/10.2024',
-  challanserialnumber:'12345',
-  paymenttype:'200',
-  seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
-  total:'2000'
-},
-{
-  sr_No: '003',
-  bsrCode: '202324',
-  date: '06/10.2024',
-  challanserialnumber:'12345',
-  paymenttype:'200',
-  seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
-  total:'2000'
-},
-{
-  sr_No: '004',
-  bsrCode: '202324',
-  date: '06/10.2024',
-  challanserialnumber:'12345',
-  paymenttype:'200',
-  seccode:'24B',
-  tds:'',
-  surcharge:'',
-  edcess:'',
-  interest:'',
-  fees:'',
-  others:'',
-  total:'2000'
- 
-},
+  tdsReturnList = [
+    {
+      sr_No: '001',
+      bsrCode: '202324',
+      date: '06/10.2024',
+      challanserialnumber: '12345',
+      paymenttype: '200',
+      seccode: '24B',
+      tds: '',
+      surcharge: '',
+      edcess: '',
+      interest: '',
+      fees: '',
+      others: '',
+      total: '2000'
+    },
+    {
+      sr_No: '002',
+      bsrCode: '202324',
+      date: '06/10.2024',
+      challanserialnumber: '12345',
+      paymenttype: '200',
+      seccode: '24B',
+      tds: '',
+      surcharge: '',
+      edcess: '',
+      interest: '',
+      fees: '',
+      others: '',
+      total: '2000'
+    },
+    {
+      sr_No: '003',
+      bsrCode: '202324',
+      date: '06/10.2024',
+      challanserialnumber: '12345',
+      paymenttype: '200',
+      seccode: '24B',
+      tds: '',
+      surcharge: '',
+      edcess: '',
+      interest: '',
+      fees: '',
+      others: '',
+      total: '2000'
+    },
+    {
+      sr_No: '004',
+      bsrCode: '202324',
+      date: '06/10.2024',
+      challanserialnumber: '12345',
+      paymenttype: '200',
+      seccode: '24B',
+      tds: '',
+      surcharge: '',
+      edcess: '',
+      interest: '',
+      fees: '',
+      others: '',
+      total: '2000'
 
-]
-declaredTableColumns: TableColumn[] = [
-  {
-    field: 'sr_No',
-    headerName: 'SR NO',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 100
-  },
-  {
-    field: 'bsrCode',
-    headerName: 'BSR  Code',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
-    },
-  },
-  {
-    field: 'date',
-    headerName: 'Date',
-    filter: 'agSetColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
-    },
-    minWidth: 100
 
-  },
-  {
-    field: 'challanserialnumber',
-    headerName: 'Challan Serial Number',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
+  ]
+  declaredTableColumns: TableColumn[] = [
+    {
+      field: 'sr_No',
+      headerName: 'SR NO',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 100
     },
-    minWidth: 150
+    {
+      field: 'bsrCode',
+      headerName: 'BSR  Code',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+    },
+    {
+      field: 'date',
+      headerName: 'Date',
+      filter: 'agSetColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 100
 
-  },
-  {
-    field: 'paymenttype',
-    headerName: 'Payment Type',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    {
+      field: 'challanserialnumber',
+      headerName: 'Challan Serial Number',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  },
-  {
-    field: 'seccode',
-    headerName: 'Sec Code',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    {
+      field: 'paymenttype',
+      headerName: 'Payment Type',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  },
-  {
-    field: 'tds',
-    headerName: 'TDS',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    {
+      field: 'seccode',
+      headerName: 'Sec Code',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  },
-  {
-    field: 'surcharge',
-    headerName: 'Surcharge',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    {
+      field: 'tds',
+      headerName: 'TDS',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  },
-  {
-    field: 'edcess',
-    headerName: 'Ed. Cess',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    {
+      field: 'surcharge',
+      headerName: 'Surcharge',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  },
-  {
-    field: 'interest',
-    headerName: 'Interest',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    {
+      field: 'edcess',
+      headerName: 'Ed. Cess',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  },
-  {
-    field: 'fees',
-    headerName: 'Fees',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 120
+    {
+      field: 'interest',
+      headerName: 'Interest',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 150
 
-  }, {
-    field: 'others',
-    headerName: 'Others',
-    cellEditor: 'customTextCellEditor', // Replace with your custom cell editor component
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
     },
-    minWidth: 120
+    {
+      field: 'fees',
+      headerName: 'Fees',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 120
 
-  },
-  {
-    field: 'total',
-    headerName: 'Total',
-    filter: 'agTextColumnFilter',
-    filterParams: {
-      buttons: ['reset', 'apply'],
+    }, {
+      field: 'others',
+      headerName: 'Others',
+      cellEditor: 'customTextCellEditor', // Replace with your custom cell editor component
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 120
+
     },
-    minWidth: 120
+    {
+      field: 'total',
+      headerName: 'Total',
+      filter: 'agTextColumnFilter',
+      filterParams: {
+        buttons: ['reset', 'apply'],
+      },
+      minWidth: 120
+
+    }
+  ];
+  receivedData : any
+
+  constructor(private alertService: AlertService,
+    private router : Router,
+    private uploadService: UploadService,
+    private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.receivedData = JSON.parse(this.route.snapshot.queryParams.yourDataKey);
+    console.log(this.receivedData)
+  }
+  selectEmployee(employees: any) {
 
   }
-];
-constructor( private alertService: AlertService,
-    private uploadService: UploadService){}
-selectEmployee(employees: any) {
+  onRowAction(data: any) {
 
-}
-onRowAction(data: any) {
-
-}
+  }
 
 
   allowDrop(event): void {
@@ -287,15 +297,15 @@ onRowAction(data: any) {
   }
   download() {
     // if (this.bulkEmployeeTypeId > 0) {
-      this.uploadService.getTemplateBites().subscribe((m) => {
-        if (m.Value.data) {
-          this.downloadFile(
-            m.Value.data,
-            "application/vnd.ms-excel",
-            "employee upload template.xlsx"
-          );
-        }
-      });
+    this.uploadService.getTemplateBites().subscribe((m) => {
+      if (m.Value.data) {
+        this.downloadFile(
+          m.Value.data,
+          "application/vnd.ms-excel",
+          "employee upload template.xlsx"
+        );
+      }
+    });
     // } else {
     //   this.alertService.ShowErrorMessage("Please Select the Bulk Employee Type");
     // }
@@ -338,5 +348,14 @@ onRowAction(data: any) {
 
   public fileLeave(event) {
     console.log(event);
+  }
+
+  onCancleClick(){
+    if(this.receivedData.source == "employee"){
+      this.router.navigateByUrl('tds/tds-return/employee')
+    }else{
+      this.router.navigateByUrl('tds/tds-return/challan')
+    }
+    
   }
 }

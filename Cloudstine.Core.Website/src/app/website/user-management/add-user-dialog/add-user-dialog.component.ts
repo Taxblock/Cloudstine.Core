@@ -12,10 +12,9 @@ export class AddUserDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-   onSubmit() {
+  onSubmit() {
     // Add logic to save the new user (e.g., send a request to a backend service)
     console.log('New User:', this.newUser);
-
     // Reset the form after submission
     this.newUser = {};
   }

@@ -14,10 +14,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class ResetPasswordComponent {
   @ViewChild('resetPasswordForm', { static: true }) ngForm: NgForm;
-
   private subscription: Subscription;
   public title: string = 'Reset Password';
-
   loginModel = new LoginModel();
   newPassword: string = "";
   confirmNewPassword: string = "";
@@ -26,20 +24,19 @@ export class ResetPasswordComponent {
   hideNewPassword: boolean = false;
   hideConfirmPassword: boolean = false;
   public UserId: number = 0;
-  public UserName: string ;
-  passwordTextType:boolean=true;
-  NewPasswordTextType:boolean=true;
+  public UserName: string;
+  passwordTextType: boolean = true;
+  NewPasswordTextType: boolean = true;
   constructor(private router: Router,
     private route: ActivatedRoute,
     private alertService: AlertService,
     private forgetPasswordService: ForgetPasswordService) { }
 
-  ngOnInit() { 
- 
+  ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.UserId = params['UserId'];
       this.UserName = params['UserName'];
-  })
+    })
 
   }
 
@@ -50,11 +47,9 @@ export class ResetPasswordComponent {
   ResetPassword(resetPasswordForm: NgForm) {
     if (resetPasswordForm && resetPasswordForm.valid) {
       let loginModel = new LoginModel();
-      loginModel.UserId =this.UserId;
+      loginModel.UserId = this.UserId;
       loginModel.Email = this.UserName;
       loginModel.NewPassword = this.newPassword;
-
-
       if (this.newPassword == this.passwordHash) {
         loginModel.NewPassword = this.newPassword;
       }
@@ -64,13 +59,12 @@ export class ResetPasswordComponent {
       }
       this.forgetPasswordService.ResetPassword(loginModel).subscribe(
         (result: any) => {
-           result.Value;
-           this.alertService.ShowSuccessMessage("Password Reset Successfully.");
-           this.router.navigateByUrl('/login')
+          result.Value;
+          this.alertService.ShowSuccessMessage("Password Reset Successfully.");
+          this.router.navigateByUrl('/login')
         },
-        (error:any) => {
-          this.alertService.ShowError(error,"Failed to Reset password due to unknown error");
-  
+        (error: any) => {
+          this.alertService.ShowError(error, "Failed to Reset password due to unknown error");
         }
       );
     }
