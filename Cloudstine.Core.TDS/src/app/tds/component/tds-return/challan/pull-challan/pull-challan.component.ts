@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
-import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
+import { ActionRendererComponent } from 'src/app/shared/action-renderer/action-renderer.component';
+import { ActionColumn, TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.model';
+import { TextboxEditorComponent } from 'src/app/shared/data-grid/text-box-editor.component';
 
 
 
@@ -11,6 +13,7 @@ import { TableColumn } from 'src/app/shared/data-grid/model/data-grid-column.mod
 })
 
 export class PullChallanComponent {
+  [x: string]: any;
   @ViewChild('agGrid', { static: true }) agGrid: AgGridAngular;
   
   formQsectionList = [
@@ -104,11 +107,14 @@ declaredTableColumns: TableColumn[] = [
     field: 'sr_No',
     headerName: 'SR NO',
     filter: 'agTextColumnFilter',
-    editable:true,
+    
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 100
+    minWidth: 100,
+    
+    
+    //cellEditor: 'appTextboxEditor'
   },
   {
     field: 'bsrCode',
@@ -165,7 +171,8 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    cellRenderer: TextboxEditorComponent,
 
   },
   {
@@ -175,7 +182,8 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    cellRenderer: TextboxEditorComponent,
 
   },
   {
@@ -185,7 +193,8 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    cellRenderer: TextboxEditorComponent,
 
   },
   {
@@ -195,7 +204,8 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 150
+    minWidth: 150,
+    cellRenderer: TextboxEditorComponent,
 
   },
   {
@@ -205,7 +215,8 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 120
+    minWidth: 120,
+    cellRenderer: TextboxEditorComponent,
 
   }, {
     field: 'others',
@@ -215,7 +226,8 @@ declaredTableColumns: TableColumn[] = [
     filterParams: {
       buttons: ['reset', 'apply'],
     },
-    minWidth: 120
+    minWidth: 120,
+    cellRenderer: TextboxEditorComponent,
 
   },
   {
@@ -229,24 +241,59 @@ declaredTableColumns: TableColumn[] = [
 
   }
 ];
+  gridApi: any;
 constructor(){}
 selectEmployee(employees: any) {
 
 }
-onRowAction(data: any) {
 
+
+onRowAction(data: any) {
+  
 }
+
+onGridReady(params) {
+  this.gridApi = params.api;
+  this.gridColumnApi = params.columnApi;
+  console.log('Row Data after change:', params);
+  const selectedNode = this.gridApi.getSelectedNodes()[0];
+
+  if (selectedNode) {
+    // Assuming you have a column named 'value' in your columnDefs
+    selectedNode.setDataValue('value', 1111111111111111);
+    this.gridApi.refreshCells();
+  }
+}
+
+
+// onCellValueChanged(params) {
+//   // 'params.data' contains the updated row data
+//   console.log('Row Data after change:', params.data);
+
+//   // Implement your save logic here
+//   // For example, send an HTTP request to update the data on the server
+// }
 
 ngAfterViewInit() {
   // Access the AG-Grid API after the grid has been fully initialized
-  this.OnConfirmClick();
+  //this.OnConfirmClick(e:any);
 }
-OnConfirmClick(){
-  const editedRows = this.agGrid.api.getSelectedNodes();
-  console.log('Edited Data:', editedRows.map(row => row.data));
+OnConfirmClick(e:any){
+// //   const editedRows = this.agGrid.api.getSelectedNodes();
+// //   console.log('Edited Data:', editedRows.map(row => row.data));
+  
+console.log('Data :',e)
+// const selectedNode = this.gridApi.getSelectedNodes()[0];
+
+ 
+//     // Assuming you have a column named 'value' in your columnDefs
+//     selectedNode.setDataValue('value', 1111111111111111);
+//     this.gridApi.refreshCells();
+
+
 }
 onCellValueChanged(e:any){
-  const editedRows = this.agGrid.api.getSelectedNodes();
+  const editedRows = this.gridApi.getSelectedNodes()[0];
   console.log('Edited Data:', editedRows.map(row => row.data));
 
 }

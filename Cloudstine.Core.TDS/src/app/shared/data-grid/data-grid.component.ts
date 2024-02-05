@@ -27,6 +27,7 @@ export class DataGridComponent implements OnInit {
   @Output() selectedRows: EventEmitter<any> = new EventEmitter<any>();
   @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
   @Output() actionButton: EventEmitter<any> = new EventEmitter<any>();
+  @Output() gridReady: EventEmitter<any> = new EventEmitter<any>();
 
   // this property needs to have a setter, to dynamically get changes from parent component
   @Input() set tableData(data: any[]) {
@@ -153,6 +154,7 @@ export class DataGridComponent implements OnInit {
   onGridReady(params: any) {
     this.gridApi = params.api;
     this.gridApi.sizeColumnsToFit();
+    this.gridReady.emit(params);
   }
 
   applyFilter() {

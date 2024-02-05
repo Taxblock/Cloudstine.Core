@@ -15,6 +15,7 @@ import { MessageComponent } from "./dialog/message/message.component";
 import { SubjectService } from "./services/subject.service";
 import { InsertITDSubmissionToPOIService } from "./services/InsertITDSubmissionToPOI.service";
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { TextboxEditorComponent } from "./data-grid/text-box-editor.component";
 
 @NgModule({
 	declarations: [
@@ -27,7 +28,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 		LabelWrapper,
 		SanitizeHtmlPipe,
 		DatePickerComponent,
-
+		TextboxEditorComponent
 
 		//MessageComponent,
 
@@ -56,6 +57,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 		SanitizeHtmlPipe,
 		DataGridComponent,
 		ActionRendererComponent,
+		TextboxEditorComponent
 		//MessageComponent
 	],
 	providers: [
@@ -63,5 +65,6 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 		SubjectService,
 		InsertITDSubmissionToPOIService
 	],
+	entryComponents: [TextboxEditorComponent],
 })
 export class SharedModule { }
