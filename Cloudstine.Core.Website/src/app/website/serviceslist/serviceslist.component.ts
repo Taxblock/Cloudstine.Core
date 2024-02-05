@@ -13,15 +13,15 @@ export class ServiceslistComponent implements OnInit {
   ngOnInit(): void {
   }
   onClickProductPOI() {
-    this._router.navigate(['/poi']);
+    //this._router.navigate(['/poi']);
   }
   onClickProductERI() {
-    this._router.navigate(['/erp']);
+   // this._router.navigate(['/erp']);
   }
   onClickProduct() {
 
   }
   onClickSignup() {
-    this._router.navigate(['/sign-up']);
+   // this._router.navigate(['/sign-up']);
   }
 }
