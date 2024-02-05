@@ -351,7 +351,7 @@ export class UploadExelComponent {
   }
 
   onCancleClick(){
-    if(this.receivedData.data == "employee"){
+    if(this.receivedData.source == "employee"){
       this.router.navigateByUrl('tds/tds-return/employee')
     }else{
       this.router.navigateByUrl('tds/tds-return/challan')
