@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, Renderer2 } from '@angular/core';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
-
 import { APIService } from '../../core/services/apiService';
 import { AlertService } from '../../core/services/alertService';
-
 import { NavComponentService } from './nav-component.service';
 import { ResponseCode } from 'app/core/models/ServiceResponse.model';
 import { UserProfileService } from 'app/core/services/user-profile.service';
@@ -23,7 +21,6 @@ export class NavComponent {
   public Total: number = 0;
   public ItemCount: number = 0;
   currentRoute: string;
-
   public currentUser: IdentityUser;
   public showDropdown: boolean;
   returnUrl: string;
@@ -32,7 +29,6 @@ export class NavComponent {
   closeDrop: boolean = false;
 
   constructor(
-
     private router: Router,
     private alertService: AlertService,
     private navService: NavComponentService,
@@ -41,10 +37,7 @@ export class NavComponent {
     private route: ActivatedRoute,
     private renderer: Renderer2, private el: ElementRef
   ) {
-
-
     this.route.queryParams.subscribe((params) => {
-
       this.companyName = params['corporateName'];
       let RecheckCorporateName = localStorage.getItem('RecheckCorporateName')
       if (this.companyName != undefined || this.companyName != null) {
@@ -64,7 +57,7 @@ export class NavComponent {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
         //console.log(this.currentRoute);
-        if (this.currentRoute== '/forgot-pass' || this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error') {
+        if (this.currentRoute == '/forgot-pass' || this.currentRoute == '/sign-up' || this.currentRoute == '/login' || this.currentRoute == '/error') {
           this.showNav = false;
         } else {
           this.showNav = true;
@@ -75,7 +68,6 @@ export class NavComponent {
     // this.userService.currentUserSubject.subscribe((user) => {
     //   setTimeout(() => {
     //     this.currentUser = user;
-
     //     let userCartVM = this.cartService.getCartData();
     //     if (
     //       userCartVM != null &&
@@ -89,7 +81,6 @@ export class NavComponent {
     //   }, 500);
     //   this.currentUser = user;
     // });
-
     // this.cartService.UserCartData.subscribe((userCartData) => {
     //   setTimeout(() => {
     //     //this.SetServices(userCartData);
@@ -115,7 +106,6 @@ export class NavComponent {
     this.router.navigate(["./poi"])
     // Get the native element reference
     const element = this.el.nativeElement.querySelector('.closeDrop');
-
     // Use Renderer2 to modify the style
     this.renderer.setStyle(element, 'display', 'none');
   }
@@ -177,7 +167,6 @@ export class NavComponent {
   //     },
   //     (error: any) => {
   //       this.alertService.ShowError(error, "Failed to save to unknown error");
-
   //     }
   //   );
   // }
@@ -188,7 +177,6 @@ export class NavComponent {
     } else {
       this.router.navigateByUrl('/login');
     }
-
   }
   OnSignUpClick() {
     this.router.navigateByUrl('/sign-up');
@@ -224,7 +212,6 @@ export class NavComponent {
   //           },
   //           (error: any) => {
   //             this.alertService.ShowError(error, "Failed add to cart due to unknown error");
-
   //           }
   //         );
   //     }

@@ -18,7 +18,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 
 })
 export class HomeComponent implements OnInit {
-  imgHome: any = "assets/images/Home_Page/indian-businesswoman.png"
+  imgHome: any = "assets/images/Cloudstine/modal/modal1.png"
   transferPara: boolean = true
   SAPServicePara: boolean = false
   taxWorkspacePara: boolean = false;
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     private elementRef: ElementRef,
     private _router: Router,
   ) {
-    this.titleService.setTitle("Taxblock: Accounting & Taxation Compliance Management");
+    this.titleService.setTitle("Cloudstine: Togather we can achive more");
     this.meta.updateTag({ name: 'description', content: "Taxblock is a one-stop shop for Income Tax, GST, Accounting,Tax Technology & Automation. Offering across the globe with a customer satisfaction score of 98%" });
     this.meta.updateTag({ name: 'keywords', content: 'efiling tax, income efiling, income tax efiling, efile taxes india, efiling india, india tax efiling, income tax filing Taxblock,  itr filing, itr efiling, itr filing fy 2022-23, income tax filing fy 2022-23, Taxblock. gst filing' });
   }
@@ -48,19 +48,16 @@ export class HomeComponent implements OnInit {
   // Method to update progress
   updateProgress(newProgress: number): void {
     this.progress = newProgress;
-   
   }
 
   // Method to update progress
   updateProgress1(newProgress: number): void {
     this.progress1 = newProgress;
-   
   }
 
   // Method to update progress
   updateProgress2(newProgress: number): void {
     this.progress2 = newProgress;
-  
   }
 
   ngOnInit() {
@@ -79,7 +76,7 @@ export class HomeComponent implements OnInit {
       this.transferPara = false
       this.SAPServicePara = true
       this.taxWorkspacePara = false;
-      this.imgHome = "assets/images/Home_Page/Woman_Power.png"
+      this.imgHome = "assets/images/Cloudstine/modal/modal9.png"
       this.simulateProgress1()
     }
   }
@@ -97,7 +94,7 @@ export class HomeComponent implements OnInit {
       this.transferPara = false
       this.SAPServicePara = false
       this.taxWorkspacePara = true;
-      this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
+      this.imgHome = "assets/images/Cloudstine/modal/modal3.png"
       this.simulateProgress2()
     }
   }
@@ -115,7 +112,7 @@ export class HomeComponent implements OnInit {
       this.transferPara = true
       this.SAPServicePara = false
       this.taxWorkspacePara = false;
-      this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
+      this.imgHome = "assets/images/Cloudstine/modal/modal1.png"
       this.simulateProgress()
     }
   }
@@ -135,7 +132,7 @@ export class HomeComponent implements OnInit {
 
     this.simulateProgress()
 
-    this.imgHome = "assets/images/Home_Page/indian-businesswoman.png"
+    this.imgHome = "assets/images/Cloudstine/modal/modal1.png"
 
   }
 
@@ -152,7 +149,7 @@ export class HomeComponent implements OnInit {
 
     this.simulateProgress1()
 
-    this.imgHome = "assets/images/Home_Page/Woman_Power.png"
+    this.imgHome = "assets/images/Cloudstine/modal/modal9.png"
   }
 
   taxWorkspaceImage() {
@@ -166,21 +163,21 @@ export class HomeComponent implements OnInit {
     this.taxWorkspacePara = true;
 
     this.simulateProgress2()
-    this.imgHome = "assets/images/Home_Page/indianasian-smart-young-couple-accounting.png"
+    this.imgHome = "assets/images/Cloudstine/modal/modal0.png"
   }
-  readAbout(){
+  readAbout() {
     this._router.navigate(['/about']);
   }
-  onClickService(){
-    this._router.navigate(['/serviceslist']);
+  onClickService() {
+    this._router.navigate(['/cloudworkspace']);
   }
-  onclicksap(){
-    this._router.navigate(['/sapservice']);
+  onclicksap() {
+    // this._router.navigate(['/digitalservices']);
   }
-  onclickservice(){
-    this._router.navigate(['/serviceslist']);
+  onClickTaxService() {
+    this._router.navigate(['/cloudworkspace']);
   }
-  onClickTaxService(){
-    this._router.navigate(['/taxservice']);
+  onclickTransform() {
+    this._router.navigate(['/digitalservices']);
   }
 }

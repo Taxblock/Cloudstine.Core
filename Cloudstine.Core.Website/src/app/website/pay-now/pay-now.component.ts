@@ -15,17 +15,15 @@ export class PayNowComponent implements OnInit {
   ngOnInit(): void {
     this.CreateForm();
   }
-  CreateForm()
-  {
+  CreateForm() {
     this.PaymentInfo = this.formBuilder.group({
-      creditAmount:[],
-      gstn:[],
-      totalinovoiceAmount:[],
-      discountAmount:[],
-      netAmount:[]
-  
+      creditAmount: [],
+      gstn: [],
+      totalinovoiceAmount: [],
+      discountAmount: [],
+      netAmount: []
     });
     this.Payment_Info = this.PaymentInfo.controls;
   }
- 
+
 }

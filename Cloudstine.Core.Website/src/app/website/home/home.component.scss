@@ -32,10 +32,6 @@
     height: auto;
     overflow: hidden;
   }
-
-  .vertical-line {
-    display: none !important;
-  }
 }
 
 .businesses {
@@ -70,8 +66,8 @@
 }
 
 .image-container {
-  height: 400px !important;
-  width: 400px !important;
+  height: 450px !important;
+  width: 530px !important;
 }
 
 .image-container img {
@@ -79,22 +75,8 @@
   height: 100%;
   object-fit: cover;
   margin: auto !important;
-}
-
-.verticalLine {
-  position: relative;
-  padding-left: 40px;
-  display: block;
-}
-
-.verticalLine::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #9938A5;
+  border: 1px solid #eeeeee;
+  border-radius: 20px;
 }
 
 .progress-container {
@@ -102,7 +84,6 @@
   height: auto;
   background-color: #eee;
   border-radius: 20px;
-  // margin-bottom: 10px;
 }
 
 .progress-bar {
@@ -114,7 +95,6 @@
 .paraHover:hover {
   cursor: pointer;
   color: black !important;
-
 }
 
 .paraHover {
@@ -148,10 +128,21 @@
   display: inline;
 }
 
-// h2{
-//   font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
-//   font-weight: 700;
-//     font-size: 35px;
-//     color: #0087d5!important;
-//     line-height: 45px;
-// }
+.img-fluid {
+  // height: 400px !important;
+  width: 400px !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-fluid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto !important;
+}
+
+.icon {
+  font-size: 40px;
+  color: #9938A5;
+}

@@ -1,112 +1,96 @@
 <div style="margin-top:64px; background-color:#AD60B7;color:#FFFFFF;">
-    <h4 class=" col-12 p-2" style="border-bottom: 2px solid rgb(230, 230, 230);">
-        <a href="/home"><i class="uil uil-multiply" style="color:#FFFFFF;"></i></a>
-        Pay Now
-    </h4>
+  <h4 class=" col-12 p-2" style="border-bottom: 2px solid rgb(230, 230, 230);">
+    <a href="/home"><i class="uil uil-multiply" style="color:#FFFFFF;"></i></a>
+    Pay Now
+  </h4>
 </div>
 <div>
-    <h5 class="mx-4">Payment Info</h5>
+  <h5 class="mx-4">Payment Info</h5>
   <form [formGroup]="PaymentInfo">
-    <div class="col-md-12 mx-5 container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-              <label>Credits you want to add in your balance</label>
-      
-          </div>
-          <div class="col-md-6 inputwidth">
-              <input class="form-control" type="number" formControlName="creditAmount" placeholder=" Enter Credit Amount" />
-      
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-6">
-              <label>GST@18%</label>
-      
-          </div>
-          <div class="col-md-6 inputwidth">
-              <input class="form-control" type="number" formControlName="gstn" placeholder=" Enter GSTN" />
-      
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-6">
-              <label>Total invoice amount</label>
-      
-          </div>
-          <div class="col-md-6 inputwidth">
-              <input class="form-control" type="number" formControlName="totalinovoiceAmount" placeholder=" Enter Total Inovoice Amount" />
-      
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-6">
-              <label>Discount amount</label>
-      
-          </div>
-          <div class="col-md-6 inputwidth">
-              <input class="form-control" type="number" formControlName="discountAmount" placeholder=" Enter Discount Amount" />
-      
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-6">
-              <label>Net amount to pay</label>
-          </div>
-          <div class="col-md-6 inputwidth">
-              <input class="form-control" type="number" formControlName="netAmount" placeholder=" Enter Net Amount" />
-      
-          </div>
-        </div>
-      </div>
-  </form>
-</div>
-<div>
-    <h5 class="mx-4">Biiling Info</h5>
     <div class="col-md-12 mx-5 container-fluid">
       <div class="row">
         <div class="col-md-6">
-            <label>GSTN</label>
-    
+          <label>Credits you want to add in your balance</label>
         </div>
         <div class="col-md-6 inputwidth">
-            <input class="form-control" type="text" formControlName="GSTN" placeholder=" Enter GSTN" />
-    
+          <input class="form-control" type="number" formControlName="creditAmount" placeholder=" Enter Credit Amount" />
         </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6">
-            <label>Organization Name</label>
-    
+          <label>GST@18%</label>
         </div>
         <div class="col-md-6 inputwidth">
-            <input class="form-control" type="text" formControlName="organisationName" placeholder=" Enter Organisation Name" />
-    
+          <input class="form-control" type="number" formControlName="gstn" placeholder=" Enter GSTN" />
         </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6">
-            <label>Address</label>
-    
+          <label>Total invoice amount</label>
         </div>
         <div class="col-md-6 inputwidth">
-            <input class="form-control" type="number" formControlName="address" placeholder=" Enter Address" />
-    
+          <input class="form-control" type="number" formControlName="totalinovoiceAmount"
+            placeholder=" Enter Total Inovoice Amount" />
         </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-6">
-            <label>State</label>
-    
+          <label>Discount amount</label>
         </div>
         <div class="col-md-6 inputwidth">
-            <input class="form-control" type="number" formControlName="state" placeholder=" Enter State" />
-    
+          <input class="form-control" type="number" formControlName="discountAmount"
+            placeholder=" Enter Discount Amount" />
         </div>
       </div>
-   
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <label>Net amount to pay</label>
+        </div>
+        <div class="col-md-6 inputwidth">
+          <input class="form-control" type="number" formControlName="netAmount" placeholder=" Enter Net Amount" />
+        </div>
+      </div>
     </div>
+  </form>
+</div>
+<div>
+  <h5 class="mx-4">Biiling Info</h5>
+  <div class="col-md-12 mx-5 container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <label>GSTN</label>
+      </div>
+      <div class="col-md-6 inputwidth">
+        <input class="form-control" type="text" formControlName="GSTN" placeholder=" Enter GSTN" />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <label>Organization Name</label>
+      </div>
+      <div class="col-md-6 inputwidth">
+        <input class="form-control" type="text" formControlName="organisationName"
+          placeholder=" Enter Organisation Name" />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <label>Address</label>
+      </div>
+      <div class="col-md-6 inputwidth">
+        <input class="form-control" type="number" formControlName="address" placeholder=" Enter Address" />
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <label>State</label>
+      </div>
+      <div class="col-md-6 inputwidth">
+        <input class="form-control" type="number" formControlName="state" placeholder=" Enter State" />
+      </div>
+    </div>
+  </div>
 </div>
 <div class="col-12 mx-4 mt-2  mb-3" align="left">
-    <button type="submit" class="btn btn-cloud">Pay Now</button>
-    
+  <button type="submit" class="btn btn-cloud">Pay Now</button>
 </div>
