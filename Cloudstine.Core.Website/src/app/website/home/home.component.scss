@@ -32,7 +32,10 @@
     height: auto;
     overflow: hidden;
   }
+
 }
+
+@media only screen and (max-width: 768px) {}
 
 .businesses {
   background: linear-gradient(to bottom, #F17EFF 0%, #EBD7ED 100%);
@@ -66,8 +69,8 @@
 }
 
 .image-container {
-  height: 450px !important;
-  width: 530px !important;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .image-container img {
